@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>resource/back_view.png</file>
+        <file>resource/left_view.png</file>
+        <file>resource/main_view.png</file>
+        <file>resource/right_view.png</file>
+        <file>resource/top_view.png</file>
+        <file>resource/up_view.png</file>
+    </qresource>
+</RCC>
