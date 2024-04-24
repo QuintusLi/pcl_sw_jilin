@@ -1,9 +1,10 @@
 #include "mainwindow.h"
-
 #include <QApplication>
 #include<QMutex>
 #include<QTime>
 #include<QQueue>
+#include<QFile>
+#include <QStyleFactory>
 void LogMessage(QtMsgType type, const QMessageLogContext &context, const QString &msg)
 {
     static QMutex mutex;
@@ -15,14 +16,12 @@ void LogMessage(QtMsgType type, const QMessageLogContext &context, const QString
     log_txt.enqueue(log_element);
     mutex.unlock();
 }
-
-
-
 int main(int argc, char *argv[])
 {
 
 
     QApplication a(argc, argv);
+    a.setStyle(QStyleFactory::create("windows"));
     qInstallMessageHandler(LogMessage);
     qDebug()<<"startup application!";
     MainWindow w;

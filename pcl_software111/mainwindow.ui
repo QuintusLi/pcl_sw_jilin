@@ -7,40 +7,57 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>655</height>
+    <height>743</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>PCL_PROCESSOR</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="view_icon.qrc">
+    <normaloff>:/new/prefix1/resource/point_cloud_icon.png</normaloff>:/new/prefix1/resource/point_cloud_icon.png</iconset>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <layout class="QVBoxLayout" name="verticalLayout">
     <item>
-     <widget class="QVTKOpenGLNativeWidget" name="guiwidget"/>
+     <widget class="QWidget" name="widget_5" native="true">
+      <property name="styleSheet">
+       <string notr="true">background-color: black;</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_7">
+       <item>
+        <widget class="CustomTreeView" name="treeView">
+         <property name="maximumSize">
+          <size>
+           <width>450</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: white;</string>
+         </property>
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QVTKOpenGLNativeWidget" name="guiwidget">
+         <property name="autoFillBackground">
+          <bool>false</bool>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 #000000, stop:1 #00008B);</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </item>
    </layout>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>100</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout_3"/>
-   </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>0</y>
-      <width>100</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout_4"/>
-   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -74,11 +91,13 @@
    </widget>
    <widget class="QMenu" name="menu_2">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="title">
      <string>窗口</string>
     </property>
+    <addaction name="visualization_action"/>
+    <addaction name="processing_action"/>
    </widget>
    <widget class="QMenu" name="menu_3">
     <property name="enabled">
@@ -141,6 +160,15 @@
      <string>帮助</string>
     </property>
    </widget>
+   <widget class="QMenu" name="menu_11">
+    <property name="title">
+     <string>主题</string>
+    </property>
+    <addaction name="bb_theme"/>
+    <addaction name="action1"/>
+    <addaction name="action3"/>
+    <addaction name="action4"/>
+   </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
    <addaction name="menu_3"/>
@@ -151,6 +179,7 @@
    <addaction name="menu_8"/>
    <addaction name="menu_9"/>
    <addaction name="menu_10"/>
+   <addaction name="menu_11"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <widget class="QToolBar" name="toolBar">
@@ -163,6 +192,13 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="open_action"/>
+   <addaction name="save_action"/>
+   <addaction name="actionSTL"/>
+   <addaction name="separator"/>
+   <addaction name="Triangular_meshing"/>
+   <addaction name="interpolation"/>
+   <addaction name="tree_clear"/>
   </widget>
   <widget class="QToolBar" name="toolBar_2">
    <property name="windowTitle">
@@ -174,18 +210,28 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="if_axis_appear"/>
+   <addaction name="reset_view"/>
+   <addaction name="interface_larger"/>
+   <addaction name="interface_smaller"/>
+   <addaction name="actionmain_view"/>
+   <addaction name="actionback_view"/>
+   <addaction name="actionleft_view"/>
+   <addaction name="actionright_view"/>
+   <addaction name="actiontop_view"/>
+   <addaction name="actionup_view"/>
   </widget>
-  <widget class="QDockWidget" name="dockWidget_4">
+  <widget class="QDockWidget" name="dockWidget_3">
    <property name="minimumSize">
     <size>
-     <width>200</width>
-     <height>140</height>
+     <width>300</width>
+     <height>300</height>
     </size>
    </property>
    <property name="maximumSize">
     <size>
      <width>300</width>
-     <height>140</height>
+     <height>300</height>
     </size>
    </property>
    <property name="mouseTracking">
@@ -204,39 +250,131 @@
     <set>Qt::ImhNone</set>
    </property>
    <property name="floating">
-    <bool>false</bool>
+    <bool>true</bool>
    </property>
    <property name="features">
-    <set>QDockWidget::DockWidgetMovable</set>
+    <set>QDockWidget::DockWidgetClosable|QDockWidget::DockWidgetMovable</set>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::AllDockWidgetAreas</set>
    </property>
    <property name="windowTitle">
-    <string>加载过的文件：</string>
+    <string>点云处理操作界面</string>
    </property>
    <attribute name="dockWidgetArea">
     <number>1</number>
    </attribute>
    <widget class="QWidget" name="dockWidgetContents_3">
-    <layout class="QVBoxLayout" name="verticalLayout">
+    <layout class="QVBoxLayout" name="verticalLayout_3">
      <item>
-      <widget class="QTextEdit" name="textEdit">
-       <property name="enabled">
-        <bool>false</bool>
+      <widget class="QWidget" name="widget_6" native="true">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>预处理操作：</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QPushButton" name="pushButton">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>下采样</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButton_2">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>拉普拉斯平滑处理</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
        </property>
-       <property name="inputMethodHints">
-        <set>Qt::ImhMultiLine</set>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="widget_2" native="true">
+       <layout class="QHBoxLayout" name="horizontalLayout_4">
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>插值操作：</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_7">
+          <item>
+           <widget class="QPushButton" name="chazhi">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>最近邻插值</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="chazhi1">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>距离反比插值</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
        </property>
-       <property name="verticalScrollBarPolicy">
-        <enum>Qt::ScrollBarAsNeeded</enum>
-       </property>
-       <property name="horizontalScrollBarPolicy">
-        <enum>Qt::ScrollBarAlwaysOn</enum>
-       </property>
-       <property name="lineWrapMode">
-        <enum>QTextEdit::NoWrap</enum>
-       </property>
-       <property name="readOnly">
-        <bool>true</bool>
-       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="widget" native="true">
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>网格化操作：</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="TaLanSanJiao">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>三角网格化</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </item>
     </layout>
@@ -277,11 +415,20 @@
    </widget>
   </widget>
   <widget class="QDockWidget" name="dockWidget_2">
+   <property name="acceptDrops">
+    <bool>false</bool>
+   </property>
+   <property name="floating">
+    <bool>true</bool>
+   </property>
    <property name="features">
-    <set>QDockWidget::DockWidgetMovable</set>
+    <set>QDockWidget::DockWidgetClosable|QDockWidget::DockWidgetMovable</set>
+   </property>
+   <property name="allowedAreas">
+    <set>Qt::AllDockWidgetAreas</set>
    </property>
    <property name="windowTitle">
-    <string>点云文件中包含的点数为：</string>
+    <string>点云可视化操作界面</string>
    </property>
    <attribute name="dockWidgetArea">
     <number>1</number>
@@ -289,422 +436,306 @@
    <widget class="QWidget" name="dockWidgetContents">
     <layout class="QVBoxLayout" name="verticalLayout_2">
      <item>
-      <widget class="QTextBrowser" name="textBrowser">
-       <property name="enabled">
-        <bool>false</bool>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>80</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>100</height>
-        </size>
-       </property>
-       <property name="mouseTracking">
-        <bool>true</bool>
-       </property>
-       <property name="autoFillBackground">
-        <bool>false</bool>
-       </property>
-       <property name="acceptRichText">
-        <bool>true</bool>
+      <widget class="QWidget" name="widget_4" native="true">
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>视图转换：</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0">
+           <widget class="QPushButton" name="main_view">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>35</width>
+              <height>35</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="view_icon.qrc">
+              <normaloff>:/new/prefix1/resource/main_view.png</normaloff>:/new/prefix1/resource/main_view.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="back_view">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>35</width>
+              <height>35</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="view_icon.qrc">
+              <normaloff>:/new/prefix1/resource/back_view.png</normaloff>:/new/prefix1/resource/back_view.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="left_view">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>35</width>
+              <height>35</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="view_icon.qrc">
+              <normaloff>:/new/prefix1/resource/left_view.png</normaloff>:/new/prefix1/resource/left_view.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="right_view">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>35</width>
+              <height>35</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="view_icon.qrc">
+              <normaloff>:/new/prefix1/resource/right_view.png</normaloff>:/new/prefix1/resource/right_view.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QPushButton" name="top_view">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>35</width>
+              <height>35</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="view_icon.qrc">
+              <normaloff>:/new/prefix1/resource/top_view.png</normaloff>:/new/prefix1/resource/top_view.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QPushButton" name="upward_view">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>35</width>
+              <height>35</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="view_icon.qrc">
+              <normaloff>:/new/prefix1/resource/up_view.png</normaloff>:/new/prefix1/resource/up_view.png</iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="Line" name="line">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QTabWidget" name="tabWidget">
-       <property name="currentIndex">
-        <number>1</number>
-       </property>
-       <widget class="QWidget" name="tab">
-        <attribute name="title">
-         <string>点云可视化模块</string>
-        </attribute>
-        <layout class="QVBoxLayout" name="verticalLayout_8">
-         <item>
-          <widget class="QWidget" name="widget_4" native="true">
-           <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <widget class="QWidget" name="widget_3" native="true">
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>高程渲染：</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QComboBox" name="comboBox">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>22</height>
+             </size>
+            </property>
             <item>
-             <widget class="QLabel" name="label">
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>30</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>16777215</width>
-                <height>16777215</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>视图转换：</string>
-              </property>
-             </widget>
+             <property name="text">
+              <string>轴向（当前为无）</string>
+             </property>
             </item>
             <item>
-             <layout class="QGridLayout" name="gridLayout">
-              <item row="0" column="0">
-               <widget class="QPushButton" name="main_view">
-                <property name="enabled">
-                 <bool>false</bool>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>35</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="view_icon.qrc">
-                  <normaloff>:/new/prefix1/resource/main_view.png</normaloff>:/new/prefix1/resource/main_view.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="1">
-               <widget class="QPushButton" name="back_view">
-                <property name="enabled">
-                 <bool>false</bool>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>35</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="view_icon.qrc">
-                  <normaloff>:/new/prefix1/resource/back_view.png</normaloff>:/new/prefix1/resource/back_view.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="0">
-               <widget class="QPushButton" name="left_view">
-                <property name="enabled">
-                 <bool>false</bool>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>35</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="view_icon.qrc">
-                  <normaloff>:/new/prefix1/resource/left_view.png</normaloff>:/new/prefix1/resource/left_view.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="1">
-               <widget class="QPushButton" name="right_view">
-                <property name="enabled">
-                 <bool>false</bool>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>35</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="view_icon.qrc">
-                  <normaloff>:/new/prefix1/resource/right_view.png</normaloff>:/new/prefix1/resource/right_view.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="0">
-               <widget class="QPushButton" name="top_view">
-                <property name="enabled">
-                 <bool>false</bool>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>35</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="view_icon.qrc">
-                  <normaloff>:/new/prefix1/resource/top_view.png</normaloff>:/new/prefix1/resource/top_view.png</iconset>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="1">
-               <widget class="QPushButton" name="upward_view">
-                <property name="enabled">
-                 <bool>false</bool>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>35</width>
-                  <height>35</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>16777215</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string/>
-                </property>
-                <property name="icon">
-                 <iconset resource="view_icon.qrc">
-                  <normaloff>:/new/prefix1/resource/up_view.png</normaloff>:/new/prefix1/resource/up_view.png</iconset>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-           </layout>
-          </widget>
-         </item>
-         <item>
-          <widget class="Line" name="line">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QWidget" name="widget_3" native="true">
-           <layout class="QHBoxLayout" name="horizontalLayout_5">
-            <item>
-             <widget class="QLabel" name="label_2">
-              <property name="maximumSize">
-               <size>
-                <width>16777215</width>
-                <height>30</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>高程渲染：</string>
-              </property>
-             </widget>
+             <property name="text">
+              <string>X轴</string>
+             </property>
             </item>
             <item>
-             <layout class="QVBoxLayout" name="verticalLayout_5">
-              <item>
-               <widget class="QComboBox" name="comboBox">
-                <property name="enabled">
-                 <bool>false</bool>
-                </property>
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>22</height>
-                 </size>
-                </property>
-                <item>
-                 <property name="text">
-                  <string>轴向（当前为无）</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>X轴</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Y轴</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Z轴</string>
-                 </property>
-                </item>
-               </widget>
-              </item>
-              <item>
-               <widget class="QComboBox" name="comboBox_2">
-                <property name="enabled">
-                 <bool>false</bool>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>22</height>
-                 </size>
-                </property>
-                <item>
-                 <property name="text">
-                  <string>彩色渐变（默认）</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>蓝色渐变</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>红色渐变</string>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>黄色渐变</string>
-                 </property>
-                </item>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="render_begin">
-                <property name="enabled">
-                 <bool>false</bool>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>22</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>渲染</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-           </layout>
-          </widget>
-         </item>
-        </layout>
-       </widget>
-       <widget class="QWidget" name="tab_2">
-        <attribute name="title">
-         <string>点云处理模块</string>
-        </attribute>
-        <layout class="QVBoxLayout" name="verticalLayout_6">
-         <item>
-          <widget class="QWidget" name="widget_2" native="true">
-           <layout class="QHBoxLayout" name="horizontalLayout_4">
-            <item>
-             <widget class="QLabel" name="label_3">
-              <property name="text">
-               <string>插值操作：</string>
-              </property>
-             </widget>
+             <property name="text">
+              <string>Y轴</string>
+             </property>
             </item>
             <item>
-             <layout class="QVBoxLayout" name="verticalLayout_7">
-              <item>
-               <widget class="QPushButton" name="chazhi">
-                <property name="enabled">
-                 <bool>false</bool>
-                </property>
-                <property name="text">
-                 <string>最近邻插值</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QPushButton" name="chazhi1">
-                <property name="enabled">
-                 <bool>false</bool>
-                </property>
-                <property name="text">
-                 <string>距离反比插值</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
+             <property name="text">
+              <string>Z轴</string>
+             </property>
             </item>
-           </layout>
-          </widget>
-         </item>
-         <item>
-          <widget class="Line" name="line_2">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QWidget" name="widget" native="true">
-           <layout class="QHBoxLayout" name="horizontalLayout_3">
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="comboBox_2">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>22</height>
+             </size>
+            </property>
             <item>
-             <widget class="QLabel" name="label_4">
-              <property name="text">
-               <string>网格化操作：</string>
-              </property>
-             </widget>
+             <property name="text">
+              <string>彩色渐变（默认）</string>
+             </property>
             </item>
             <item>
-             <widget class="QPushButton" name="TaLanSanJiao">
-              <property name="enabled">
-               <bool>false</bool>
-              </property>
-              <property name="text">
-               <string>三角网格化</string>
-              </property>
-             </widget>
+             <property name="text">
+              <string>蓝色渐变</string>
+             </property>
             </item>
-           </layout>
-          </widget>
-         </item>
-        </layout>
-       </widget>
+            <item>
+             <property name="text">
+              <string>红色渐变</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>黄色渐变</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="render_begin">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>22</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>渲染</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
       </widget>
      </item>
     </layout>
@@ -713,6 +744,10 @@
   <action name="open_action">
    <property name="checkable">
     <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="view_icon.qrc">
+     <normaloff>:/new/prefix1/resource/open.png</normaloff>:/new/prefix1/resource/open.png</iconset>
    </property>
    <property name="text">
     <string>加载点云（open）</string>
@@ -730,6 +765,10 @@
   <action name="save_action">
    <property name="enabled">
     <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="view_icon.qrc">
+     <normaloff>:/new/prefix1/resource/save.png</normaloff>:/new/prefix1/resource/save.png</iconset>
    </property>
    <property name="text">
     <string>保存（save）</string>
@@ -812,10 +851,233 @@
   </action>
   <action name="actionSTL">
    <property name="enabled">
-    <bool>true</bool>
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="view_icon.qrc">
+     <normaloff>:/new/prefix1/resource/Save_As.png</normaloff>:/new/prefix1/resource/Save_As.png</iconset>
    </property>
    <property name="text">
     <string>STL</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="if_axis_appear">
+   <property name="icon">
+    <iconset resource="view_icon.qrc">
+     <normaloff>:/new/prefix1/resource/axis.png</normaloff>:/new/prefix1/resource/axis.png</iconset>
+   </property>
+   <property name="text">
+    <string>坐标轴显示</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="interface_larger">
+   <property name="icon">
+    <iconset resource="view_icon.qrc">
+     <normaloff>:/new/prefix1/resource/bigger.png</normaloff>:/new/prefix1/resource/bigger.png</iconset>
+   </property>
+   <property name="text">
+    <string>界面放大</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="reset_view">
+   <property name="icon">
+    <iconset resource="view_icon.qrc">
+     <normaloff>:/new/prefix1/resource/eye.png</normaloff>:/new/prefix1/resource/eye.png</iconset>
+   </property>
+   <property name="text">
+    <string>视角复位</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="interface_smaller">
+   <property name="icon">
+    <iconset resource="view_icon.qrc">
+     <normaloff>:/new/prefix1/resource/smaller.png</normaloff>:/new/prefix1/resource/smaller.png</iconset>
+   </property>
+   <property name="text">
+    <string>界面缩小</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="bb_theme">
+   <property name="text">
+    <string>白蓝风格</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="action1">
+   <property name="text">
+    <string>原风格</string>
+   </property>
+  </action>
+  <action name="action3">
+   <property name="text">
+    <string>黑色风格</string>
+   </property>
+  </action>
+  <action name="action4">
+   <property name="text">
+    <string>白黑风格</string>
+   </property>
+  </action>
+  <action name="Triangular_meshing">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="view_icon.qrc">
+     <normaloff>:/new/prefix1/resource/meshing.png</normaloff>:/new/prefix1/resource/meshing.png</iconset>
+   </property>
+   <property name="text">
+    <string>三角网格化</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="interpolation">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="view_icon.qrc">
+     <normaloff>:/new/prefix1/resource/interpolation.png</normaloff>:/new/prefix1/resource/interpolation.png</iconset>
+   </property>
+   <property name="text">
+    <string>最近邻插值</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionmain_view">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="view_icon.qrc">
+     <normaloff>:/new/prefix1/resource/main_view.png</normaloff>:/new/prefix1/resource/main_view.png</iconset>
+   </property>
+   <property name="text">
+    <string>main_view</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionback_view">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="view_icon.qrc">
+     <normaloff>:/new/prefix1/resource/back_view.png</normaloff>:/new/prefix1/resource/back_view.png</iconset>
+   </property>
+   <property name="text">
+    <string>back_view</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionleft_view">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="view_icon.qrc">
+     <normaloff>:/new/prefix1/resource/left_view.png</normaloff>:/new/prefix1/resource/left_view.png</iconset>
+   </property>
+   <property name="text">
+    <string>left_view</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionright_view">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="view_icon.qrc">
+     <normaloff>:/new/prefix1/resource/right_view.png</normaloff>:/new/prefix1/resource/right_view.png</iconset>
+   </property>
+   <property name="text">
+    <string>right_view</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actiontop_view">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="view_icon.qrc">
+     <normaloff>:/new/prefix1/resource/top_view.png</normaloff>:/new/prefix1/resource/top_view.png</iconset>
+   </property>
+   <property name="text">
+    <string>top_view</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionup_view">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="view_icon.qrc">
+     <normaloff>:/new/prefix1/resource/up_view.png</normaloff>:/new/prefix1/resource/up_view.png</iconset>
+   </property>
+   <property name="text">
+    <string>up_view</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="visualization_action">
+   <property name="text">
+    <string>可视化操作窗口</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="processing_action">
+   <property name="text">
+    <string>点云处理窗口</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="tree_clear">
+   <property name="icon">
+    <iconset resource="view_icon.qrc">
+     <normaloff>:/new/prefix1/resource/tree_clear.png</normaloff>:/new/prefix1/resource/tree_clear.png</iconset>
+   </property>
+   <property name="text">
+    <string>清空树状图</string>
    </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
@@ -827,6 +1089,11 @@
    <class>QVTKOpenGLNativeWidget</class>
    <extends>QOpenGLWidget</extends>
    <header location="global">QVTKOpenGLNativeWidget.h</header>
+  </customwidget>
+  <customwidget>
+   <class>CustomTreeView</class>
+   <extends>QTreeView</extends>
+   <header location="global">CustomTreeView.h</header>
   </customwidget>
  </customwidgets>
  <resources>

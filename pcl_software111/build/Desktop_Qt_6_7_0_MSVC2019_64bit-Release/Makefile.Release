@@ -19,7 +19,7 @@ CXXFLAGS      = -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStri
 INCPATH       = -I..\..\..\pcl_software111 -I. -I"C:\Program Files\PCL 1.13.1\include\pcl-1.13" -I"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82" -I"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3" -I"C:\Program Files\PCL 1.13.1\3rdParty\FLANN\include" -I"C:\Program Files\PCL 1.13.1\3rdParty\OpenNI2\Include" -I"C:\Program Files\PCL 1.13.1\3rdParty\Qhull\include" -I"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2" -ID:\Qt\6.7.0\msvc2019_64\include -ID:\Qt\6.7.0\msvc2019_64\include\QtOpenGLWidgets -ID:\Qt\6.7.0\msvc2019_64\include\QtOpenGL -ID:\Qt\6.7.0\msvc2019_64\include\QtWidgets -ID:\Qt\6.7.0\msvc2019_64\include\QtGui -ID:\Qt\6.7.0\msvc2019_64\include\QtCore -Irelease -I. -I/include -ID:\Qt\6.7.0\msvc2019_64\mkspecs\win32-msvc 
 LINKER        = link
 LFLAGS        = /NOLOGO /DYNAMICBASE /NXCOMPAT /OPT:REF /OPT:ICF /INCREMENTAL:NO /SUBSYSTEM:WINDOWS "/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'"
-LIBS          = /LIBPATH:"C:\Program Files\PCL 1.13.1\lib" "C:\Program Files\PCL 1.13.1\lib\pcl_common.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_features.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_filters.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_io.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_iod.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_io_ply.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_kdtree.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_keypoints.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_ml.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_octree.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_outofcore.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_people.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_recognition.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_registration.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_sample_consensus.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_search.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_segmentation.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_stereo.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_surface.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_tracking.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_visualization.lib" /LIBPATH:"C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_atomic-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_bzip2-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_chrono-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_container-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_context-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_contract-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_coroutine-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_date_time-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_exception-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_fiber-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_filesystem-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_graph-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_graph_parallel-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_iostreams-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_json-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_locale-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_log-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_log_setup-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_math_c99-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_math_c99f-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_math_c99l-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_math_tr1-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_math_tr1f-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_math_tr1l-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_mpi-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_nowide-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_numpy310-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_prg_exec_monitor-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_program_options-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_python310-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_random-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_regex-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_serialization-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_stacktrace_noop-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_stacktrace_windbg-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_stacktrace_windbg_cached-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_system-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_test_exec_monitor-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_thread-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_timer-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_type_erasure-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_unit_test_framework-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_url-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_wave-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_wserialization-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_zlib-vc143-mt-x64-1_82.lib" /LIBPATH:"C:\Program Files\PCL 1.13.1\3rdParty\FLANN\lib" "C:\Program Files\PCL 1.13.1\3rdParty\FLANN\lib\flann.lib" "C:\Program Files\PCL 1.13.1\3rdParty\FLANN\lib\flann_cpp.lib" "C:\Program Files\PCL 1.13.1\3rdParty\FLANN\lib\flann_cpp_s.lib" "C:\Program Files\PCL 1.13.1\3rdParty\FLANN\lib\flann_s.lib" /LIBPATH:"C:\Program Files\PCL 1.13.1\3rdParty\Qhull\lib" "C:\Program Files\PCL 1.13.1\3rdParty\Qhull\lib\qhullcpp.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Qhull\lib\qhullstatic.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Qhull\lib\qhullstatic_r.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Qhull\lib\qhull_r.lib" /LIBPATH:"C:\Program Files\PCL 1.13.1\3rdParty\OpenNI2\Lib" "C:\Program Files\PCL 1.13.1\3rdParty\OpenNI2\Lib\OpenNI2.lib" /LIBPATH:"C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkcgns-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkChartsCore-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkCommonColor-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkCommonComputationalGeometry-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkCommonCore-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkCommonDataModel-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkCommonExecutionModel-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkCommonMath-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkCommonMisc-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkCommonSystem-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkCommonTransforms-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkDICOMParser-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkDomainsChemistry-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkDomainsChemistryOpenGL2-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkdoubleconversion-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkexodusII-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkexpat-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersAMR-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersCore-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersExtraction-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersFlowPaths-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersGeneral-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersGeneric-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersGeometry-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersHybrid-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersHyperTree-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersImaging-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersModeling-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersParallel-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersParallelImaging-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersPoints-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersProgrammable-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersSelection-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersSMP-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersSources-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersStatistics-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersTexture-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersTopology-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersVerdict-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkfmt-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkfreetype-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkGeovisCore-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkgl2ps-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkglew-9.2.lib" vtkGUISupportQt-9.2.lib "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkhdf5-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkhdf5_hl-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkImagingColor-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkImagingCore-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkImagingFourier-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkImagingGeneral-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkImagingHybrid-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkImagingMath-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkImagingMorphological-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkImagingSources-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkImagingStatistics-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkImagingStencil-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkInfovisCore-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkInfovisLayout-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkInteractionImage-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkInteractionStyle-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkInteractionWidgets-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOAMR-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOAsynchronous-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOCesium3DTiles-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOCGNSReader-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOChemistry-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOCityGML-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOCONVERGECFD-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOCore-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOEnSight-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOExodus-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOExport-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOExportGL2PS-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOExportPDF-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOGeometry-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOHDF-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOImage-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOImport-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOInfovis-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOIOSS-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOLegacy-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOLSDyna-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOMINC-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOMotionFX-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOMovie-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIONetCDF-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOOggTheora-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOParallel-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOParallelXML-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOPLY-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOSegY-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOSQL-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkioss-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOTecplotTable-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOVeraOut-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOVideo-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOXML-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOXMLParser-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkjpeg-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkjsoncpp-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkkissfft-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtklibharu-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtklibproj-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtklibxml2-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkloguru-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtklz4-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtklzma-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkmetaio-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtknetcdf-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkogg-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkParallelCore-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkParallelDIY-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkpng-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkpugixml-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingAnnotation-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingContext2D-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingContextOpenGL2-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingCore-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingFreeType-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingGL2PSOpenGL2-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingHyperTreeGrid-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingImage-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingLabel-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingLICOpenGL2-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingLOD-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingOpenGL2-9.2.lib" vtkRenderingQt-9.2.lib "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingSceneGraph-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingUI-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingVolume-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingVolumeOpenGL2-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingVtkJS-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtksqlite-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtksys-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkTestingRendering-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtktheora-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtktiff-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkverdict-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkViewsContext2D-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkViewsCore-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkViewsInfovis-9.2.lib" vtkViewsQt-9.2.lib "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkWrappingTools-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkzlib-9.2.lib" D:\Qt\6.7.0\msvc2019_64\lib\Qt6OpenGLWidgets.lib D:\Qt\6.7.0\msvc2019_64\lib\Qt6OpenGL.lib D:\Qt\6.7.0\msvc2019_64\lib\Qt6Widgets.lib D:\Qt\6.7.0\msvc2019_64\lib\Qt6Gui.lib D:\Qt\6.7.0\msvc2019_64\lib\Qt6Core.lib D:\Qt\6.7.0\msvc2019_64\lib\Qt6EntryPoint.lib shell32.lib  
+LIBS          = /LIBPATH:"C:\Program Files\PCL 1.13.1\lib" "C:\Program Files\PCL 1.13.1\lib\pcl_common.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_features.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_filters.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_io.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_iod.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_io_ply.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_kdtree.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_keypoints.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_ml.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_octree.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_outofcore.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_people.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_recognition.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_registration.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_sample_consensus.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_search.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_segmentation.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_stereo.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_surface.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_tracking.lib" "C:\Program Files\PCL 1.13.1\lib\pcl_visualization.lib" /LIBPATH:"C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_atomic-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_bzip2-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_chrono-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_container-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_context-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_contract-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_coroutine-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_date_time-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_exception-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_fiber-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_filesystem-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_graph-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_graph_parallel-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_iostreams-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_json-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_locale-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_log-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_log_setup-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_math_c99-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_math_c99f-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_math_c99l-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_math_tr1-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_math_tr1f-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_math_tr1l-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_mpi-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_nowide-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_numpy310-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_prg_exec_monitor-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_program_options-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_python310-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_random-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_regex-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_serialization-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_stacktrace_noop-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_stacktrace_windbg-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_stacktrace_windbg_cached-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_system-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_test_exec_monitor-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_thread-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_timer-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_type_erasure-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_unit_test_framework-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_url-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_wave-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_wserialization-vc143-mt-x64-1_82.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Boost\lib\libboost_zlib-vc143-mt-x64-1_82.lib" /LIBPATH:"C:\Program Files\PCL 1.13.1\3rdParty\FLANN\lib" "C:\Program Files\PCL 1.13.1\3rdParty\FLANN\lib\flann.lib" "C:\Program Files\PCL 1.13.1\3rdParty\FLANN\lib\flann_cpp.lib" "C:\Program Files\PCL 1.13.1\3rdParty\FLANN\lib\flann_cpp_s.lib" "C:\Program Files\PCL 1.13.1\3rdParty\FLANN\lib\flann_s.lib" /LIBPATH:"C:\Program Files\PCL 1.13.1\3rdParty\Qhull\lib" "C:\Program Files\PCL 1.13.1\3rdParty\Qhull\lib\qhullcpp.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Qhull\lib\qhullstatic.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Qhull\lib\qhullstatic_r.lib" "C:\Program Files\PCL 1.13.1\3rdParty\Qhull\lib\qhull_r.lib" /LIBPATH:"C:\Program Files\PCL 1.13.1\3rdParty\OpenNI2\Lib" "C:\Program Files\PCL 1.13.1\3rdParty\OpenNI2\Lib\OpenNI2.lib" /LIBPATH:"C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkcgns-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkChartsCore-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkCommonColor-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkCommonComputationalGeometry-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkCommonCore-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkCommonDataModel-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkCommonExecutionModel-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkCommonMath-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkCommonMisc-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkCommonSystem-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkCommonTransforms-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkDICOMParser-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkDomainsChemistry-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkDomainsChemistryOpenGL2-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkdoubleconversion-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkexodusII-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkexpat-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersAMR-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersCore-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersExtraction-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersFlowPaths-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersGeneral-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersGeneric-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersGeometry-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersHybrid-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersHyperTree-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersImaging-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersModeling-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersParallel-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersParallelImaging-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersPoints-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersProgrammable-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersSelection-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersSMP-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersSources-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersStatistics-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersTexture-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersTopology-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkFiltersVerdict-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkfmt-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkfreetype-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkGeovisCore-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkgl2ps-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkglew-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkGUISupportQt-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkhdf5-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkhdf5_hl-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkImagingColor-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkImagingCore-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkImagingFourier-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkImagingGeneral-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkImagingHybrid-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkImagingMath-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkImagingMorphological-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkImagingSources-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkImagingStatistics-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkImagingStencil-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkInfovisCore-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkInfovisLayout-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkInteractionImage-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkInteractionStyle-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkInteractionWidgets-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOAMR-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOAsynchronous-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOCesium3DTiles-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOCGNSReader-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOChemistry-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOCityGML-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOCONVERGECFD-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOCore-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOEnSight-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOExodus-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOExport-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOExportGL2PS-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOExportPDF-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOGeometry-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOHDF-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOImage-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOImport-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOInfovis-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOIOSS-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOLegacy-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOLSDyna-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOMINC-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOMotionFX-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOMovie-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIONetCDF-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOOggTheora-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOParallel-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOParallelXML-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOPLY-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOSegY-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOSQL-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkioss-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOTecplotTable-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOVeraOut-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOVideo-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOXML-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkIOXMLParser-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkjpeg-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkjsoncpp-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkkissfft-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtklibharu-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtklibproj-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtklibxml2-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkloguru-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtklz4-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtklzma-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkmetaio-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtknetcdf-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkogg-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkParallelCore-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkParallelDIY-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkpng-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkpugixml-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingAnnotation-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingContext2D-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingContextOpenGL2-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingCore-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingFreeType-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingGL2PSOpenGL2-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingHyperTreeGrid-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingImage-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingLabel-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingLICOpenGL2-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingLOD-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingOpenGL2-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingQt-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingSceneGraph-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingUI-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingVolume-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingVolumeOpenGL2-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkRenderingVtkJS-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtksqlite-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtksys-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkTestingRendering-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtktheora-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtktiff-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkverdict-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkViewsContext2D-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkViewsCore-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkViewsInfovis-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkViewsQt-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkWrappingTools-9.2.lib" "C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib\vtkzlib-9.2.lib" D:\Qt\6.7.0\msvc2019_64\lib\Qt6OpenGLWidgets.lib D:\Qt\6.7.0\msvc2019_64\lib\Qt6OpenGL.lib D:\Qt\6.7.0\msvc2019_64\lib\Qt6Widgets.lib D:\Qt\6.7.0\msvc2019_64\lib\Qt6Gui.lib D:\Qt\6.7.0\msvc2019_64\lib\Qt6Core.lib release\pcl_software_resource.res D:\Qt\6.7.0\msvc2019_64\lib\Qt6EntryPoint.lib shell32.lib  
 QMAKE         = D:\Qt\6.7.0\msvc2019_64\bin\qmake.exe
 DEL_FILE      = del
 CHK_DIR_EXISTS= if not exist
@@ -40,7 +40,7 @@ IDC           = idc
 IDL           = midl
 ZIP           = zip -r -9
 DEF_FILE      = 
-RES_FILE      = 
+RES_FILE      = release\pcl_software_resource.res
 SED           = $(QMAKE) -install sed
 MOVE          = move
 
@@ -50,15 +50,21 @@ OBJECTS_DIR   = release
 
 ####### Files
 
-SOURCES       = ..\..\main.cpp \
+SOURCES       = ..\..\CustomTreeView.cpp \
+		..\..\main.cpp \
 		..\..\mainwindow.cpp release\qrc_view_icon.cpp \
+		release\moc_CustomTreeView.cpp \
 		release\moc_mainwindow.cpp
-OBJECTS       = release\main.obj \
+OBJECTS       = release\CustomTreeView.obj \
+		release\main.obj \
 		release\mainwindow.obj \
 		release\qrc_view_icon.obj \
+		release\moc_CustomTreeView.obj \
 		release\moc_mainwindow.obj
 
-DIST          =  ..\..\mainwindow.h ..\..\main.cpp \
+DIST          =  ..\..\CustomTreeView.h \
+		..\..\mainwindow.h ..\..\CustomTreeView.cpp \
+		..\..\main.cpp \
 		..\..\mainwindow.cpp
 QMAKE_TARGET  = pcl_software
 DESTDIR        = release\ #avoid trailing-slash linebreak
@@ -134,11 +140,14 @@ DESTDIR_TARGET = release\pcl_software.exe
 first: all
 all: Makefile.Release  release\pcl_software.exe
 
-release\pcl_software.exe: D:\Qt\6.7.0\msvc2019_64\lib\Qt6OpenGLWidgets.lib D:\Qt\6.7.0\msvc2019_64\lib\Qt6OpenGL.lib D:\Qt\6.7.0\msvc2019_64\lib\Qt6Widgets.lib D:\Qt\6.7.0\msvc2019_64\lib\Qt6Gui.lib D:\Qt\6.7.0\msvc2019_64\lib\Qt6Core.lib D:\Qt\6.7.0\msvc2019_64\lib\Qt6EntryPoint.lib ui_mainwindow.h $(OBJECTS) 
+release\pcl_software.exe: D:\Qt\6.7.0\msvc2019_64\lib\Qt6OpenGLWidgets.lib D:\Qt\6.7.0\msvc2019_64\lib\Qt6OpenGL.lib D:\Qt\6.7.0\msvc2019_64\lib\Qt6Widgets.lib D:\Qt\6.7.0\msvc2019_64\lib\Qt6Gui.lib D:\Qt\6.7.0\msvc2019_64\lib\Qt6Core.lib D:\Qt\6.7.0\msvc2019_64\lib\Qt6EntryPoint.lib ui_mainwindow.h $(OBJECTS) release\pcl_software_resource.res
 	$(LINKER) $(LFLAGS) /MANIFEST:embed /OUT:$(DESTDIR_TARGET) @<<
-release\main.obj release\mainwindow.obj release\qrc_view_icon.obj release\moc_mainwindow.obj
+release\CustomTreeView.obj release\main.obj release\mainwindow.obj release\qrc_view_icon.obj release\moc_CustomTreeView.obj release\moc_mainwindow.obj
 $(LIBS)
 <<
+
+release\pcl_software_resource.res: pcl_software_resource.rc
+	rc /NOLOGO $(DEFINES) -fo release\pcl_software_resource.res pcl_software_resource.rc
 
 qmake: FORCE
 	@$(QMAKE) -o Makefile.Release ..\..\pcl_software.pro -spec win32-msvc "CONFIG+=qtquickcompiler"
@@ -146,10 +155,11 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) pcl_software.zip $(SOURCES) $(DIST) ..\..\pcl_software.pro D:\Qt\6.7.0\msvc2019_64\mkspecs\features\spec_pre.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\common\windows-desktop.conf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\win32\windows_vulkan_sdk.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\common\windows-vulkan.conf D:\Qt\6.7.0\msvc2019_64\mkspecs\common\msvc-desktop.conf D:\Qt\6.7.0\msvc2019_64\mkspecs\qconfig.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_ext_freetype.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_ext_libjpeg.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_ext_libpng.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3danimation.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3danimation_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dcore.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dcore_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dextras.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dextras_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dinput.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dinput_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dlogic.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dlogic_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dquick.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dquick_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dquickanimation.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dquickextras.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dquickextras_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dquickinput.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dquickinput_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dquickrender.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dquickrender_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dquickscene2d.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3drender.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3drender_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_activeqt.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_activeqt_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_axbase_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_axcontainer.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_axcontainer_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_axserver.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_axserver_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_bluetooth.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_bluetooth_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_bodymovin_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_charts.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_charts_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_chartsqml.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_chartsqml_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_concurrent.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_concurrent_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_core.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_core5compat.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_core5compat_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_core_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_datavisualization.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_datavisualization_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_datavisualizationqml.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_datavisualizationqml_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_dbus.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_dbus_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_designer.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_designer_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_designercomponents_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_entrypoint_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_example_icons_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_fb_support_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_freetype_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_graphs.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_graphs_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_grpc.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_grpc_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_grpcquick.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_grpcquick_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_gui.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_gui_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_harfbuzz_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_help.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_help_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_httpserver.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_httpserver_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_insighttracker.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_insighttracker_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_insighttrackerqml.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_insighttrackerqml_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_jpeg_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_jsonrpc_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_labsanimation.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_labsanimation_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_labsfolderlistmodel.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_labsfolderlistmodel_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_labsqmlmodels.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_labsqmlmodels_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_labssettings.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_labssettings_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_labssharedimage.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_labssharedimage_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_labswavefrontmesh.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_labswavefrontmesh_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_languageserver_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_linguist.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_location.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_location_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_multimedia.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_multimedia_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_multimediaquick_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_multimediawidgets.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_network.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_network_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_networkauth.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_networkauth_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_nfc.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_nfc_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_opengl.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_opengl_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_openglwidgets.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_openglwidgets_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_packetprotocol_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_pdf.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_pdf_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_pdfquick.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_pdfquick_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_pdfwidgets.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_pdfwidgets_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_png_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_positioning.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_positioning_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_positioningquick.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_positioningquick_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_printsupport.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_printsupport_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_protobuf.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_protobuf_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_protobufqtcoretypes.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_protobufqtcoretypes_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_protobufqtguitypes.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_protobufqtguitypes_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_protobufwellknowntypes.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_protobufwellknowntypes_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qdoccatch_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qdoccatchconversions_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qdoccatchgenerators_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qml.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qml_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlbuiltins.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlbuiltins_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlcompiler.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlcompiler_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlcore.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlcore_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmldebug_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmldom_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlintegration.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlintegration_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmllocalstorage.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmllocalstorage_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlls_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlmodels.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlmodels_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlnetwork.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlnetwork_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmltest.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmltest_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmltoolingsettings_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmltyperegistrar_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlworkerscript.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlxmllistmodel.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlxmllistmodel_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3d.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3d_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dassetimport.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dassetimport_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dassetutils.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dassetutils_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3deffects.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3deffects_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dglslparser_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dhelpers.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dhelpers_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dhelpersimpl.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dhelpersimpl_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3diblbaker.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3diblbaker_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dparticleeffects.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dparticleeffects_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dparticles.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dparticles_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dphysics.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dphysics_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dphysicshelpers.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dphysicshelpers_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3druntimerender.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3druntimerender_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dspatialaudio_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dutils.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dutils_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2basic.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2basic_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2basicstyleimpl.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2basicstyleimpl_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2fusion.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2fusion_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2fusionstyleimpl.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2fusionstyleimpl_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2imagine.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2imagine_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2imaginestyleimpl.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2imaginestyleimpl_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2impl.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2impl_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2material.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2material_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2materialstyleimpl.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2materialstyleimpl_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2universal.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2universal_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2universalstyleimpl.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2universalstyleimpl_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2windowsstyleimpl.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2windowsstyleimpl_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrolstestutilsprivate_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickdialogs2.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickdialogs2_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickdialogs2quickimpl.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickdialogs2quickimpl_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickdialogs2utils.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickdialogs2utils_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickeffects_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quicklayouts.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quicklayouts_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickparticles_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickshapes_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quicktemplates2.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quicktestutilsprivate_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quicktimeline.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quicktimeline_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quicktimelineblendtrees.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quicktimelineblendtrees_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickwidgets.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickwidgets_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_remoteobjects.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_remoteobjects_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_remoteobjectsqml.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_remoteobjectsqml_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_repparser.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_repparser_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_scxml.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_scxml_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_scxmlqml.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_scxmlqml_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_sensors.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_sensors_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_sensorsquick.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_sensorsquick_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_serialbus.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_serialbus_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_serialport.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_serialport_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_shadertools.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_shadertools_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_spatialaudio.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_spatialaudio_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_sql.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_sql_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_statemachine.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_statemachine_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_statemachineqml.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_statemachineqml_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_svg.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_svg_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_svgwidgets.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_svgwidgets_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_testlib.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_testlib_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_texttospeech.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_texttospeech_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_tools_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_uiplugin.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_uitools.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_uitools_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_virtualkeyboard.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_virtualkeyboard_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_virtualkeyboardsettings.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_virtualkeyboardsettings_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webchannel.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webchannel_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webchannelquick.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webchannelquick_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webenginecore.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webenginecore_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webenginequick.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webenginequick_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webenginequickdelegatesqml.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webenginequickdelegatesqml_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webenginewidgets.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webenginewidgets_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_websockets.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_websockets_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webview.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webview_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webviewquick.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webviewquick_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_widgets.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_widgets_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_xml.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_xml_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_zlib_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\features\qt_functions.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\qt_config.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\win32-msvc\qmake.conf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\spec_post.prf .qmake.stash D:\Qt\6.7.0\msvc2019_64\mkspecs\features\exclusive_builds.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\common\msvc-version.conf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\toolchain.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\default_pre.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\win32\default_pre.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\resolve_config.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\exclusive_builds_post.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\default_post.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\build_pass.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\qtquickcompiler.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\precompile_header.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\warn_on.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\permissions.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\qt.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\resources_functions.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\resources.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\moc.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\win32\opengl.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\uic.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\qmake_use.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\file_copies.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\win32\windows.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\testcase_targets.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\exceptions.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\yacc.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\lex.prf ..\..\pcl_software.pro ..\..\view_icon.qrc D:\Qt\6.7.0\msvc2019_64\lib\Qt6OpenGLWidgets.prl D:\Qt\6.7.0\msvc2019_64\lib\Qt6OpenGL.prl D:\Qt\6.7.0\msvc2019_64\lib\Qt6Widgets.prl D:\Qt\6.7.0\msvc2019_64\lib\Qt6Gui.prl D:\Qt\6.7.0\msvc2019_64\lib\Qt6Core.prl D:\Qt\6.7.0\msvc2019_64\lib\Qt6EntryPoint.prl   ..\..\view_icon.qrc D:\Qt\6.7.0\msvc2019_64\mkspecs\features\data\dummy.cpp ..\..\mainwindow.h  ..\..\main.cpp ..\..\mainwindow.cpp ..\..\mainwindow.ui    
+	$(ZIP) pcl_software.zip $(SOURCES) $(DIST) ..\..\pcl_software.pro D:\Qt\6.7.0\msvc2019_64\mkspecs\features\spec_pre.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\common\windows-desktop.conf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\win32\windows_vulkan_sdk.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\common\windows-vulkan.conf D:\Qt\6.7.0\msvc2019_64\mkspecs\common\msvc-desktop.conf D:\Qt\6.7.0\msvc2019_64\mkspecs\qconfig.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_ext_freetype.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_ext_libjpeg.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_ext_libpng.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3danimation.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3danimation_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dcore.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dcore_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dextras.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dextras_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dinput.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dinput_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dlogic.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dlogic_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dquick.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dquick_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dquickanimation.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dquickanimation_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dquickextras.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dquickextras_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dquickinput.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dquickinput_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dquickrender.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dquickrender_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dquickscene2d.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3dquickscene2d_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3drender.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_3drender_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_activeqt.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_activeqt_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_axbase_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_axcontainer.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_axcontainer_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_axserver.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_axserver_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_bluetooth.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_bluetooth_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_bodymovin_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_charts.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_charts_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_chartsqml.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_chartsqml_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_concurrent.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_concurrent_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_core.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_core5compat.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_core5compat_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_core_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_datavisualization.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_datavisualization_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_datavisualizationqml.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_datavisualizationqml_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_dbus.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_dbus_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_designer.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_designer_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_designercomponents_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_entrypoint_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_example_icons_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_fb_support_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_freetype_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_graphs.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_graphs_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_grpc.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_grpc_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_grpcquick.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_grpcquick_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_gui.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_gui_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_harfbuzz_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_help.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_help_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_httpserver.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_httpserver_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_insighttracker.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_insighttracker_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_insighttrackerqml.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_insighttrackerqml_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_jpeg_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_jsonrpc_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_labsanimation.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_labsanimation_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_labsfolderlistmodel.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_labsfolderlistmodel_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_labsqmlmodels.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_labsqmlmodels_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_labssettings.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_labssettings_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_labssharedimage.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_labssharedimage_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_labswavefrontmesh.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_labswavefrontmesh_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_languageserver_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_linguist.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_location.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_location_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_multimedia.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_multimedia_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_multimediaquick_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_multimediawidgets.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_multimediawidgets_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_network.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_network_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_networkauth.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_networkauth_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_nfc.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_nfc_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_opengl.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_opengl_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_openglwidgets.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_openglwidgets_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_packetprotocol_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_pdf.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_pdf_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_pdfquick.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_pdfquick_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_pdfwidgets.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_pdfwidgets_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_png_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_positioning.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_positioning_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_positioningquick.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_positioningquick_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_printsupport.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_printsupport_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_protobuf.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_protobuf_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_protobufqtcoretypes.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_protobufqtcoretypes_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_protobufqtguitypes.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_protobufqtguitypes_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_protobufwellknowntypes.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_protobufwellknowntypes_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qdoccatch_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qdoccatchconversions_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qdoccatchgenerators_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qml.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qml_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlbuiltins.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlbuiltins_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlcompiler.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlcompiler_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlcore.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlcore_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmldebug_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmldom_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlintegration.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlintegration_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmllocalstorage.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmllocalstorage_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlls_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlmodels.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlmodels_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlnetwork.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlnetwork_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmltest.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmltest_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmltoolingsettings_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmltyperegistrar_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlworkerscript.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlxmllistmodel.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_qmlxmllistmodel_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3d.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3d_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dassetimport.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dassetimport_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dassetutils.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dassetutils_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3deffects.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3deffects_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dglslparser_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dhelpers.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dhelpers_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dhelpersimpl.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dhelpersimpl_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3diblbaker.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3diblbaker_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dparticleeffects.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dparticleeffects_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dparticles.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dparticles_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dphysics.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dphysics_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dphysicshelpers.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dphysicshelpers_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3druntimerender.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3druntimerender_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dspatialaudio_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dutils.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick3dutils_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quick_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2basic.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2basic_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2basicstyleimpl.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2basicstyleimpl_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2fusion.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2fusion_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2fusionstyleimpl.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2fusionstyleimpl_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2imagine.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2imagine_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2imaginestyleimpl.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2imaginestyleimpl_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2impl.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2impl_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2material.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2material_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2materialstyleimpl.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2materialstyleimpl_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2universal.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2universal_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2universalstyleimpl.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2universalstyleimpl_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2windowsstyleimpl.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrols2windowsstyleimpl_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickcontrolstestutilsprivate_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickdialogs2.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickdialogs2_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickdialogs2quickimpl.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickdialogs2quickimpl_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickdialogs2utils.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickdialogs2utils_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickeffects_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quicklayouts.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quicklayouts_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickparticles_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickshapes_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quicktemplates2.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quicktestutilsprivate_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quicktimeline.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quicktimeline_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quicktimelineblendtrees.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quicktimelineblendtrees_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickwidgets.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_quickwidgets_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_remoteobjects.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_remoteobjects_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_remoteobjectsqml.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_remoteobjectsqml_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_repparser.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_repparser_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_scxml.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_scxml_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_scxmlqml.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_scxmlqml_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_sensors.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_sensors_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_sensorsquick.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_sensorsquick_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_serialbus.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_serialbus_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_serialport.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_serialport_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_shadertools.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_shadertools_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_spatialaudio.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_spatialaudio_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_sql.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_sql_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_statemachine.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_statemachine_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_statemachineqml.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_statemachineqml_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_svg.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_svg_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_svgwidgets.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_svgwidgets_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_testlib.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_testlib_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_texttospeech.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_texttospeech_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_tools_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_uiplugin.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_uitools.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_uitools_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_virtualkeyboard.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_virtualkeyboard_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_virtualkeyboardsettings.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_virtualkeyboardsettings_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webchannel.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webchannel_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webchannelquick.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webchannelquick_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webenginecore.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webenginecore_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webenginequick.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webenginequick_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webenginequickdelegatesqml.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webenginequickdelegatesqml_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webenginewidgets.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webenginewidgets_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_websockets.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_websockets_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webview.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webview_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webviewquick.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_webviewquick_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_widgets.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_widgets_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_xml.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_xml_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\modules\qt_lib_zlib_private.pri D:\Qt\6.7.0\msvc2019_64\mkspecs\features\qt_functions.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\qt_config.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\win32-msvc\qmake.conf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\spec_post.prf .qmake.stash D:\Qt\6.7.0\msvc2019_64\mkspecs\features\exclusive_builds.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\common\msvc-version.conf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\toolchain.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\default_pre.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\win32\default_pre.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\resolve_config.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\exclusive_builds_post.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\default_post.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\build_pass.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\qtquickcompiler.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\precompile_header.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\warn_on.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\permissions.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\qt.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\resources_functions.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\resources.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\moc.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\win32\opengl.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\uic.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\qmake_use.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\file_copies.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\win32\windows.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\testcase_targets.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\exceptions.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\yacc.prf D:\Qt\6.7.0\msvc2019_64\mkspecs\features\lex.prf ..\..\pcl_software.pro ..\..\view_icon.qrc D:\Qt\6.7.0\msvc2019_64\lib\Qt6OpenGLWidgets.prl D:\Qt\6.7.0\msvc2019_64\lib\Qt6OpenGL.prl D:\Qt\6.7.0\msvc2019_64\lib\Qt6Widgets.prl D:\Qt\6.7.0\msvc2019_64\lib\Qt6Gui.prl D:\Qt\6.7.0\msvc2019_64\lib\Qt6Core.prl D:\Qt\6.7.0\msvc2019_64\lib\Qt6EntryPoint.prl   ..\..\view_icon.qrc D:\Qt\6.7.0\msvc2019_64\mkspecs\features\data\dummy.cpp ..\..\CustomTreeView.h ..\..\mainwindow.h  ..\..\CustomTreeView.cpp ..\..\main.cpp ..\..\mainwindow.cpp ..\..\mainwindow.ui    
 
 clean: compiler_clean 
-	-$(DEL_FILE) release\main.obj release\mainwindow.obj release\qrc_view_icon.obj release\moc_mainwindow.obj
+	-$(DEL_FILE) release\CustomTreeView.obj release\main.obj release\mainwindow.obj release\qrc_view_icon.obj release\moc_CustomTreeView.obj release\moc_mainwindow.obj
+	-$(DEL_FILE) release\pcl_software_resource.res
 
 distclean: clean 
 	-$(DEL_FILE) .qmake.stash
@@ -173,10 +183,28 @@ release\qrc_view_icon.cpp: ..\..\view_icon.qrc \
 		D:\Qt\6.7.0\msvc2019_64\bin\rcc.exe \
 		..\..\resource\up_view.png \
 		..\..\resource\main_view.png \
+		..\..\resource\meshing.png \
+		..\..\resource\interpolation.png \
+		..\..\resource\point_cloud_icon.png \
+		..\..\resource\smaller.png \
+		..\..\resource\save.png \
+		..\..\resource\open.png \
 		..\..\resource\left_view.png \
 		..\..\resource\right_view.png \
+		..\..\resource\axis.png \
 		..\..\resource\back_view.png \
-		..\..\resource\top_view.png
+		..\..\resource\cloud.png \
+		..\..\resource\eye.png \
+		..\..\resource\file.png \
+		..\..\resource\tree_clear.png \
+		..\..\resource\bigger.png \
+		..\..\resource\Save_As.png \
+		..\..\resource\logo.ico \
+		..\..\resource\top_view.png \
+		..\..\resource\theme\white.qss \
+		..\..\resource\theme\no.qss \
+		..\..\resource\theme\default.qss \
+		..\..\resource\theme\QDarkStyleSheet.qss
 	D:\Qt\6.7.0\msvc2019_64\bin\rcc.exe -name view_icon --no-zstd ..\..\view_icon.qrc -o release\qrc_view_icon.cpp
 
 compiler_moc_predefs_make_all: release\moc_predefs.h
@@ -185,9 +213,218 @@ compiler_moc_predefs_clean:
 release\moc_predefs.h: D:\Qt\6.7.0\msvc2019_64\mkspecs\features\data\dummy.cpp
 	cl -BxD:\Qt\6.7.0\msvc2019_64\bin\qmake.exe -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -permissive- -Zc:__cplusplus -Zc:externConstexpr -O2 -MD -std:c++17 -utf-8 -W3 -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 -wd4577 -wd4467 -E D:\Qt\6.7.0\msvc2019_64\mkspecs\features\data\dummy.cpp 2>NUL >release\moc_predefs.h
 
-compiler_moc_header_make_all: release\moc_mainwindow.cpp
+compiler_moc_header_make_all: release\moc_CustomTreeView.cpp release\moc_mainwindow.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) release\moc_mainwindow.cpp
+	-$(DEL_FILE) release\moc_CustomTreeView.cpp release\moc_mainwindow.cpp
+release\moc_CustomTreeView.cpp: ..\..\CustomTreeView.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\QTreeView \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtreeview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtwidgetsglobal.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qtguiglobal.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qglobal.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtversionchecks.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtconfiginclude.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qconfig.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtcore-config.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtconfigmacros.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtcoreexports.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcompilerdetection.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qsystemdetection.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qprocessordetection.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtdeprecationmarkers.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtpreprocessorsupport.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qassert.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtnoop.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtypes.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtversion.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtclasshelpermacros.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtypeinfo.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcontainerfwd.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qsysinfo.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qlogging.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qflags.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcompare_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qatomic.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qbasicatomic.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qatomic_cxx11.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qgenericatomic.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qyieldcpu.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qconstructormacros.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qdarwinhelpers.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qexceptionhandling.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qforeach.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qttypetraits.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qfunctionpointer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qglobalstatic.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qmalloc.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qminmax.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qnumeric.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qoverload.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qswap.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtenvironmentvariables.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtresource.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qttranslation.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qversiontagging.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qtgui-config.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qtguiexports.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtwidgets-config.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtwidgetsexports.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractitemview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qframe.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qwidget.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qwindowdefs.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qobjectdefs.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qnamespace.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtmetamacros.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qobjectdefs_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qfunctionaltools_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qwindowdefs_win.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qobject.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstring.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qchar.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qbytearray.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qrefcount.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qarraydata.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qpair.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qarraydatapointer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qarraydataops.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcontainertools_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qxptype_traits.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\q20functional.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\q20memory.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qbytearrayalgorithms.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qbytearrayview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringfwd.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\q20type_traits.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringliteral.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringalgorithms.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qlatin1stringview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qanystringview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qutf8stringview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringtokenizer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringbuilder.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringconverter.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringconverter_base.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qlist.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qhashfunctions.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qiterator.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qbytearraylist.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringlist.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qalgorithms.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringmatcher.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcoreevent.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qscopedpointer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qmetatype.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcompare.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcomparehelpers.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qdatastream.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qiodevicebase.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qfloat16.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qmath.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qiterable.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qmetacontainer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcontainerinfo.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtaggedpointer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qscopeguard.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qobject_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qbindingstorage.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qmargins.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\q23utility.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qaction.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qkeysequence.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qicon.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qsize.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qpixmap.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qpaintdevice.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qrect.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qpoint.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qcolor.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qrgb.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qrgba64.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qshareddata.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qimage.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qpixelformat.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qtransform.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qpolygon.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qregion.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qline.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qvariant.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qdebug.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtextstream.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcontiguouscache.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qsharedpointer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qsharedpointer_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qmap.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qshareddata_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qset.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qhash.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qvarlengtharray.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qpalette.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qbrush.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qfont.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qendian.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qfontmetrics.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qfontinfo.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qsizepolicy.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qcursor.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qbitmap.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qevent.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qiodevice.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qurl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qeventpoint.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qvector2d.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qvectornd.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qpointingdevice.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qinputdevice.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qscreen.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\QList \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\QObject \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\QRect \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\QSize \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\QSizeF \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\QTransform \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qnativeinterface.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qscreen_platform.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qguiapplication.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcoreapplication.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qdeadlinetimer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qelapsedtimer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qeventloop.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcoreapplication_platform.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qfuture.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qfutureinterface.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qmutex.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtsan_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qresultstore.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qfuture_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qthreadpool.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qthread.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qrunnable.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qexception.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qpromise.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qinputmethod.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qlocale.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qguiapplication_platform.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qabstractitemmodel.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qitemselectionmodel.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractitemdelegate.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qstyleoption.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractspinbox.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qvalidator.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qregularexpression.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qslider.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractslider.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qstyle.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtabbar.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtabwidget.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qrubberband.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\QWheelEvent \
+		release\moc_predefs.h \
+		D:\Qt\6.7.0\msvc2019_64\bin\moc.exe
+	D:\Qt\6.7.0\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include E:/pcl_software111/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Release/release/moc_predefs.h -ID:/Qt/6.7.0/msvc2019_64/mkspecs/win32-msvc -IE:/pcl_software111 -I"C:/Program Files/PCL 1.13.1/include/pcl-1.13" -I"C:/Program Files/PCL 1.13.1/3rdParty/Boost/include/boost-1_82" -I"C:/Program Files/PCL 1.13.1/3rdParty/Eigen/eigen3" -I"C:/Program Files/PCL 1.13.1/3rdParty/FLANN/include" -I"C:/Program Files/PCL 1.13.1/3rdParty/OpenNI2/Include" -I"C:/Program Files/PCL 1.13.1/3rdParty/Qhull/include" -I"C:/Program Files/PCL 1.13.1/3rdParty/VTK/include/vtk-9.2" -ID:/Qt/6.7.0/msvc2019_64/include -ID:/Qt/6.7.0/msvc2019_64/include/QtOpenGLWidgets -ID:/Qt/6.7.0/msvc2019_64/include/QtOpenGL -ID:/Qt/6.7.0/msvc2019_64/include/QtWidgets -ID:/Qt/6.7.0/msvc2019_64/include/QtGui -ID:/Qt/6.7.0/msvc2019_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" -I"D:\Windows Kits\10\include\10.0.22000.0\ucrt" -I"D:\Windows Kits\10\include\10.0.22000.0\shared" -I"D:\Windows Kits\10\include\10.0.22000.0\um" -I"D:\Windows Kits\10\include\10.0.22000.0\winrt" -I"D:\Windows Kits\10\include\10.0.22000.0\cppwinrt" ..\..\CustomTreeView.h -o release\moc_CustomTreeView.cpp
+
 release\moc_mainwindow.cpp: ..\..\mainwindow.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\QMainWindow \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qmainwindow.h \
@@ -2482,6 +2719,25 @@ release\moc_mainwindow.cpp: ..\..\mainwindow.h \
 		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\fusion\view\filter_view\detail\size_impl.hpp" \
 		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\common\impl\centroid.hpp" \
 		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\features\impl\normal_3d.hpp" \
+		..\..\CustomTreeView.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\QTreeView \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtreeview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractitemview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qframe.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qabstractitemmodel.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qitemselectionmodel.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractitemdelegate.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qstyleoption.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractspinbox.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qvalidator.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qregularexpression.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qslider.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractslider.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qstyle.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtabbar.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qrubberband.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\QWheelEvent \
 		release\moc_predefs.h \
 		D:\Qt\6.7.0\msvc2019_64\bin\moc.exe
 	D:\Qt\6.7.0\msvc2019_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include E:/pcl_software111/build/Desktop_Qt_6_7_0_MSVC2019_64bit-Release/release/moc_predefs.h -ID:/Qt/6.7.0/msvc2019_64/mkspecs/win32-msvc -IE:/pcl_software111 -I"C:/Program Files/PCL 1.13.1/include/pcl-1.13" -I"C:/Program Files/PCL 1.13.1/3rdParty/Boost/include/boost-1_82" -I"C:/Program Files/PCL 1.13.1/3rdParty/Eigen/eigen3" -I"C:/Program Files/PCL 1.13.1/3rdParty/FLANN/include" -I"C:/Program Files/PCL 1.13.1/3rdParty/OpenNI2/Include" -I"C:/Program Files/PCL 1.13.1/3rdParty/Qhull/include" -I"C:/Program Files/PCL 1.13.1/3rdParty/VTK/include/vtk-9.2" -ID:/Qt/6.7.0/msvc2019_64/include -ID:/Qt/6.7.0/msvc2019_64/include/QtOpenGLWidgets -ID:/Qt/6.7.0/msvc2019_64/include/QtOpenGL -ID:/Qt/6.7.0/msvc2019_64/include/QtWidgets -ID:/Qt/6.7.0/msvc2019_64/include/QtGui -ID:/Qt/6.7.0/msvc2019_64/include/QtCore -I. -I"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\include\um" -I"D:\Windows Kits\10\include\10.0.22000.0\ucrt" -I"D:\Windows Kits\10\include\10.0.22000.0\shared" -I"D:\Windows Kits\10\include\10.0.22000.0\um" -I"D:\Windows Kits\10\include\10.0.22000.0\winrt" -I"D:\Windows Kits\10\include\10.0.22000.0\cppwinrt" ..\..\mainwindow.h -o release\moc_mainwindow.cpp
@@ -2494,7 +2750,452 @@ compiler_uic_make_all: ui_mainwindow.h
 compiler_uic_clean:
 	-$(DEL_FILE) ui_mainwindow.h
 ui_mainwindow.h: ..\..\mainwindow.ui \
-		D:\Qt\6.7.0\msvc2019_64\bin\uic.exe
+		D:\Qt\6.7.0\msvc2019_64\bin\uic.exe \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\QVTKOpenGLNativeWidget.h" \
+		..\..\CustomTreeView.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtOpenGLWidgets\QOpenGLWidget \
+		D:\Qt\6.7.0\msvc2019_64\include\QtOpenGLWidgets\qopenglwidget.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtOpenGLWidgets\qtopenglwidgetsglobal.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qglobal.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtversionchecks.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtconfiginclude.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qconfig.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtcore-config.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtconfigmacros.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtcoreexports.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcompilerdetection.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qsystemdetection.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qprocessordetection.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtdeprecationmarkers.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtpreprocessorsupport.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qassert.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtnoop.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtypes.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtversion.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtclasshelpermacros.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtypeinfo.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcontainerfwd.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qsysinfo.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qlogging.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qflags.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcompare_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qatomic.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qbasicatomic.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qatomic_cxx11.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qgenericatomic.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qyieldcpu.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qconstructormacros.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qdarwinhelpers.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qexceptionhandling.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qforeach.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qttypetraits.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qfunctionpointer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qglobalstatic.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qmalloc.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qminmax.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qnumeric.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qoverload.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qswap.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtenvironmentvariables.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtresource.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qttranslation.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qversiontagging.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtOpenGLWidgets\qtopenglwidgetsexports.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\QWidget \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qwidget.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtwidgetsglobal.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qtguiglobal.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qtgui-config.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qtguiexports.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtwidgets-config.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtwidgetsexports.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qwindowdefs.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qobjectdefs.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qnamespace.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtmetamacros.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qobjectdefs_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qfunctionaltools_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qwindowdefs_win.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qobject.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstring.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qchar.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qbytearray.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qrefcount.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qarraydata.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qpair.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qarraydatapointer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qarraydataops.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcontainertools_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qxptype_traits.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\q20functional.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\q20memory.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qbytearrayalgorithms.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qbytearrayview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringfwd.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\q20type_traits.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringliteral.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringalgorithms.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qlatin1stringview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qanystringview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qutf8stringview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringtokenizer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringbuilder.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringconverter.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringconverter_base.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qlist.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qhashfunctions.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qiterator.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qbytearraylist.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringlist.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qalgorithms.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringmatcher.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcoreevent.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qscopedpointer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qmetatype.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcompare.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcomparehelpers.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qdatastream.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qiodevicebase.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qfloat16.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qmath.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qiterable.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qmetacontainer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcontainerinfo.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtaggedpointer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qscopeguard.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qobject_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qbindingstorage.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qmargins.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\q23utility.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qaction.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qkeysequence.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qicon.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qsize.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qpixmap.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qpaintdevice.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qrect.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qpoint.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qcolor.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qrgb.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qrgba64.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qshareddata.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qimage.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qpixelformat.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qtransform.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qpolygon.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qregion.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qline.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qvariant.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qdebug.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtextstream.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcontiguouscache.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qsharedpointer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qsharedpointer_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qmap.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qshareddata_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qset.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qhash.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qvarlengtharray.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qpalette.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qbrush.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qfont.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qendian.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qfontmetrics.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qfontinfo.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qsizepolicy.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qcursor.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qbitmap.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qevent.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qiodevice.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qurl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qeventpoint.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qvector2d.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qvectornd.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qpointingdevice.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qinputdevice.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qscreen.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\QList \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\QObject \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\QRect \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\QSize \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\QSizeF \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\QTransform \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qnativeinterface.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qscreen_platform.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qguiapplication.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcoreapplication.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qdeadlinetimer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qelapsedtimer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qeventloop.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcoreapplication_platform.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qfuture.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qfutureinterface.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qmutex.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtsan_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qresultstore.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qfuture_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qthreadpool.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qthread.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qrunnable.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qexception.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qpromise.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qinputmethod.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qlocale.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qguiapplication_platform.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\QSurfaceFormat \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qsurfaceformat.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qopengl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qopenglext.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qt_windows.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\QScopedPointer \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\QVTKInteractor.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\QVTKWin32Header.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkABI.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkBuild.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkSystemIncludes.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkWin32Header.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkPlatform.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkIOStreamFwd.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkIOStream.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkType.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkCompiler.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkLegacy.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkOptions.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtk_kwiml.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkkwiml\abi.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkkwiml\int.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkWrappingHints.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkOStreamWrapper.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkCommonCoreModule.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkOStrStreamWrapper.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkGUISupportQtModule.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkCommand.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkObject.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkObjectBase.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkFeatures.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkIndent.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkSetGet.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtksys\SystemTools.hxx" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtksys\Configure.hxx" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtksys\Configure.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtksys\Status.hxx" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkTimeStamp.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkWeakPointerBase.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkRenderWindowInteractor.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkRenderingCoreModule.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkFiltersCoreModule.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkAutoInit.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkDebugLeaksManager.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkSmartPointer.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkSmartPointerBase.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkMeta.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkNew.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkTDxConfigure.h" \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\QTreeView \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtreeview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtwidgetsglobal.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qtguiglobal.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qglobal.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtversionchecks.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtconfiginclude.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qconfig.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtcore-config.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtconfigmacros.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtcoreexports.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcompilerdetection.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qsystemdetection.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qprocessordetection.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtdeprecationmarkers.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtpreprocessorsupport.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qassert.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtnoop.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtypes.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtversion.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtclasshelpermacros.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtypeinfo.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcontainerfwd.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qsysinfo.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qlogging.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qflags.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcompare_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qatomic.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qbasicatomic.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qatomic_cxx11.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qgenericatomic.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qyieldcpu.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qconstructormacros.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qdarwinhelpers.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qexceptionhandling.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qforeach.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qttypetraits.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qfunctionpointer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qglobalstatic.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qmalloc.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qminmax.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qnumeric.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qoverload.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qswap.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtenvironmentvariables.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtresource.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qttranslation.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qversiontagging.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qtgui-config.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qtguiexports.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtwidgets-config.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtwidgetsexports.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractitemview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qframe.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qwidget.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qwindowdefs.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qobjectdefs.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qnamespace.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtmetamacros.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qobjectdefs_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qfunctionaltools_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qwindowdefs_win.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qobject.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstring.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qchar.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qbytearray.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qrefcount.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qarraydata.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qpair.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qarraydatapointer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qarraydataops.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcontainertools_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qxptype_traits.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\q20functional.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\q20memory.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qbytearrayalgorithms.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qbytearrayview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringfwd.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\q20type_traits.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringliteral.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringalgorithms.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qlatin1stringview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qanystringview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qutf8stringview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringtokenizer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringbuilder.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringconverter.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringconverter_base.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qlist.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qhashfunctions.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qiterator.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qbytearraylist.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringlist.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qalgorithms.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringmatcher.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcoreevent.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qscopedpointer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qmetatype.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcompare.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcomparehelpers.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qdatastream.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qiodevicebase.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qfloat16.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qmath.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qiterable.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qmetacontainer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcontainerinfo.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtaggedpointer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qscopeguard.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qobject_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qbindingstorage.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qmargins.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\q23utility.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qaction.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qkeysequence.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qicon.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qsize.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qpixmap.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qpaintdevice.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qrect.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qpoint.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qcolor.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qrgb.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qrgba64.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qshareddata.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qimage.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qpixelformat.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qtransform.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qpolygon.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qregion.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qline.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qvariant.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qdebug.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtextstream.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcontiguouscache.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qsharedpointer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qsharedpointer_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qmap.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qshareddata_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qset.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qhash.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qvarlengtharray.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qpalette.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qbrush.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qfont.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qendian.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qfontmetrics.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qfontinfo.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qsizepolicy.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qcursor.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qbitmap.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qevent.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qiodevice.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qurl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qeventpoint.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qvector2d.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qvectornd.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qpointingdevice.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qinputdevice.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qscreen.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\QList \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\QObject \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\QRect \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\QSize \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\QSizeF \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\QTransform \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qnativeinterface.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qscreen_platform.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qguiapplication.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcoreapplication.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qdeadlinetimer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qelapsedtimer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qeventloop.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcoreapplication_platform.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qfuture.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qfutureinterface.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qmutex.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtsan_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qresultstore.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qfuture_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qthreadpool.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qthread.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qrunnable.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qexception.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qpromise.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qinputmethod.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qlocale.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qguiapplication_platform.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qabstractitemmodel.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qitemselectionmodel.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractitemdelegate.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qstyleoption.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractspinbox.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qvalidator.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qregularexpression.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qslider.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractslider.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qstyle.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtabbar.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtabwidget.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qrubberband.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\QWheelEvent
 	D:\Qt\6.7.0\msvc2019_64\bin\uic.exe ..\..\mainwindow.ui -o ui_mainwindow.h
 
 compiler_yacc_decl_make_all:
@@ -2508,6 +3209,212 @@ compiler_clean: compiler_rcc_clean compiler_moc_predefs_clean compiler_moc_heade
 
 
 ####### Compile
+
+release\CustomTreeView.obj: ..\..\CustomTreeView.cpp ..\..\CustomTreeView.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\QTreeView \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtreeview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtwidgetsglobal.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qtguiglobal.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qglobal.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtversionchecks.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtconfiginclude.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qconfig.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtcore-config.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtconfigmacros.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtcoreexports.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcompilerdetection.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qsystemdetection.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qprocessordetection.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtdeprecationmarkers.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtpreprocessorsupport.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qassert.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtnoop.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtypes.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtversion.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtclasshelpermacros.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtypeinfo.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcontainerfwd.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qsysinfo.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qlogging.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qflags.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcompare_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qatomic.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qbasicatomic.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qatomic_cxx11.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qgenericatomic.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qyieldcpu.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qconstructormacros.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qdarwinhelpers.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qexceptionhandling.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qforeach.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qttypetraits.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qfunctionpointer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qglobalstatic.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qmalloc.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qminmax.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qnumeric.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qoverload.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qswap.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtenvironmentvariables.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtresource.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qttranslation.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qversiontagging.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qtgui-config.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qtguiexports.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtwidgets-config.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtwidgetsexports.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractitemview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qframe.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qwidget.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qwindowdefs.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qobjectdefs.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qnamespace.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtmetamacros.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qobjectdefs_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qfunctionaltools_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qwindowdefs_win.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qobject.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstring.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qchar.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qbytearray.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qrefcount.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qarraydata.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qpair.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qarraydatapointer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qarraydataops.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcontainertools_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qxptype_traits.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\q20functional.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\q20memory.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qbytearrayalgorithms.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qbytearrayview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringfwd.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\q20type_traits.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringliteral.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringalgorithms.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qlatin1stringview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qanystringview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qutf8stringview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringtokenizer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringbuilder.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringconverter.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringconverter_base.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qlist.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qhashfunctions.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qiterator.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qbytearraylist.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringlist.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qalgorithms.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qstringmatcher.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcoreevent.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qscopedpointer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qmetatype.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcompare.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcomparehelpers.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qdatastream.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qiodevicebase.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qfloat16.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qmath.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qiterable.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qmetacontainer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcontainerinfo.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtaggedpointer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qscopeguard.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qobject_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qbindingstorage.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qmargins.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\q23utility.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qaction.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qkeysequence.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qicon.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qsize.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qpixmap.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qpaintdevice.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qrect.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qpoint.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qcolor.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qrgb.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qrgba64.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qshareddata.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qimage.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qpixelformat.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qtransform.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qpolygon.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qregion.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qline.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qvariant.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qdebug.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtextstream.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcontiguouscache.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qsharedpointer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qsharedpointer_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qmap.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qshareddata_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qset.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qhash.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qvarlengtharray.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qpalette.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qbrush.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qfont.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qendian.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qfontmetrics.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qfontinfo.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qsizepolicy.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qcursor.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qbitmap.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qevent.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qiodevice.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qurl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qeventpoint.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qvector2d.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qvectornd.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qpointingdevice.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qinputdevice.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qscreen.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\QList \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\QObject \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\QRect \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\QSize \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\QSizeF \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\QTransform \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qnativeinterface.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qscreen_platform.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qguiapplication.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcoreapplication.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qdeadlinetimer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qelapsedtimer.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qeventloop.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcoreapplication_platform.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qfuture.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qfutureinterface.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qmutex.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qtsan_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qresultstore.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qfuture_impl.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qthreadpool.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qthread.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qrunnable.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qexception.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qpromise.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qinputmethod.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qlocale.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qguiapplication_platform.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qabstractitemmodel.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qitemselectionmodel.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractitemdelegate.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qstyleoption.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractspinbox.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qvalidator.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qregularexpression.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qslider.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractslider.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qstyle.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtabbar.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtabwidget.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qrubberband.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\QWheelEvent
 
 release\main.obj: ..\..\main.cpp ..\..\mainwindow.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\QMainWindow \
@@ -4803,6 +5710,25 @@ release\main.obj: ..\..\main.cpp ..\..\mainwindow.h \
 		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\fusion\view\filter_view\detail\size_impl.hpp" \
 		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\common\impl\centroid.hpp" \
 		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\features\impl\normal_3d.hpp" \
+		..\..\CustomTreeView.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\QTreeView \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtreeview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractitemview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qframe.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qabstractitemmodel.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qitemselectionmodel.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractitemdelegate.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qstyleoption.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractspinbox.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qvalidator.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qregularexpression.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qslider.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractslider.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qstyle.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtabbar.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qrubberband.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\QWheelEvent \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\QApplication \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qapplication.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtCore\QMutex \
@@ -4810,7 +5736,12 @@ release\main.obj: ..\..\main.cpp ..\..\mainwindow.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qdatetime.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qcalendar.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtCore\QQueue \
-		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qqueue.h
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qqueue.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\QFile \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qfile.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qfiledevice.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\QStyleFactory \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qstylefactory.h
 
 release\mainwindow.obj: ..\..\mainwindow.cpp ..\..\mainwindow.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\QMainWindow \
@@ -7106,6 +8037,25 @@ release\mainwindow.obj: ..\..\mainwindow.cpp ..\..\mainwindow.h \
 		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\fusion\view\filter_view\detail\size_impl.hpp" \
 		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\common\impl\centroid.hpp" \
 		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\features\impl\normal_3d.hpp" \
+		..\..\CustomTreeView.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\QTreeView \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtreeview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractitemview.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qframe.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qabstractitemmodel.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qitemselectionmodel.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractitemdelegate.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qstyleoption.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractspinbox.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qvalidator.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qregularexpression.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qslider.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractslider.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qstyle.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtabbar.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qrubberband.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\QWheelEvent \
 		ui_mainwindow.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\QFileDialog \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qfiledialog.h \
@@ -7128,9 +8078,61 @@ release\mainwindow.obj: ..\..\mainwindow.cpp ..\..\mainwindow.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qqueue.h \
 		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkColorTransferFunction.h" \
 		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkScalarBarActor.h" \
-		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkDoubleArray.h"
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkDoubleArray.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\common\common.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\common\impl\common.hpp" \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\QFileSystemModel \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qfilesystemmodel.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qdiriterator.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\QStandardItem \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qstandarditemmodel.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\QDir \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\convex_hull.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\impl\convex_hull.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\common\transforms.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\common\impl\transforms.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\qhull.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Qhull\include\libqhull_r\libqhull_r.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Qhull\include\libqhull_r\user_r.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Qhull\include\libqhull_r\mem_r.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Qhull\include\libqhull_r\qset_r.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Qhull\include\libqhull_r\stat_r.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Qhull\include\libqhull_r\geom_r.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Qhull\include\libqhull_r\merge_r.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Qhull\include\libqhull_r\poly_r.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Qhull\include\libqhull_r\io_r.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\poisson.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\impl\poisson.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\3rdparty\poisson4\octree_poisson.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\3rdparty\poisson4\allocator.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\3rdparty\poisson4\binary_node.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\3rdparty\poisson4\marching_cubes_poisson.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\3rdparty\poisson4\geometry.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\3rdparty\poisson4\geometry.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\3rdparty\poisson4\octree_poisson.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\3rdparty\poisson4\poisson_exceptions.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\3rdparty\poisson4\sparse_matrix.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\3rdparty\poisson4\vector.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\3rdparty\poisson4\vector.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\3rdparty\poisson4\sparse_matrix.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\3rdparty\poisson4\function_data.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\3rdparty\poisson4\ppolynomial.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\3rdparty\poisson4\polynomial.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\3rdparty\poisson4\polynomial.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\3rdparty\poisson4\factor.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\3rdparty\poisson4\ppolynomial.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\3rdparty\poisson4\function_data.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\3rdparty\poisson4\multi_grid_octree_data.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\3rdparty\poisson4\bspline_data.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\3rdparty\poisson4\bspline_data.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\3rdparty\poisson4\multi_grid_octree_data.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\3rdparty\poisson4\mat.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\3rdparty\poisson4\mat.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkAxesActor.h"
 
 release\qrc_view_icon.obj: release\qrc_view_icon.cpp 
+
+release\moc_CustomTreeView.obj: release\moc_CustomTreeView.cpp 
 
 release\moc_mainwindow.obj: release\moc_mainwindow.cpp 
 

@@ -6,5 +6,23 @@
         <file>resource/right_view.png</file>
         <file>resource/top_view.png</file>
         <file>resource/up_view.png</file>
+        <file>resource/theme/default.qss</file>
+        <file>resource/theme/no.qss</file>
+        <file>resource/theme/white.qss</file>
+        <file>resource/theme/QDarkStyleSheet.qss</file>
+        <file>resource/axis.png</file>
+        <file>resource/bigger.png</file>
+        <file>resource/interpolation.png</file>
+        <file>resource/meshing.png</file>
+        <file>resource/open.png</file>
+        <file>resource/save.png</file>
+        <file>resource/Save_As.png</file>
+        <file>resource/smaller.png</file>
+        <file>resource/eye.png</file>
+        <file>resource/point_cloud_icon.png</file>
+        <file>resource/logo.ico</file>
+        <file>resource/cloud.png</file>
+        <file>resource/tree_clear.png</file>
+        <file>resource/file.png</file>
     </qresource>
 </RCC>

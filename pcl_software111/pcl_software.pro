@@ -9,10 +9,12 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    CustomTreeView.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
+    CustomTreeView.h \
     mainwindow.h
 
 FORMS += \
@@ -506,3 +508,7 @@ LIBS += -L'C:\Program Files\PCL 1.13.1\3rdParty\VTK\lib'\
 
 RESOURCES += \
     view_icon.qrc
+
+DISTFILES +=
+
+RC_ICONS = logo.ico

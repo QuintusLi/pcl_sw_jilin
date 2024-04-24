@@ -23,6 +23,7 @@
 #include <pcl/io/vtk_lib_io.h>
 #include <pcl/surface/gp3.h>
 #include <pcl/features/normal_3d.h>
+#include "CustomTreeView.h"
 extern int count1;
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -73,14 +74,52 @@ private slots:
 
     void setButtonsEnabled(bool enabled); // 禁用新添加的函数声明
 
+    void on_if_axis_appear_triggered();
+
+    void on_reset_view_triggered();
+
+    void on_interface_larger_triggered();
+
+    void on_interface_smaller_triggered();
+
+    void on_bb_theme_triggered();
+
+    void on_action1_triggered();
+
+    void on_action3_triggered();
+
+    void on_action4_triggered();
+
+
+    void on_actionmain_view_triggered();
+
+    void on_actionback_view_triggered();
+
+    void on_actionleft_view_triggered();
+
+    void on_actionright_view_triggered();
+
+    void on_actiontop_view_triggered();
+
+    void on_actionup_view_triggered();
+
+    void on_visualization_action_triggered();
+
+    void on_processing_action_triggered();
+
+    void on_tree_clear_triggered();
+
 
 private:
     Ui::MainWindow *ui;
+    CustomTreeView *customTreeView;
     QTimer *timer0;
 
     boost::shared_ptr< pcl::visualization::PCLVisualizer > view;//加载点云的共享指针
     void updateCameraView(double focalPoint[3], double position[3], double viewUp[3]);//切换视图用
     bool buttonsEnabled;//存储按钮状态
+
+    vtkSmartPointer<vtkOrientationMarkerWidget> MarkerWidget;
 
 
 };
