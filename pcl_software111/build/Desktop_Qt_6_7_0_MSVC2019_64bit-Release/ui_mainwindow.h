@@ -17,6 +17,8 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QDockWidget>
+#include <QtWidgets/QDoubleSpinBox>
+#include <QtWidgets/QFormLayout>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
@@ -26,6 +28,7 @@
 #include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTextEdit>
 #include <QtWidgets/QToolBar>
@@ -91,11 +94,28 @@ public:
     QWidget *dockWidgetContents_3;
     QVBoxLayout *verticalLayout_3;
     QWidget *widget_6;
-    QHBoxLayout *horizontalLayout_2;
+    QVBoxLayout *verticalLayout_8;
     QLabel *label_5;
-    QVBoxLayout *verticalLayout_4;
+    QLabel *L_yuzhi1;
+    QDoubleSpinBox *L_yuzhi;
+    QLabel *L_search1;
+    QSpinBox *L_search;
+    QPushButton *delete_away;
     QPushButton *pushButton;
+    QWidget *widget_9;
+    QHBoxLayout *horizontalLayout_2;
+    QFormLayout *formLayout;
+    QLabel *label_12;
+    QSpinBox *diedai;
+    QLabel *label_13;
+    QDoubleSpinBox *songchi;
     QPushButton *pushButton_2;
+    QFormLayout *formLayout_2;
+    QLabel *label_10;
+    QDoubleSpinBox *G_searchradius;
+    QLabel *label_11;
+    QSpinBox *G_standard;
+    QPushButton *Gauss_Button;
     QFrame *line_3;
     QWidget *widget_2;
     QHBoxLayout *horizontalLayout_4;
@@ -103,11 +123,22 @@ public:
     QVBoxLayout *verticalLayout_7;
     QPushButton *chazhi;
     QPushButton *chazhi1;
-    QFrame *line_2;
     QWidget *widget;
-    QHBoxLayout *horizontalLayout_3;
+    QVBoxLayout *verticalLayout_6;
+    QFrame *line_2;
     QLabel *label_4;
+    QWidget *widget_7;
+    QGridLayout *gridLayout_2;
+    QDoubleSpinBox *fluent_coefficient;
+    QDoubleSpinBox *searchradius;
+    QLabel *label_9;
+    QComboBox *comboBox_3;
+    QLabel *label_8;
+    QLabel *label_7;
+    QLabel *label_6;
+    QSpinBox *setMaximumNearestNeighbors;
     QPushButton *TaLanSanJiao;
+    QPushButton *bosong;
     QDockWidget *dockWidget;
     QWidget *dockWidgetContents_2;
     QHBoxLayout *horizontalLayout;
@@ -138,7 +169,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
-        MainWindow->resize(800, 743);
+        MainWindow->resize(800, 924);
         QIcon icon;
         icon.addFile(QString::fromUtf8(":/new/prefix1/resource/point_cloud_icon.png"), QSize(), QIcon::Normal, QIcon::Off);
         MainWindow->setWindowIcon(icon);
@@ -162,7 +193,7 @@ public:
         close_action->setMenuRole(QAction::NoRole);
         exit_action = new QAction(MainWindow);
         exit_action->setObjectName("exit_action");
-        exit_action->setEnabled(false);
+        exit_action->setEnabled(true);
         exit_action->setMenuRole(QAction::NoRole);
         actionPCD = new QAction(MainWindow);
         actionPCD->setObjectName("actionPCD");
@@ -299,6 +330,7 @@ public:
         treeView = new CustomTreeView(widget_5);
         treeView->setObjectName("treeView");
         treeView->setMaximumSize(QSize(450, 16777215));
+        treeView->setMouseTracking(false);
         treeView->setAutoFillBackground(false);
         treeView->setStyleSheet(QString::fromUtf8("color: white;"));
         treeView->setEditTriggers(QAbstractItemView::NoEditTriggers);
@@ -363,15 +395,15 @@ public:
         MainWindow->addToolBar(Qt::ToolBarArea::LeftToolBarArea, toolBar_2);
         dockWidget_3 = new QDockWidget(MainWindow);
         dockWidget_3->setObjectName("dockWidget_3");
-        dockWidget_3->setMinimumSize(QSize(300, 300));
-        dockWidget_3->setMaximumSize(QSize(300, 300));
+        dockWidget_3->setMinimumSize(QSize(500, 496));
+        dockWidget_3->setMaximumSize(QSize(500, 800));
         dockWidget_3->setMouseTracking(false);
         dockWidget_3->setTabletTracking(false);
         dockWidget_3->setAcceptDrops(false);
         dockWidget_3->setAutoFillBackground(false);
         dockWidget_3->setInputMethodHints(Qt::ImhNone);
         dockWidget_3->setFloating(true);
-        dockWidget_3->setFeatures(QDockWidget::DockWidgetClosable|QDockWidget::DockWidgetMovable);
+        dockWidget_3->setFeatures(QDockWidget::DockWidgetClosable|QDockWidget::DockWidgetFloatable|QDockWidget::DockWidgetMovable);
         dockWidget_3->setAllowedAreas(Qt::AllDockWidgetAreas);
         dockWidgetContents_3 = new QWidget();
         dockWidgetContents_3->setObjectName("dockWidgetContents_3");
@@ -379,29 +411,132 @@ public:
         verticalLayout_3->setObjectName("verticalLayout_3");
         widget_6 = new QWidget(dockWidgetContents_3);
         widget_6->setObjectName("widget_6");
-        horizontalLayout_2 = new QHBoxLayout(widget_6);
-        horizontalLayout_2->setObjectName("horizontalLayout_2");
+        verticalLayout_8 = new QVBoxLayout(widget_6);
+        verticalLayout_8->setObjectName("verticalLayout_8");
         label_5 = new QLabel(widget_6);
         label_5->setObjectName("label_5");
 
-        horizontalLayout_2->addWidget(label_5);
+        verticalLayout_8->addWidget(label_5);
 
-        verticalLayout_4 = new QVBoxLayout();
-        verticalLayout_4->setObjectName("verticalLayout_4");
+        L_yuzhi1 = new QLabel(widget_6);
+        L_yuzhi1->setObjectName("L_yuzhi1");
+
+        verticalLayout_8->addWidget(L_yuzhi1);
+
+        L_yuzhi = new QDoubleSpinBox(widget_6);
+        L_yuzhi->setObjectName("L_yuzhi");
+        L_yuzhi->setMaximum(5.000000000000000);
+        L_yuzhi->setSingleStep(0.250000000000000);
+        L_yuzhi->setValue(1.000000000000000);
+
+        verticalLayout_8->addWidget(L_yuzhi);
+
+        L_search1 = new QLabel(widget_6);
+        L_search1->setObjectName("L_search1");
+
+        verticalLayout_8->addWidget(L_search1);
+
+        L_search = new QSpinBox(widget_6);
+        L_search->setObjectName("L_search");
+        L_search->setMaximum(10000);
+        L_search->setSingleStep(1);
+        L_search->setValue(50);
+
+        verticalLayout_8->addWidget(L_search);
+
+        delete_away = new QPushButton(widget_6);
+        delete_away->setObjectName("delete_away");
+        delete_away->setEnabled(false);
+
+        verticalLayout_8->addWidget(delete_away);
+
         pushButton = new QPushButton(widget_6);
         pushButton->setObjectName("pushButton");
         pushButton->setEnabled(false);
 
-        verticalLayout_4->addWidget(pushButton);
+        verticalLayout_8->addWidget(pushButton);
 
-        pushButton_2 = new QPushButton(widget_6);
+        widget_9 = new QWidget(widget_6);
+        widget_9->setObjectName("widget_9");
+        horizontalLayout_2 = new QHBoxLayout(widget_9);
+        horizontalLayout_2->setObjectName("horizontalLayout_2");
+        formLayout = new QFormLayout();
+        formLayout->setObjectName("formLayout");
+        label_12 = new QLabel(widget_9);
+        label_12->setObjectName("label_12");
+
+        formLayout->setWidget(0, QFormLayout::LabelRole, label_12);
+
+        diedai = new QSpinBox(widget_9);
+        diedai->setObjectName("diedai");
+        diedai->setMinimum(1);
+        diedai->setMaximum(1000);
+        diedai->setSingleStep(5);
+        diedai->setValue(10);
+        diedai->setDisplayIntegerBase(10);
+
+        formLayout->setWidget(0, QFormLayout::FieldRole, diedai);
+
+        label_13 = new QLabel(widget_9);
+        label_13->setObjectName("label_13");
+
+        formLayout->setWidget(1, QFormLayout::LabelRole, label_13);
+
+        songchi = new QDoubleSpinBox(widget_9);
+        songchi->setObjectName("songchi");
+        songchi->setMinimum(0.010000000000000);
+        songchi->setMaximum(1.000000000000000);
+        songchi->setValue(0.500000000000000);
+
+        formLayout->setWidget(1, QFormLayout::FieldRole, songchi);
+
+
+        horizontalLayout_2->addLayout(formLayout);
+
+        pushButton_2 = new QPushButton(widget_9);
         pushButton_2->setObjectName("pushButton_2");
         pushButton_2->setEnabled(false);
 
-        verticalLayout_4->addWidget(pushButton_2);
+        horizontalLayout_2->addWidget(pushButton_2);
+
+        formLayout_2 = new QFormLayout();
+        formLayout_2->setObjectName("formLayout_2");
+        label_10 = new QLabel(widget_9);
+        label_10->setObjectName("label_10");
+
+        formLayout_2->setWidget(0, QFormLayout::LabelRole, label_10);
+
+        G_searchradius = new QDoubleSpinBox(widget_9);
+        G_searchradius->setObjectName("G_searchradius");
+        G_searchradius->setMaximum(9999.000000000000000);
+        G_searchradius->setValue(10.000000000000000);
+
+        formLayout_2->setWidget(0, QFormLayout::FieldRole, G_searchradius);
+
+        label_11 = new QLabel(widget_9);
+        label_11->setObjectName("label_11");
+
+        formLayout_2->setWidget(1, QFormLayout::LabelRole, label_11);
+
+        G_standard = new QSpinBox(widget_9);
+        G_standard->setObjectName("G_standard");
+        G_standard->setMaximum(10000);
+        G_standard->setSingleStep(10);
+        G_standard->setValue(6);
+
+        formLayout_2->setWidget(1, QFormLayout::FieldRole, G_standard);
 
 
-        horizontalLayout_2->addLayout(verticalLayout_4);
+        horizontalLayout_2->addLayout(formLayout_2);
+
+        Gauss_Button = new QPushButton(widget_9);
+        Gauss_Button->setObjectName("Gauss_Button");
+        Gauss_Button->setEnabled(false);
+
+        horizontalLayout_2->addWidget(Gauss_Button);
+
+
+        verticalLayout_8->addWidget(widget_9);
 
 
         verticalLayout_3->addWidget(widget_6);
@@ -442,27 +577,90 @@ public:
 
         verticalLayout_3->addWidget(widget_2);
 
-        line_2 = new QFrame(dockWidgetContents_3);
+        widget = new QWidget(dockWidgetContents_3);
+        widget->setObjectName("widget");
+        verticalLayout_6 = new QVBoxLayout(widget);
+        verticalLayout_6->setObjectName("verticalLayout_6");
+        line_2 = new QFrame(widget);
         line_2->setObjectName("line_2");
         line_2->setFrameShape(QFrame::Shape::HLine);
         line_2->setFrameShadow(QFrame::Shadow::Sunken);
 
-        verticalLayout_3->addWidget(line_2);
+        verticalLayout_6->addWidget(line_2);
 
-        widget = new QWidget(dockWidgetContents_3);
-        widget->setObjectName("widget");
-        horizontalLayout_3 = new QHBoxLayout(widget);
-        horizontalLayout_3->setObjectName("horizontalLayout_3");
         label_4 = new QLabel(widget);
         label_4->setObjectName("label_4");
+        label_4->setMaximumSize(QSize(16777215, 50));
 
-        horizontalLayout_3->addWidget(label_4);
+        verticalLayout_6->addWidget(label_4);
+
+        widget_7 = new QWidget(widget);
+        widget_7->setObjectName("widget_7");
+        gridLayout_2 = new QGridLayout(widget_7);
+        gridLayout_2->setObjectName("gridLayout_2");
+        fluent_coefficient = new QDoubleSpinBox(widget_7);
+        fluent_coefficient->setObjectName("fluent_coefficient");
+        fluent_coefficient->setSingleStep(0.500000000000000);
+        fluent_coefficient->setValue(3.500000000000000);
+
+        gridLayout_2->addWidget(fluent_coefficient, 0, 4, 2, 2);
+
+        searchradius = new QDoubleSpinBox(widget_7);
+        searchradius->setObjectName("searchradius");
+        searchradius->setMaximum(9999.000000000000000);
+        searchradius->setValue(10.000000000000000);
+
+        gridLayout_2->addWidget(searchradius, 0, 1, 2, 2);
+
+        label_9 = new QLabel(widget_7);
+        label_9->setObjectName("label_9");
+
+        gridLayout_2->addWidget(label_9, 2, 3, 1, 2);
+
+        comboBox_3 = new QComboBox(widget_7);
+        comboBox_3->addItem(QString());
+        comboBox_3->addItem(QString());
+        comboBox_3->setObjectName("comboBox_3");
+
+        gridLayout_2->addWidget(comboBox_3, 2, 5, 1, 1);
+
+        label_8 = new QLabel(widget_7);
+        label_8->setObjectName("label_8");
+
+        gridLayout_2->addWidget(label_8, 2, 0, 1, 2);
+
+        label_7 = new QLabel(widget_7);
+        label_7->setObjectName("label_7");
+
+        gridLayout_2->addWidget(label_7, 0, 3, 2, 1);
+
+        label_6 = new QLabel(widget_7);
+        label_6->setObjectName("label_6");
+
+        gridLayout_2->addWidget(label_6, 0, 0, 2, 1);
+
+        setMaximumNearestNeighbors = new QSpinBox(widget_7);
+        setMaximumNearestNeighbors->setObjectName("setMaximumNearestNeighbors");
+        setMaximumNearestNeighbors->setMaximum(10000);
+        setMaximumNearestNeighbors->setSingleStep(10);
+        setMaximumNearestNeighbors->setValue(1500);
+
+        gridLayout_2->addWidget(setMaximumNearestNeighbors, 2, 2, 1, 1);
+
+
+        verticalLayout_6->addWidget(widget_7);
 
         TaLanSanJiao = new QPushButton(widget);
         TaLanSanJiao->setObjectName("TaLanSanJiao");
         TaLanSanJiao->setEnabled(false);
 
-        horizontalLayout_3->addWidget(TaLanSanJiao);
+        verticalLayout_6->addWidget(TaLanSanJiao);
+
+        bosong = new QPushButton(widget);
+        bosong->setObjectName("bosong");
+        bosong->setEnabled(false);
+
+        verticalLayout_6->addWidget(bosong);
 
 
         verticalLayout_3->addWidget(widget);
@@ -744,13 +942,29 @@ public:
         toolBar_2->setWindowTitle(QCoreApplication::translate("MainWindow", "toolBar_2", nullptr));
         dockWidget_3->setWindowTitle(QCoreApplication::translate("MainWindow", "\347\202\271\344\272\221\345\244\204\347\220\206\346\223\215\344\275\234\347\225\214\351\235\242", nullptr));
         label_5->setText(QCoreApplication::translate("MainWindow", "\351\242\204\345\244\204\347\220\206\346\223\215\344\275\234\357\274\232", nullptr));
+        L_yuzhi1->setText(QCoreApplication::translate("MainWindow", "\345\210\244\346\226\255\351\230\210\345\200\274\357\274\232", nullptr));
+        L_search1->setText(QCoreApplication::translate("MainWindow", "\350\200\203\350\231\221\344\270\264\350\277\221\347\202\271\344\270\252\346\225\260\357\274\232", nullptr));
+        delete_away->setText(QCoreApplication::translate("MainWindow", "\347\246\273\347\276\244\347\202\271\345\216\273\351\231\244", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "\344\270\213\351\207\207\346\240\267", nullptr));
+        label_12->setText(QCoreApplication::translate("MainWindow", "\345\271\263\346\273\221\350\277\255\344\273\243\346\254\241\346\225\260\357\274\232", nullptr));
+        label_13->setText(QCoreApplication::translate("MainWindow", "\346\235\276\345\274\233\345\233\240\345\255\220\357\274\232", nullptr));
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "\346\213\211\346\231\256\346\213\211\346\226\257\345\271\263\346\273\221\345\244\204\347\220\206", nullptr));
+        label_10->setText(QCoreApplication::translate("MainWindow", "\346\220\234\347\264\242\345\215\212\345\276\204\357\274\232", nullptr));
+        label_11->setText(QCoreApplication::translate("MainWindow", "\346\240\207\345\207\206\345\267\256\357\274\232", nullptr));
+        Gauss_Button->setText(QCoreApplication::translate("MainWindow", "\351\253\230\346\226\257\345\271\263\346\273\221\345\244\204\347\220\206", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "\346\217\222\345\200\274\346\223\215\344\275\234\357\274\232", nullptr));
         chazhi->setText(QCoreApplication::translate("MainWindow", "\346\234\200\350\277\221\351\202\273\346\217\222\345\200\274", nullptr));
         chazhi1->setText(QCoreApplication::translate("MainWindow", "\350\267\235\347\246\273\345\217\215\346\257\224\346\217\222\345\200\274", nullptr));
         label_4->setText(QCoreApplication::translate("MainWindow", "\347\275\221\346\240\274\345\214\226\346\223\215\344\275\234\357\274\232", nullptr));
-        TaLanSanJiao->setText(QCoreApplication::translate("MainWindow", "\344\270\211\350\247\222\347\275\221\346\240\274\345\214\226", nullptr));
+        label_9->setText(QCoreApplication::translate("MainWindow", "\350\200\203\350\231\221\347\202\271\347\232\204\346\263\225\347\272\277\344\270\200\350\207\264\346\200\247:", nullptr));
+        comboBox_3->setItemText(0, QCoreApplication::translate("MainWindow", "\345\220\246", nullptr));
+        comboBox_3->setItemText(1, QCoreApplication::translate("MainWindow", "\346\230\257", nullptr));
+
+        label_8->setText(QCoreApplication::translate("MainWindow", "\346\234\200\345\244\247\351\202\273\345\261\205\347\202\271\346\225\260\357\274\232", nullptr));
+        label_7->setText(QCoreApplication::translate("MainWindow", "\345\205\211\346\273\221\345\257\206\345\272\246\345\233\240\345\255\220\357\274\232", nullptr));
+        label_6->setText(QCoreApplication::translate("MainWindow", "\346\220\234\347\264\242\345\215\212\345\276\204\357\274\232", nullptr));
+        TaLanSanJiao->setText(QCoreApplication::translate("MainWindow", "\350\277\233\350\241\214\350\264\252\345\251\252\344\270\211\350\247\222\345\214\226", nullptr));
+        bosong->setText(QCoreApplication::translate("MainWindow", "\346\263\212\346\235\276\351\207\215\345\273\272", nullptr));
         dockWidget->setWindowTitle(QCoreApplication::translate("MainWindow", "\347\202\271\344\272\221\345\244\204\347\220\206\345\256\236\346\227\266\346\227\245\345\277\227\357\274\232", nullptr));
         dockWidget_2->setWindowTitle(QCoreApplication::translate("MainWindow", "\347\202\271\344\272\221\345\217\257\350\247\206\345\214\226\346\223\215\344\275\234\347\225\214\351\235\242", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "\350\247\206\345\233\276\350\275\254\346\215\242\357\274\232", nullptr));

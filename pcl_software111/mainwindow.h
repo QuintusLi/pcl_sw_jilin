@@ -23,6 +23,8 @@
 #include <pcl/io/vtk_lib_io.h>
 #include <pcl/surface/gp3.h>
 #include <pcl/features/normal_3d.h>
+#include <QCheckBox>
+#include <QStandardItemModel>
 #include "CustomTreeView.h"
 extern int count1;
 QT_BEGIN_NAMESPACE
@@ -47,10 +49,6 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
 
     ~MainWindow();
-
-
-
-
 
 private slots:
 
@@ -109,6 +107,8 @@ private slots:
 
     void on_tree_clear_triggered();
 
+    void checkState();
+
 
 private:
     Ui::MainWindow *ui;
@@ -120,7 +120,28 @@ private:
     bool buttonsEnabled;//存储按钮状态
 
     vtkSmartPointer<vtkOrientationMarkerWidget> MarkerWidget;
+    QStandardItemModel *model;
+    QStandardItem *fileItem;
+    std::string cloud_id;                                              //点云的id
+    pcl::PointCloud<pcl::PointXYZ>::Ptr allcloud;
+    QMap<QString, pcl::PointCloud<pcl::PointXYZ>::Ptr> pointCloudMap;  // 存储点云名称和对应指针
+    QMap<QString, bool> pointCloudVisibilityMap;  // 存储点云名称和其显示状态
+    QMap<QString, pcl::PolygonMesh> polygonMeshMap;  // 存储生成的 PolygonMesh 对象
+    QMap<QString, bool> polygonMeshVisibilityMap;  // 存储 PolygonMesh 的可见性状态
+    int checkcount = 0; //为复选框的勾选数量计数
+    std::pair<QString, pcl::PointCloud<pcl::PointXYZ>::Ptr> getCurrentlyDisplayedPointCloudFromView(); //查找当前正在显示的点云
 
-
+    //判断两点云是否相同（此函数为辅助用）
+    bool arePointCloudsEqual(const pcl::PointCloud<pcl::PointXYZ>::Ptr& cloud1, const pcl::PointCloud<pcl::PointXYZ>::Ptr& cloud2) const {
+        if (cloud1->size()!= cloud2->size()) {
+            return false;
+        }
+        for (size_t i = 0; i < cloud1->size(); ++i) {
+            if (cloud1->points[i].x!= cloud2->points[i].x || cloud1->points[i].y!= cloud2->points[i].y || cloud1->points[i].z!= cloud2->points[i].z) {
+                return false;
+            }
+        }
+        return true;
+    }
 };
 #endif // MAINWINDOW_H
