@@ -33,10 +33,9 @@
 #include <pcl/search/kdtree.h>
 #include <pcl/filters/convolution_3d.h>
 #include <pcl/filters/statistical_outlier_removal.h>
-
-
 QQueue<LogElement> log_txt;
 int count1=0;
+
 MainWindow::MainWindow(QWidget *parent):
     QMainWindow(parent), ui(new Ui::MainWindow), buttonsEnabled(false)
 {
@@ -54,9 +53,21 @@ MainWindow::MainWindow(QWidget *parent):
     vtkSmartPointer<vtkGenericOpenGLRenderWindow> renderWindow = vtkSmartPointer<vtkGenericOpenGLRenderWindow>::New();
     renderWindow->AddRenderer(renderer);
     view.reset(new pcl::visualization::PCLVisualizer(renderer,renderWindow,"viewer",false));
+
     view->setupInteractor(ui->guiwidget->interactor(),ui->guiwidget->renderWindow());
     view->addCoordinateSystem(0.1);
 
+
+    cloud_polygon.reset(new pcl::PointCloud<pcl::PointXYZ>);
+    cloud_cliped1.reset(new pcl::PointCloud<pcl::PointXYZ>);
+    cloud_cliped2.reset(new pcl::PointCloud<pcl::PointXYZ>);
+
+
+
+    //设置回调函数
+
+    ui->guiwidget->renderWindow()->Render();
+    ui->guiwidget->update();
     pcl::PointXYZ position_x,position_y,position_z;//设置坐标轴标签
     position_x.x = 0.11f;
     position_x.y = 0.0f;
@@ -99,6 +110,7 @@ MainWindow::MainWindow(QWidget *parent):
     MarkerWidget->SetViewport(0.0, 0.0, 0.2, 0.2);
     MarkerWidget->SetEnabled(1);
     MarkerWidget->SetOutlineColor(1,0,0);
+
 
     //打开点云文件的匿名信号槽
     connect(ui->open_action,&QAction::triggered,this,[this]{
@@ -774,8 +786,9 @@ MainWindow::MainWindow(QWidget *parent):
         gp3.setNormalConsistency(false); // Reconstruct
         gp3.setInputCloud(cloud_with_normals); gp3.setSearchMethod(tree2);
         gp3.reconstruct(triangles);
+        polygonMeshMap[cloudId] = triangles;
         view->removeAllPointClouds();
-        view->addPolygonMesh(triangles,"mytriangles");
+        view->addPolygonMesh(triangles,cloudId.toStdString());
         ui->guiwidget->renderWindow()->Render();
         ui->guiwidget->update();
         qDebug()<<"贪婪三角网格化处理完成！";
@@ -815,10 +828,10 @@ MainWindow::MainWindow(QWidget *parent):
         // 存储填补孔洞后的结果
         pcl::PolygonMesh recloud;
         poisson.reconstruct(recloud);
-
+        polygonMeshMap[cloudId] = recloud;
         // 更新视图，显示填补后的模型
         view->removeAllPointClouds();
-        view->addPolygonMesh(recloud, "recloud");
+        view->addPolygonMesh(recloud, cloudId.toStdString());
         ui->guiwidget->renderWindow()->Render();
         ui->guiwidget->update();
         qDebug()<<"泊松重建处理完成！";
@@ -990,7 +1003,6 @@ MainWindow::MainWindow(QWidget *parent):
 
 
 }
-
 MainWindow::~MainWindow()
 {
     delete ui;
@@ -1043,17 +1055,10 @@ void MainWindow::setButtonsEnabled(bool enabled)
     ui->upward_view->setEnabled(enabled);
     ui->top_view->setEnabled(enabled);
     ui->render_begin->setEnabled(enabled);
-    ui->menu_3->setEnabled(enabled);
-    ui->menu_4->setEnabled(enabled);
-    ui->menu_5->setEnabled(enabled);
-    ui->menu_6->setEnabled(enabled);
-    ui->menu_7->setEnabled(enabled);
     ui->menu_8->setEnabled(enabled);
-    ui->menu_9->setEnabled(enabled);
     ui->chazhi->setEnabled(enabled);
     ui->chazhi1->setEnabled(enabled);
     ui->TaLanSanJiao->setEnabled(enabled);
-    ui->actionSTL->setEnabled(enabled);
     ui->Triangular_meshing->setEnabled(enabled);
     ui->interpolation->setEnabled(enabled);
     ui->actionmain_view->setEnabled(enabled);
@@ -1067,8 +1072,13 @@ void MainWindow::setButtonsEnabled(bool enabled)
     ui->Gauss_Button->setEnabled(enabled);
     ui->bosong->setEnabled(enabled);
     ui->delete_away->setEnabled(enabled);
-
-
+    ui->menu_12->setEnabled(enabled);
+    ui->Mouse_select->setEnabled(enabled);
+    ui->divide->setEnabled(enabled);
+    ui->tanlan->setEnabled(enabled);
+    ui->bosong1->setEnabled(enabled);
+    ui->actionStatisticalOutlierRemove->setEnabled(enabled);
+    ui->menu_output->setEnabled(enabled);
 }
 
 //控制点云是否显示
@@ -1091,7 +1101,10 @@ void MainWindow::checkState()
 
                     if (currentItem->checkState() == Qt::Checked) {
                         checkcount++;
+                        if(row==0)
+                        {
                         qDebug() << "正在显示点云: " << beforeColon;
+                        }
                         //如果网格集合中包含数据，那么不显示点云集合中的数据，显示网格集合中的数据,如果两个集合中都没有数据，那就在点云集合中添加数据
                         if (pointCloudMap.contains(beforeColon) && !polygonMeshMap.contains(beforeColon))
                         {
@@ -1120,6 +1133,10 @@ void MainWindow::checkState()
                             }
                         }
                     } else {
+                        if(row==0)
+                        {
+                            qDebug() << "正在隐藏点云: " << beforeColon;
+                        }
                         if (pointCloudMap.contains(beforeColon)) {
                             pointCloudVisibilityMap[beforeColon] = false;
                             view->removePointCloud(beforeColon.toStdString());
@@ -1146,7 +1163,9 @@ void MainWindow::checkState()
     traverseItems(rootIndex);
     if(checkcount != 1) //如果复选框勾选数量大于1，则禁用其他大多数功能
     {
+        ui->Mouse_select->setEnabled(false);
         ui->save_action->setEnabled(false);
+        ui->menu_12->setEnabled(false);
         ui->main_view->setEnabled(false);
         ui->back_view->setEnabled(false);
         ui->left_view->setEnabled(false);
@@ -1163,17 +1182,10 @@ void MainWindow::checkState()
         ui->upward_view->setEnabled(false);
         ui->top_view->setEnabled(false);
         ui->render_begin->setEnabled(false);
-        ui->menu_3->setEnabled(false);
-        ui->menu_4->setEnabled(false);
-        ui->menu_5->setEnabled(false);
-        ui->menu_6->setEnabled(false);
-        ui->menu_7->setEnabled(false);
         ui->menu_8->setEnabled(false);
-        ui->menu_9->setEnabled(false);
         ui->chazhi->setEnabled(false);
         ui->chazhi1->setEnabled(false);
         ui->TaLanSanJiao->setEnabled(false);
-        ui->actionSTL->setEnabled(false);
         ui->Triangular_meshing->setEnabled(false);
         ui->interpolation->setEnabled(false);
         ui->actionmain_view->setEnabled(false);
@@ -1187,6 +1199,12 @@ void MainWindow::checkState()
         ui->Gauss_Button->setEnabled(false);
         ui->bosong->setEnabled(false);
         ui->delete_away->setEnabled(false);
+        ui->Mouse_select->setEnabled(false);
+        ui->divide->setEnabled(false);
+        ui->tanlan->setEnabled(false);
+        ui->bosong1->setEnabled(false);
+        ui->actionStatisticalOutlierRemove->setEnabled(false);
+        ui->menu_output->setEnabled(false);
     }
 
     setButtonsEnabled(checkcount == 1);//如果复选框勾选数量等于1，则启用其他大多数功能
@@ -1667,6 +1685,7 @@ public:
         qss.close();
     }
 };
+
 //白蓝风格主题
 void MainWindow::on_bb_theme_triggered()
 {
@@ -1706,12 +1725,625 @@ void MainWindow::on_processing_action_triggered()
     ui->dockWidget_3->show();
 }
 
-//清空树状图
+//关闭所有
 void MainWindow::on_tree_clear_triggered()
 {
     QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->treeView->model());
-    model->clear(); // 清除之前的内容
+    // 清除之前的内容
+    model->clear();
+    pointCloudMap.clear();
+    pointCloudVisibilityMap.clear();
+    polygonMeshMap.clear();
+    polygonMeshVisibilityMap.clear();
+    count1=0;
+    view->removeAllPointClouds();
+    ui->guiwidget->renderWindow()->Render();
+    ui->guiwidget->update();
+    qDebug()<<"已关闭所有文件！";
 }
 
+//坐标转换函数（屏幕坐标转世界坐标）
+void MainWindow::getScreentPos(double* displayPos, double* world, void* viewer_void)
+{
+    qDebug()<<"执行屏幕坐标转换至世界坐标函数";
+    pcl::visualization::PCLVisualizer* viewer = static_cast<pcl::visualization::PCLVisualizer*>(viewer_void);
+    vtkRenderer* renderer{viewer->getRendererCollection()->GetFirstRenderer()};
+    double fp[4], tmp1[4], eventFPpos[4];
+    renderer->GetActiveCamera()->GetFocalPoint(fp);
+    fp[3] = 0.0;
+    renderer->SetWorldPoint(fp);
+    renderer->WorldToDisplay();
+    renderer->GetDisplayPoint(tmp1);
 
+    tmp1[0] = displayPos[0];
+    tmp1[1] = displayPos[1];
+
+    renderer->SetDisplayPoint(tmp1);
+    renderer->DisplayToWorld();
+    renderer->GetWorldPoint(eventFPpos);
+
+    for (int i = 0; i < 3; i++)
+    {
+        world[i] = eventFPpos[i];
+    }
+}
+
+//点云分割判断函数
+int MainWindow::inOrNot1(int poly_sides, double *poly_X, double *poly_Y, double x, double y)
+{
+    int i, j;
+    j = poly_sides - 1;
+    int res = 0;
+
+    for (i = 0; i < poly_sides; i++)
+    {
+        if (((poly_Y[i] < y && poly_Y[j] >= y) || (poly_Y[j] < y && poly_Y[i] >= y)) && (poly_X[i] <= x || poly_X[j] <= x))
+        {
+            res ^= ((poly_X[i] + (y - poly_Y[i]) / (poly_Y[j] - poly_Y[i])  *(poly_X[j] - poly_X[i])) < x);
+        }
+        j = i;
+    }
+    return res;
+}
+
+//点云分割函数
+void MainWindow::projectInliers(void* viewer_void)
+{
+    // 获取当前显示的点云指针及其 cloudId
+    auto result = getCurrentlyDisplayedPointCloudFromView();
+    QString cloudId = result.first;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloudptr = result.second;
+    int id = cloudId.toInt();
+    pcl::visualization::PCLVisualizer* viewer = static_cast<pcl::visualization::PCLVisualizer*>(viewer_void);
+    // 存储焦点和相机位置的数组
+    double focal[3] = {0};
+    double pos[3] = {0};
+    vtkRenderer* renderer{viewer->getRendererCollection()->GetFirstRenderer()};// 获取渲染器
+    renderer->GetActiveCamera()->GetFocalPoint(focal);//获取相机的焦点
+    renderer->GetActiveCamera()->GetPosition(pos);//获取相机的位置
+    //输出
+    std::cout << "focal: " << focal[0] << ',' << focal[1] << ',' << focal[2] << endl;
+    std::cout << "pos: " << pos[0] << ',' << pos[1] << ',' << pos[2] << endl;
+    pcl::PointXYZ eyeLine1 = pcl::PointXYZ(focal[0] - pos[0], focal[1] - pos[1], focal[2] - pos[2]);// 计算从相机位置到焦点的向量
+    float mochang = sqrt(pow(eyeLine1.x, 2) + pow(eyeLine1.y, 2) + pow(eyeLine1.z, 2));//计算向量的模长
+    pcl::PointXYZ eyeLine = pcl::PointXYZ(eyeLine1.x / mochang, eyeLine1.y / mochang, eyeLine1.z / mochang);// 归一化该向量，得到单位向量
+    // 平面方程 ax + by + cz + d = 0，这里设置平面的法向量和 d = 0
+    pcl::ModelCoefficients::Ptr coefficients(new pcl::ModelCoefficients());
+    coefficients->values.resize(4);
+    coefficients->values[0] = eyeLine.x;
+    coefficients->values[1] = eyeLine.y;
+    coefficients->values[2] = eyeLine.z;
+    coefficients->values[3] = 0;
+    // 创建存储投影结果的点云指针
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloudIn_Prj(new pcl::PointCloud<pcl::PointXYZ>);//存储点云的投影结果
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloudCiecle_result(new pcl::PointCloud<pcl::PointXYZ>);//存储多边形的投影结果
+    pcl::ProjectInliers<pcl::PointXYZ> proj;// 创建投影滤波器对象
+    proj.setModelType(pcl::SACMODEL_PLANE);//设置投影模型为平面
+    proj.setInputCloud(cloud_polygon);
+    proj.setModelCoefficients(coefficients);
+    proj.filter(*cloudCiecle_result);
+
+    pcl::ProjectInliers<pcl::PointXYZ> projCloudIn;// 创建投影滤波器对象
+    projCloudIn.setModelType(pcl::SACMODEL_PLANE);//设置投影模型为平面
+    projCloudIn.setInputCloud(cloudptr);
+    projCloudIn.setModelCoefficients(coefficients);
+    projCloudIn.filter(*cloudIn_Prj);
+
+    int ret = -1;// 存储判断结果的变量
+    double *PloyXarr = new double[cloudCiecle_result->points.size()];// 存储投影结果的多边形顶点的 x、y坐标
+    double *PloyYarr = new double[cloudCiecle_result->points.size()];
+    for (int i = 0; i < cloudCiecle_result->points.size(); i++)
+    {
+        PloyXarr[i] = cloudCiecle_result->points[i].x;
+        PloyYarr[i] = cloudCiecle_result->points[i].y;
+    }
+
+    cloud_cliped1->clear();
+    cloud_cliped2->clear();
+    for (int i = 0; i < cloudIn_Prj->points.size(); i++)
+    {
+        //判断点云是否在多边形内
+        ret = inOrNot1(cloud_polygon->points.size(), PloyXarr, PloyYarr, cloudIn_Prj->points[i].x, cloudIn_Prj->points[i].y);
+        if (1 == ret)
+        {
+            // 如果点在多边形内，将该点添加到 cloud_cliped1 中
+            cloud_cliped1->points.push_back(cloudptr->points[i]);
+        }
+        else
+        {
+            // 如果点不在多边形内，将该点添加到 cloud_cliped2 中
+            cloud_cliped2->points.push_back(cloudptr->points[i]);
+        }
+    }
+
+    viewer->removeAllPointClouds();
+    viewer->addPointCloud(cloud_cliped1,std::to_string(id));
+
+    cloudptr->clear();
+    pcl::copyPointCloud(*cloud_cliped1, *cloudptr);
+    id=id+1;
+    count1=count1+1;
+    pointCloudMap.insert(QString::number(id), cloud_cliped1);
+    pointCloudVisibilityMap.insert(QString::number(id), true);
+
+    //保留的点云项
+    QStandardItem* fileItem1 = new QStandardItem();
+    fileItem1->setIcon(QIcon(":/new/prefix1/resource/cloud.png"));
+    fileItem1->setData(false, Qt::UserRole);
+    fileItem1->setFlags(Qt::ItemIsUserCheckable | Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+    fileItem1->setCheckState(Qt::Checked);
+    fileItem1->setText(QString::number(id)+":"+"点云"+cloudId+"的分割部分1");
+    //去除的点云项
+    id=id+1;
+    count1=count1+1;
+    pointCloudMap.insert(QString::number(id), cloud_cliped2);
+    pointCloudVisibilityMap.insert(QString::number(id), true);
+    viewer->addPointCloud(cloud_cliped2,std::to_string(id));
+    QStandardItem* fileItem2 = new QStandardItem();
+    fileItem2->setIcon(QIcon(":/new/prefix1/resource/cloud.png"));
+    fileItem2->setData(false, Qt::UserRole);
+    fileItem2->setFlags(Qt::ItemIsUserCheckable | Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+    fileItem2->setCheckState(Qt::Checked);
+    fileItem2->setText(QString::number(id)+":"+"点云"+cloudId+"的分割部分2");
+    // 假设添加到根项，如果需要添加到其他项，可先获取该父项
+    QStandardItem* rootItem1 = model->invisibleRootItem();
+    rootItem1->appendRow(fileItem1);
+    rootItem1->appendRow(fileItem2);
+
+    //更新显示界面并输出Debug
+    ui->guiwidget->renderWindow()->Render();
+    ui->guiwidget->update();
+    qDebug()<<"点云分割已完成！";
+}
+
+//鼠标框选启动函数
+void MainWindow::on_Mouse_select_triggered()
+{
+    qDebug()<<"正在对要分割的点云进行鼠标框选......";
+    vtkNew<vtkInteractorStyleTrackballCamera> style;
+    ui->guiwidget->interactor()->SetInteractorStyle(style);
+    ui->guiwidget->setFocus();
+    isPickingMode =!isPickingMode;
+    if (isPickingMode)
+    {
+        qDebug()<< "start draw";
+        line_id = 0;
+        cloud_polygon->clear();
+        flag = false;
+        ui->guiwidget->interactor()->AddObserver(vtkCommand::LeftButtonReleaseEvent, this, &MainWindow::mouseEventOccurred);
+    }
+    else
+    {
+        qDebug()<<"当前未进入鼠标框选模式！";
+    }
+}
+
+//鼠标事件函数
+void MainWindow::mouseEventOccurred(vtkObject* caller, unsigned long eventId, void* callData)
+{
+    (void)callData; // 显式地表示不使用该参数
+    if (eventId == vtkCommand::LeftButtonReleaseEvent)
+    {
+        vtkRenderWindowInteractor* interactor = vtkRenderWindowInteractor::SafeDownCast(caller);
+        if (interactor)
+        {
+            pcl::visualization::PCLVisualizer* viewer = view.get();
+
+            viewer->addPointCloud(cloud_polygon, "polyline");
+            viewer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_COLOR,1.0, 0, 0, "polyline");
+            viewer->setPointCloudRenderingProperties(pcl::visualization::PCL_VISUALIZER_POINT_SIZE, 8, "polyline");
+
+
+            int* clickPos = interactor->GetEventPosition();
+            std::cout << "Left mouse button released at position (" << clickPos[0] << ", " << clickPos[1] << ")" << std::endl;
+
+
+            // 检查是否处于选择模式（isPickingMode 为 true）
+            if (isPickingMode)
+            {
+                double world_point[3];  // 世界坐标的数组
+                double displayPos[2];  // 屏幕坐标的数组
+                displayPos[0] = static_cast<double>(clickPos[0]);  // 将鼠标事件的屏幕坐标转换为 double 类型并存入 displayPos 数组
+                displayPos[1] = static_cast<double>(clickPos[1]);
+
+
+                // 假设你有一个将屏幕坐标转换为世界坐标的函数，例如 getScreentPos
+                getScreentPos(displayPos, world_point, viewer);
+
+
+                // 输出世界坐标
+                std::cout << world_point[0] << ',' << world_point[1] << ',' << world_point[2] << std::endl;
+
+
+                // 将世界坐标转换为 pcl::PointXYZ 类型的点
+                curP = pcl::PointXYZ(world_point[0], world_point[1], world_point[2]);
+
+
+                // 如果 flag 为 false，说明是第一次点击，将 flag 置为 true
+                if (!flag)
+                    flag = true;
+                else
+                {
+                    char str1[512];
+                    sprintf(str1, "line#%03d", line_id++);
+                    viewer->addLine(lastP,curP, str1);
+                }
+                lastP = curP;
+                cloud_polygon->push_back(curP);
+                qDebug() << "成功设定框选边！";
+                // 更新渲染窗口
+                ui->guiwidget->renderWindow()->Render();
+                ui->guiwidget->update();
+            }
+        }
+    }
+
+}
+
+//点云分割启动函数
+void MainWindow::on_divide_triggered()
+{
+    qDebug()<<"开始进行点云分割......";
+    isPickingMode =!isPickingMode;
+    qDebug()<< "stop draw";
+    projectInliers(view.get());
+    view->removeAllShapes();
+}
+
+//贪婪三角化（菜单栏）
+void MainWindow::on_tanlan_triggered()
+{
+    // 获取当前显示的点云指针及其 cloudId
+    auto result = getCurrentlyDisplayedPointCloudFromView();
+    QString cloudId = result.first;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloudptr = result.second;
+    qDebug()<<"正在对点云"<<cloudId<<"进行贪婪三角网格化......";
+    // 创建点云副本，使用智能指针管理内存
+    std::shared_ptr<pcl::PointCloud<pcl::PointXYZ>> modifiedCloud(new pcl::PointCloud<pcl::PointXYZ>(*cloudptr));
+    if (modifiedCloud->empty()) {
+        qDebug()<<"点云不存在!";
+        return;
+    }
+    pcl::NormalEstimation<pcl::PointXYZ, pcl::Normal> n;
+    pcl::PointCloud<pcl::Normal>::Ptr normals(new pcl::PointCloud<pcl::Normal>);
+    pcl::search::KdTree<pcl::PointXYZ>::Ptr tree(new pcl::search::KdTree<pcl::PointXYZ>);
+    tree->setInputCloud(modifiedCloud);
+    n.setInputCloud(modifiedCloud);
+    n.setSearchMethod(tree);
+    n.setKSearch(10);
+    n.compute(*normals);
+    pcl::PointCloud<pcl::PointNormal>::Ptr cloud_with_normals(new pcl::PointCloud<pcl::PointNormal>);
+    pcl::concatenateFields(*modifiedCloud, *normals, *cloud_with_normals);
+    pcl::search::KdTree<pcl::PointNormal>::Ptr tree2(new pcl::search::KdTree<pcl::PointNormal>);
+    tree2->setInputCloud(cloud_with_normals);
+    pcl::GreedyProjectionTriangulation<pcl::PointNormal> gp3;
+    pcl::PolygonMesh triangles;
+
+    // Set the maximum distance between connected points (maximum edge length)
+    gp3.setSearchRadius(10);
+    gp3.setMu(3.5);
+    gp3.setMaximumNearestNeighbors(1500);
+    gp3.setMaximumSurfaceAngle(M_PI / 4);
+    gp3.setMinimumAngle(M_PI / 36);
+    gp3.setMaximumAngle(2 * M_PI / 3);
+    gp3.setNormalConsistency(false); // Reconstruct
+    gp3.setInputCloud(cloud_with_normals); gp3.setSearchMethod(tree2);
+    gp3.reconstruct(triangles);
+    polygonMeshMap[cloudId] = triangles;
+    view->removeAllPointClouds();
+    view->addPolygonMesh(triangles,cloudId.toStdString());
+    ui->guiwidget->renderWindow()->Render();
+    ui->guiwidget->update();
+    qDebug()<<"贪婪三角网格化处理完成！";
+}
+
+//泊松重建（菜单栏）
+void MainWindow::on_bosong1_triggered()
+{
+    // 获取当前显示的点云指针及其 cloudId
+    auto result = getCurrentlyDisplayedPointCloudFromView();
+    QString cloudId = result.first;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloudptr = result.second;
+    qDebug()<<"正在对点云"<<cloudId<<"进行泊松重建......";
+    // 创建点云副本，使用智能指针管理内存
+    std::shared_ptr<pcl::PointCloud<pcl::PointXYZ>> modifiedCloud(new pcl::PointCloud<pcl::PointXYZ>(*cloudptr));
+    if (modifiedCloud->empty()) {
+        return;
+    }
+    pcl::NormalEstimation<pcl::PointXYZ, pcl::Normal> n;
+    pcl::PointCloud<pcl::Normal>::Ptr normals(new pcl::PointCloud<pcl::Normal>);
+    pcl::search::KdTree<pcl::PointXYZ>::Ptr tree(new pcl::search::KdTree<pcl::PointXYZ>);
+    tree->setInputCloud(modifiedCloud);
+    n.setInputCloud(modifiedCloud);
+    n.setSearchMethod(tree);
+    n.setKSearch(10);
+    n.compute(*normals);
+    pcl::PointCloud<pcl::PointNormal>::Ptr cloud_with_normals(new pcl::PointCloud<pcl::PointNormal>);
+    pcl::concatenateFields(*modifiedCloud, *normals, *cloud_with_normals);
+    pcl::Poisson<pcl::PointNormal> poisson;
+    poisson.setDepth(8);  // 设置重建深度
+
+    // 输入三角化后的点云数据（带法线）
+    poisson.setInputCloud(cloud_with_normals);
+
+    // 存储填补孔洞后的结果
+    pcl::PolygonMesh recloud;
+    poisson.reconstruct(recloud);
+    polygonMeshMap[cloudId] = recloud;
+    // 更新视图，显示填补后的模型
+    view->removeAllPointClouds();
+    view->addPolygonMesh(recloud, cloudId.toStdString());
+    ui->guiwidget->renderWindow()->Render();
+    ui->guiwidget->update();
+    qDebug()<<"泊松重建处理完成！";
+}
+
+//离群点去除（菜单栏）
+void MainWindow::on_actionStatisticalOutlierRemove_triggered()
+{
+    // 获取当前显示的点云指针及其 cloudId
+    auto result = getCurrentlyDisplayedPointCloudFromView();
+    QString cloudId = result.first;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloudptr = result.second;
+    qDebug()<<"正在对点云"<<cloudId<<"进行离群点去除......";
+    // 原始点云
+    std::shared_ptr<pcl::PointCloud<pcl::PointXYZ>> modifiedCloud(new pcl::PointCloud<pcl::PointXYZ>(*cloudptr));
+    float L_Searchradius=ui->L_search->value();
+    int L_Yuzhi=ui->L_yuzhi->value();
+    pcl::StatisticalOutlierRemoval<pcl::PointXYZ> sor;
+    sor.setInputCloud(modifiedCloud);
+    sor.setMeanK(L_Searchradius);
+    sor.setStddevMulThresh(L_Yuzhi);
+    sor.filter(*cloudptr);
+    // 更新 pointCloudMap 中的指针
+    pointCloudMap[cloudId] = cloudptr;
+    view->removeAllPointClouds();
+    view->addPointCloud(cloudptr);
+    ui->guiwidget->renderWindow()->Render();
+    ui->guiwidget->update();
+    qDebug()<<"点云离群点去除已完成！";
+}
+
+//另存为PLY格式
+void MainWindow::on_actionPLY_triggered()
+{
+    // 获取当前显示的点云指针及其 cloudId
+    auto result = getCurrentlyDisplayedPointCloudFromView();
+    QString cloudId = result.first;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloudptr = result.second;
+    qDebug()<<"正在将文件"<<cloudId<<"另存为PLY格式......";
+    QString filename = QFileDialog::getSaveFileName(this, tr("Save PLY File"), "", tr("PLY Files (*.ply)"));
+    if (filename.isEmpty()) {
+        qDebug()<<"另存PLY失败，文件为空！";
+        return;
+    }
+    if (cloudptr->empty()) {
+        qDebug()<<"另存失败，未找到用于转换的点云！";
+        return;
+    }
+    if (filename.endsWith(".ply", Qt::CaseInsensitive)) {
+        pcl::io::savePLYFileBinary(filename.toStdString(), *cloudptr);
+        qDebug()<<"成功另存为PLY格式！";
+    }
+    else if(filename.endsWith(".ply", Qt::CaseInsensitive)==false) {
+        filename.append(".ply");
+        pcl::io::savePLYFileBinary(filename.toStdString(), *cloudptr);
+        qDebug()<<"成功另存为PLY格式！";
+    }
+    return;
+}
+
+//另存为PCD格式
+void MainWindow::on_actionPCD_triggered()
+{
+    // 获取当前显示的点云指针及其 cloudId
+    auto result = getCurrentlyDisplayedPointCloudFromView();
+    QString cloudId = result.first;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloudptr = result.second;
+    qDebug()<<"正在将文件"<<cloudId<<"另存为PCD格式......";
+    QString filename = QFileDialog::getSaveFileName(this, tr("Save PCD File"), "", tr("PCD Files (*.pcd)"));
+    if (filename.isEmpty()) {
+        qDebug()<<"另存PCD失败，文件为空！";
+        return;
+    }
+    if (cloudptr->empty()) {
+        qDebug()<<"另存失败，未找到用于转换的点云！";
+        return;
+    }
+    if (filename.endsWith(".pcd", Qt::CaseInsensitive)) {
+        pcl::io::savePCDFileASCII(filename.toStdString(), *cloudptr);
+        qDebug()<<"成功另存为PCD格式！";
+    }
+    else if(filename.endsWith(".pcd", Qt::CaseInsensitive)==false) {
+        filename.append(".pcd");
+        pcl::io::savePCDFileASCII(filename.toStdString(), *cloudptr);
+        qDebug()<<"成功另存为PCD格式！";
+    }
+    return;
+}
+
+//另存为TXT格式
+void MainWindow::on_actionTXT_triggered()
+{
+    // 获取当前显示的点云指针及其 cloudId
+    auto result = getCurrentlyDisplayedPointCloudFromView();
+    QString cloudId = result.first;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloudptr = result.second;
+    qDebug()<<"正在将文件"<<cloudId<<"另存为TXT格式......";
+    QString filename = QFileDialog::getSaveFileName(this, tr("Save TXT File"), "", tr("TXT Files (*.txt)"));
+    if (filename.isEmpty()) {
+        qDebug()<<"另存TXT失败，文件为空！";
+        return;
+    }
+    if (cloudptr->empty()) {
+        qDebug()<<"另存失败，未找到用于转换的点云！";
+        return;
+    }
+    if (filename.endsWith(".txt", Qt::CaseInsensitive)) {
+        // 创建文件输出流
+        std::ofstream outfile(filename.toStdString());
+        if (!outfile.is_open())
+        {
+            qDebug()<<"无法打开文件！";
+            return;
+        }
+        // 遍历点云数据并写入文件
+        for (const auto& point : cloudptr->points)
+        {
+            outfile << point.x << " " << point.y << " " << point.z << std::endl;
+        }
+        // 关闭文件输出流
+        outfile.close();
+        qDebug()<<"成功另存为TXT格式！";
+    }
+    else if(filename.endsWith(".txt", Qt::CaseInsensitive)==false) {
+        filename.append(".txt");
+        // 创建文件输出流
+        std::ofstream outfile(filename.toStdString());
+        if (!outfile.is_open())
+        {
+            qDebug()<<"无法打开文件！";
+            return;
+        }
+        // 遍历点云数据并写入文件
+        for (const auto& point : cloudptr->points)
+        {
+            outfile << point.x << " " << point.y << " " << point.z << std::endl;
+        }
+        // 关闭文件输出流
+        outfile.close();
+        qDebug()<<"成功另存为TXT格式！";
+    }
+    return;
+}
+
+//另存为OBJ格式
+void MainWindow::on_actionOBJ_triggered()
+{
+    // 获取当前显示的点云指针及其 cloudId
+    auto result = getCurrentlyDisplayedPointCloudFromView();
+    QString cloudId = result.first;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloudptr = result.second;
+    qDebug()<<"正在将文件"<<cloudId<<"另存为OBJ格式......";
+    QString filename = QFileDialog::getSaveFileName(this, tr("Save OBJ File"), "", tr("OBJ Files (*.obj)"));
+    if (filename.isEmpty()) {
+        qDebug()<<"另存OBJ失败，文件为空！";
+        return;
+    }
+    if (cloudptr->empty()) {
+        qDebug()<<"另存失败，未找到用于转换的点云！";
+        return;
+    }
+    // 创建点云副本，使用智能指针管理内存
+    std::shared_ptr<pcl::PointCloud<pcl::PointXYZ>> modifiedCloud(new pcl::PointCloud<pcl::PointXYZ>(*cloudptr));
+    if (modifiedCloud->empty()) {
+        qDebug()<<"保存失败，未找到用于转换的点云！";
+        return;
+    }
+    pcl::NormalEstimation<pcl::PointXYZ, pcl::Normal> n;
+    pcl::PointCloud<pcl::Normal>::Ptr normals(new pcl::PointCloud<pcl::Normal>);
+    pcl::search::KdTree<pcl::PointXYZ>::Ptr tree(new pcl::search::KdTree<pcl::PointXYZ>);
+    tree->setInputCloud(modifiedCloud);
+    n.setInputCloud(modifiedCloud);
+    n.setSearchMethod(tree);
+    n.setKSearch(10);
+    n.compute(*normals);
+    pcl::PointCloud<pcl::PointNormal>::Ptr cloud_with_normals(new pcl::PointCloud<pcl::PointNormal>);
+    pcl::concatenateFields(*modifiedCloud, *normals, *cloud_with_normals);
+    pcl::search::KdTree<pcl::PointNormal>::Ptr tree2(new pcl::search::KdTree<pcl::PointNormal>);
+    tree2->setInputCloud(cloud_with_normals);
+    pcl::GreedyProjectionTriangulation<pcl::PointNormal> gp3;
+    pcl::PolygonMesh triangles;
+    gp3.setSearchRadius(10);
+    gp3.setMu(2.5);
+    gp3.setMaximumNearestNeighbors(1500);
+    gp3.setMaximumSurfaceAngle(M_PI / 4);
+    gp3.setMinimumAngle(M_PI / 36);
+    gp3.setMaximumAngle(2 * M_PI / 3);
+    gp3.setNormalConsistency(false);
+    gp3.setInputCloud(cloud_with_normals); gp3.setSearchMethod(tree2);
+    gp3.reconstruct(triangles);
+    if (filename.endsWith(".obj", Qt::CaseInsensitive)) {
+        // 创建文件输出流
+        std::ofstream outfile(filename.toStdString());
+        if (!outfile.is_open())
+        {
+            qDebug()<<"无法打开文件！";
+            return;
+        }
+        // 存储顶点信息
+        for (const auto& point : cloud_with_normals->points)
+        {
+            outfile << "v " << point.x << " " << point.y << " " << point.z << std::endl;
+        }
+        // 存储法线信息
+        for (const auto& point : cloud_with_normals->points)
+        {
+            outfile << "vn " << point.normal_x << " " << point.normal_y << " " << point.normal_z << std::endl;
+        }
+        // 存储面信息
+        for (const auto& polygon : triangles.polygons)
+        {
+            outfile << "f ";
+            for (const auto index : polygon.vertices)
+            {
+                outfile << index + 1 << " ";
+            }
+            outfile << std::endl;
+        }
+        // 关闭文件输出流
+        outfile.close();
+        qDebug()<<"成功另存为obj格式！";
+    }
+    else if(filename.endsWith(".txt", Qt::CaseInsensitive)==false) {
+        filename.append(".obj");
+        // 创建文件输出流
+        std::ofstream outfile(filename.toStdString());
+        if (!outfile.is_open())
+        {
+            qDebug()<<"无法打开文件！";
+            return;
+        }
+        // 存储顶点信息
+        for (const auto& point : cloud_with_normals->points)
+        {
+            outfile << "v " << point.x << " " << point.y << " " << point.z << std::endl;
+        }
+        // 存储法线信息
+        for (const auto& point : cloud_with_normals->points)
+        {
+            outfile << "vn " << point.normal_x << " " << point.normal_y << " " << point.normal_z << std::endl;
+        }
+        // 存储面信息
+        for (const auto& polygon : triangles.polygons)
+        {
+            outfile << "f ";
+            for (const auto index : polygon.vertices)
+            {
+                outfile << index + 1 << " ";
+            }
+            outfile << std::endl;
+        }
+        outfile.close();
+        qDebug()<<"成功另存为obj格式！";
+    }
+    return;
+}
+
+//关闭所有
+void MainWindow::on_close_action_triggered()
+{
+    QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->treeView->model());
+    // 清除之前的内容
+    model->clear();
+    pointCloudMap.clear();
+    pointCloudVisibilityMap.clear();
+    polygonMeshMap.clear();
+    polygonMeshVisibilityMap.clear();
+    count1=0;
+    view->removeAllPointClouds();
+    ui->guiwidget->renderWindow()->Render();
+    ui->guiwidget->update();
+    qDebug()<<"已关闭所有文件！";
+}
 

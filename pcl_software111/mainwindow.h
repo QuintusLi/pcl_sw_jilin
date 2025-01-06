@@ -25,7 +25,12 @@
 #include <pcl/features/normal_3d.h>
 #include <QCheckBox>
 #include <QStandardItemModel>
+#include <pcl/ModelCoefficients.h>
+#include <pcl/visualization/mouse_event.h> //鼠标事件
+#include <pcl/visualization/keyboard_event.h>//键盘事件
+#include <pcl/filters/project_inliers.h>
 #include "CustomTreeView.h"
+
 extern int count1;
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -47,6 +52,16 @@ class MainWindow : public QMainWindow
 
 public:
     explicit MainWindow(QWidget *parent = nullptr);
+
+    void mouseEventOccurred(vtkObject* caller, unsigned long eventId, void* callData);
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_polygon;//用于储存鼠标框选的框选点
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_cliped1;//用于存储点云在多边形内部的点
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_cliped2;//用于存储点云在多边形内部的点
+    pcl::PointXYZ curP, lastP;
+    bool flag = false;
+    bool isPickingMode = false;
+    unsigned int line_id = 0;
+    boost::shared_ptr< pcl::visualization::PCLVisualizer > view;//加载点云的共享指针
 
     ~MainWindow();
 
@@ -88,7 +103,6 @@ private slots:
 
     void on_action4_triggered();
 
-
     void on_actionmain_view_triggered();
 
     void on_actionback_view_triggered();
@@ -109,13 +123,37 @@ private slots:
 
     void checkState();
 
+    void getScreentPos(double* displayPos, double* world,void* viewer_void);
+
+    int inOrNot1(int poly_sides, double *poly_X, double *poly_Y, double x, double y);
+
+    void projectInliers(void*);
+
+    void on_Mouse_select_triggered();
+
+    void on_divide_triggered();
+
+    void on_tanlan_triggered();
+
+    void on_bosong1_triggered();
+
+    void on_actionStatisticalOutlierRemove_triggered();
+
+    void on_actionPLY_triggered();
+
+    void on_actionPCD_triggered();
+
+    void on_actionTXT_triggered();
+
+    void on_actionOBJ_triggered();
+
+    void on_close_action_triggered();
 
 private:
     Ui::MainWindow *ui;
     CustomTreeView *customTreeView;
     QTimer *timer0;
 
-    boost::shared_ptr< pcl::visualization::PCLVisualizer > view;//加载点云的共享指针
     void updateCameraView(double focalPoint[3], double position[3], double viewUp[3]);//切换视图用
     bool buttonsEnabled;//存储按钮状态
 
@@ -130,7 +168,6 @@ private:
     QMap<QString, bool> polygonMeshVisibilityMap;  // 存储 PolygonMesh 的可见性状态
     int checkcount = 0; //为复选框的勾选数量计数
     std::pair<QString, pcl::PointCloud<pcl::PointXYZ>::Ptr> getCurrentlyDisplayedPointCloudFromView(); //查找当前正在显示的点云
-
     //判断两点云是否相同（此函数为辅助用）
     bool arePointCloudsEqual(const pcl::PointCloud<pcl::PointXYZ>::Ptr& cloud1, const pcl::PointCloud<pcl::PointXYZ>::Ptr& cloud2) const {
         if (cloud1->size()!= cloud2->size()) {
@@ -143,5 +180,8 @@ private:
         }
         return true;
     }
+
+
+
 };
 #endif // MAINWINDOW_H

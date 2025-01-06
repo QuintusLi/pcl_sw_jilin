@@ -21,6 +21,9 @@
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
      <widget class="QWidget" name="widget_5" native="true">
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
       <property name="styleSheet">
        <string notr="true">background-color: black;</string>
       </property>
@@ -49,6 +52,12 @@
        </item>
        <item>
         <widget class="QVTKOpenGLNativeWidget" name="guiwidget">
+         <property name="mouseTracking">
+          <bool>false</bool>
+         </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
          <property name="autoFillBackground">
           <bool>false</bool>
          </property>
@@ -76,6 +85,9 @@
      <string>文件</string>
     </property>
     <widget class="QMenu" name="menu_output">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
      <property name="title">
       <string>另存为(output)</string>
      </property>
@@ -102,41 +114,26 @@
     <addaction name="visualization_action"/>
     <addaction name="processing_action"/>
    </widget>
-   <widget class="QMenu" name="menu_3">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
-    <property name="title">
-     <string>工具</string>
-    </property>
-   </widget>
    <widget class="QMenu" name="menu_4">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="title">
      <string>离群点移除</string>
     </property>
+    <addaction name="actionStatisticalOutlierRemove"/>
    </widget>
    <widget class="QMenu" name="menu_5">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="title">
      <string>滤波</string>
     </property>
    </widget>
-   <widget class="QMenu" name="menu_6">
-    <property name="enabled">
-     <bool>false</bool>
-    </property>
-    <property name="title">
-     <string>配准</string>
-    </property>
-   </widget>
    <widget class="QMenu" name="menu_7">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="title">
      <string>关键点</string>
@@ -144,15 +141,17 @@
    </widget>
    <widget class="QMenu" name="menu_8">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="title">
      <string>表面重建</string>
     </property>
+    <addaction name="tanlan"/>
+    <addaction name="bosong1"/>
    </widget>
    <widget class="QMenu" name="menu_9">
     <property name="enabled">
-     <bool>false</bool>
+     <bool>true</bool>
     </property>
     <property name="title">
      <string>快捷键</string>
@@ -172,13 +171,22 @@
     <addaction name="action3"/>
     <addaction name="action4"/>
    </widget>
+   <widget class="QMenu" name="menu_12">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="title">
+     <string>分割</string>
+    </property>
+    <addaction name="Mouse_select"/>
+    <addaction name="divide"/>
+   </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
-   <addaction name="menu_3"/>
    <addaction name="menu_4"/>
    <addaction name="menu_5"/>
-   <addaction name="menu_6"/>
    <addaction name="menu_7"/>
+   <addaction name="menu_12"/>
    <addaction name="menu_8"/>
    <addaction name="menu_9"/>
    <addaction name="menu_10"/>
@@ -1038,7 +1046,7 @@
   </action>
   <action name="close_action">
    <property name="enabled">
-    <bool>false</bool>
+    <bool>true</bool>
    </property>
    <property name="text">
     <string>关闭所有（close）</string>
@@ -1104,7 +1112,7 @@
   </action>
   <action name="actionSTL">
    <property name="enabled">
-    <bool>false</bool>
+    <bool>true</bool>
    </property>
    <property name="icon">
     <iconset resource="view_icon.qrc">
@@ -1331,6 +1339,67 @@
    </property>
    <property name="text">
     <string>清空树状图</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="Mouse_select">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>鼠标框选</string>
+   </property>
+   <property name="toolTip">
+    <string>鼠标框选出要保留的点云部分</string>
+   </property>
+   <property name="shortcut">
+    <string>F</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="divide">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>开始分割</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="tanlan">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>贪婪三角化</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="bosong1">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>泊松重建</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionStatisticalOutlierRemove">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>StatisticalOutlierRemove</string>
    </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
