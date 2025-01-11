@@ -149,6 +149,20 @@ private slots:
 
     void on_close_action_triggered();
 
+    void on_StatisticalOutlierRemoval1_triggered();
+
+    void on_VoxelGrid_triggered();
+
+    void on_RadiusOutlinerRemoval_triggered();
+
+    void on_actionX_triggered();
+
+    void on_actiony_triggered();
+
+    void on_actionZ_triggered();
+
+    void on_ProjectInliers_triggered();
+
 private:
     Ui::MainWindow *ui;
     CustomTreeView *customTreeView;

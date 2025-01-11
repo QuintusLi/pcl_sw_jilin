@@ -130,6 +130,22 @@
     <property name="title">
      <string>滤波</string>
     </property>
+    <widget class="QMenu" name="menu_3">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="title">
+      <string>直通滤波器</string>
+     </property>
+     <addaction name="actionX"/>
+     <addaction name="actiony"/>
+     <addaction name="actionZ"/>
+    </widget>
+    <addaction name="VoxelGrid"/>
+    <addaction name="menu_3"/>
+    <addaction name="RadiusOutlinerRemoval"/>
+    <addaction name="StatisticalOutlierRemoval1"/>
+    <addaction name="ProjectInliers"/>
    </widget>
    <widget class="QMenu" name="menu_7">
     <property name="enabled">
@@ -1400,6 +1416,86 @@
    </property>
    <property name="text">
     <string>StatisticalOutlierRemove</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="VoxelGrid">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>体素滤波器</string>
+   </property>
+   <property name="toolTip">
+    <string>VoxelGrid</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="RadiusOutlinerRemoval">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>半径离群点去除滤波器</string>
+   </property>
+   <property name="toolTip">
+    <string>RadiusOutlinerRemoval</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="StatisticalOutlierRemoval1">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>统计离群点去除滤波器</string>
+   </property>
+   <property name="toolTip">
+    <string>StatisticalOutlierRemoval</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionX">
+   <property name="text">
+    <string>X轴</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actiony">
+   <property name="text">
+    <string>Y轴</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionZ">
+   <property name="text">
+    <string>Z轴</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="ProjectInliers">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>投影参数化模型滤波器</string>
+   </property>
+   <property name="toolTip">
+    <string>ProjectInliers</string>
    </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>

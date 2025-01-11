@@ -73,6 +73,13 @@ public:
     QAction *tanlan;
     QAction *bosong1;
     QAction *actionStatisticalOutlierRemove;
+    QAction *VoxelGrid;
+    QAction *RadiusOutlinerRemoval;
+    QAction *StatisticalOutlierRemoval1;
+    QAction *actionX;
+    QAction *actiony;
+    QAction *actionZ;
+    QAction *ProjectInliers;
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout;
     QWidget *widget_5;
@@ -85,6 +92,7 @@ public:
     QMenu *menu_2;
     QMenu *menu_4;
     QMenu *menu_5;
+    QMenu *menu_3;
     QMenu *menu_7;
     QMenu *menu_8;
     QMenu *menu_9;
@@ -342,6 +350,31 @@ public:
         actionStatisticalOutlierRemove->setObjectName("actionStatisticalOutlierRemove");
         actionStatisticalOutlierRemove->setEnabled(false);
         actionStatisticalOutlierRemove->setMenuRole(QAction::NoRole);
+        VoxelGrid = new QAction(MainWindow);
+        VoxelGrid->setObjectName("VoxelGrid");
+        VoxelGrid->setEnabled(false);
+        VoxelGrid->setMenuRole(QAction::NoRole);
+        RadiusOutlinerRemoval = new QAction(MainWindow);
+        RadiusOutlinerRemoval->setObjectName("RadiusOutlinerRemoval");
+        RadiusOutlinerRemoval->setEnabled(false);
+        RadiusOutlinerRemoval->setMenuRole(QAction::NoRole);
+        StatisticalOutlierRemoval1 = new QAction(MainWindow);
+        StatisticalOutlierRemoval1->setObjectName("StatisticalOutlierRemoval1");
+        StatisticalOutlierRemoval1->setEnabled(false);
+        StatisticalOutlierRemoval1->setMenuRole(QAction::NoRole);
+        actionX = new QAction(MainWindow);
+        actionX->setObjectName("actionX");
+        actionX->setMenuRole(QAction::NoRole);
+        actiony = new QAction(MainWindow);
+        actiony->setObjectName("actiony");
+        actiony->setMenuRole(QAction::NoRole);
+        actionZ = new QAction(MainWindow);
+        actionZ->setObjectName("actionZ");
+        actionZ->setMenuRole(QAction::NoRole);
+        ProjectInliers = new QAction(MainWindow);
+        ProjectInliers->setObjectName("ProjectInliers");
+        ProjectInliers->setEnabled(false);
+        ProjectInliers->setMenuRole(QAction::NoRole);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         verticalLayout = new QVBoxLayout(centralwidget);
@@ -392,6 +425,9 @@ public:
         menu_5 = new QMenu(menubar);
         menu_5->setObjectName("menu_5");
         menu_5->setEnabled(true);
+        menu_3 = new QMenu(menu_5);
+        menu_3->setObjectName("menu_3");
+        menu_3->setEnabled(false);
         menu_7 = new QMenu(menubar);
         menu_7->setObjectName("menu_7");
         menu_7->setEnabled(true);
@@ -878,6 +914,14 @@ public:
         menu_2->addAction(visualization_action);
         menu_2->addAction(processing_action);
         menu_4->addAction(actionStatisticalOutlierRemove);
+        menu_5->addAction(VoxelGrid);
+        menu_5->addAction(menu_3->menuAction());
+        menu_5->addAction(RadiusOutlinerRemoval);
+        menu_5->addAction(StatisticalOutlierRemoval1);
+        menu_5->addAction(ProjectInliers);
+        menu_3->addAction(actionX);
+        menu_3->addAction(actiony);
+        menu_3->addAction(actionZ);
         menu_8->addAction(tanlan);
         menu_8->addAction(bosong1);
         menu_11->addAction(bb_theme);
@@ -966,11 +1010,31 @@ public:
         tanlan->setText(QCoreApplication::translate("MainWindow", "\350\264\252\345\251\252\344\270\211\350\247\222\345\214\226", nullptr));
         bosong1->setText(QCoreApplication::translate("MainWindow", "\346\263\212\346\235\276\351\207\215\345\273\272", nullptr));
         actionStatisticalOutlierRemove->setText(QCoreApplication::translate("MainWindow", "StatisticalOutlierRemove", nullptr));
+        VoxelGrid->setText(QCoreApplication::translate("MainWindow", "\344\275\223\347\264\240\346\273\244\346\263\242\345\231\250", nullptr));
+#if QT_CONFIG(tooltip)
+        VoxelGrid->setToolTip(QCoreApplication::translate("MainWindow", "VoxelGrid", nullptr));
+#endif // QT_CONFIG(tooltip)
+        RadiusOutlinerRemoval->setText(QCoreApplication::translate("MainWindow", "\345\215\212\345\276\204\347\246\273\347\276\244\347\202\271\345\216\273\351\231\244\346\273\244\346\263\242\345\231\250", nullptr));
+#if QT_CONFIG(tooltip)
+        RadiusOutlinerRemoval->setToolTip(QCoreApplication::translate("MainWindow", "RadiusOutlinerRemoval", nullptr));
+#endif // QT_CONFIG(tooltip)
+        StatisticalOutlierRemoval1->setText(QCoreApplication::translate("MainWindow", "\347\273\237\350\256\241\347\246\273\347\276\244\347\202\271\345\216\273\351\231\244\346\273\244\346\263\242\345\231\250", nullptr));
+#if QT_CONFIG(tooltip)
+        StatisticalOutlierRemoval1->setToolTip(QCoreApplication::translate("MainWindow", "StatisticalOutlierRemoval", nullptr));
+#endif // QT_CONFIG(tooltip)
+        actionX->setText(QCoreApplication::translate("MainWindow", "X\350\275\264", nullptr));
+        actiony->setText(QCoreApplication::translate("MainWindow", "Y\350\275\264", nullptr));
+        actionZ->setText(QCoreApplication::translate("MainWindow", "Z\350\275\264", nullptr));
+        ProjectInliers->setText(QCoreApplication::translate("MainWindow", "\346\212\225\345\275\261\345\217\202\346\225\260\345\214\226\346\250\241\345\236\213\346\273\244\346\263\242\345\231\250", nullptr));
+#if QT_CONFIG(tooltip)
+        ProjectInliers->setToolTip(QCoreApplication::translate("MainWindow", "ProjectInliers", nullptr));
+#endif // QT_CONFIG(tooltip)
         menu->setTitle(QCoreApplication::translate("MainWindow", "\346\226\207\344\273\266", nullptr));
         menu_output->setTitle(QCoreApplication::translate("MainWindow", "\345\217\246\345\255\230\344\270\272(output)", nullptr));
         menu_2->setTitle(QCoreApplication::translate("MainWindow", "\347\252\227\345\217\243", nullptr));
         menu_4->setTitle(QCoreApplication::translate("MainWindow", "\347\246\273\347\276\244\347\202\271\347\247\273\351\231\244", nullptr));
         menu_5->setTitle(QCoreApplication::translate("MainWindow", "\346\273\244\346\263\242", nullptr));
+        menu_3->setTitle(QCoreApplication::translate("MainWindow", "\347\233\264\351\200\232\346\273\244\346\263\242\345\231\250", nullptr));
         menu_7->setTitle(QCoreApplication::translate("MainWindow", "\345\205\263\351\224\256\347\202\271", nullptr));
         menu_8->setTitle(QCoreApplication::translate("MainWindow", "\350\241\250\351\235\242\351\207\215\345\273\272", nullptr));
         menu_9->setTitle(QCoreApplication::translate("MainWindow", "\345\277\253\346\215\267\351\224\256", nullptr));

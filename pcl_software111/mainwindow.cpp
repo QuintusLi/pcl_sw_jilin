@@ -33,6 +33,9 @@
 #include <pcl/search/kdtree.h>
 #include <pcl/filters/convolution_3d.h>
 #include <pcl/filters/statistical_outlier_removal.h>
+#include <pcl/filters/radius_outlier_removal.h>
+#include <pcl/filters/passthrough.h>
+
 QQueue<LogElement> log_txt;
 int count1=0;
 
@@ -387,7 +390,6 @@ MainWindow::MainWindow(QWidget *parent):
     connect(model, &QStandardItemModel::itemChanged, this, &MainWindow::checkState);
 
     });
-
 
     //最近邻插值运算
     connect(ui->chazhi,&QPushButton::clicked,this,[=]{
@@ -1055,7 +1057,6 @@ void MainWindow::setButtonsEnabled(bool enabled)
     ui->upward_view->setEnabled(enabled);
     ui->top_view->setEnabled(enabled);
     ui->render_begin->setEnabled(enabled);
-    ui->menu_8->setEnabled(enabled);
     ui->chazhi->setEnabled(enabled);
     ui->chazhi1->setEnabled(enabled);
     ui->TaLanSanJiao->setEnabled(enabled);
@@ -1072,13 +1073,17 @@ void MainWindow::setButtonsEnabled(bool enabled)
     ui->Gauss_Button->setEnabled(enabled);
     ui->bosong->setEnabled(enabled);
     ui->delete_away->setEnabled(enabled);
-    ui->menu_12->setEnabled(enabled);
     ui->Mouse_select->setEnabled(enabled);
     ui->divide->setEnabled(enabled);
     ui->tanlan->setEnabled(enabled);
     ui->bosong1->setEnabled(enabled);
     ui->actionStatisticalOutlierRemove->setEnabled(enabled);
     ui->menu_output->setEnabled(enabled);
+    ui->VoxelGrid->setEnabled(enabled);
+    ui->menu_3->setEnabled(enabled);
+    ui->RadiusOutlinerRemoval->setEnabled(enabled);
+    ui->StatisticalOutlierRemoval1->setEnabled(enabled);
+    ui->ProjectInliers->setEnabled(enabled);
 }
 
 //控制点云是否显示
@@ -1165,7 +1170,6 @@ void MainWindow::checkState()
     {
         ui->Mouse_select->setEnabled(false);
         ui->save_action->setEnabled(false);
-        ui->menu_12->setEnabled(false);
         ui->main_view->setEnabled(false);
         ui->back_view->setEnabled(false);
         ui->left_view->setEnabled(false);
@@ -1182,7 +1186,6 @@ void MainWindow::checkState()
         ui->upward_view->setEnabled(false);
         ui->top_view->setEnabled(false);
         ui->render_begin->setEnabled(false);
-        ui->menu_8->setEnabled(false);
         ui->chazhi->setEnabled(false);
         ui->chazhi1->setEnabled(false);
         ui->TaLanSanJiao->setEnabled(false);
@@ -1205,6 +1208,11 @@ void MainWindow::checkState()
         ui->bosong1->setEnabled(false);
         ui->actionStatisticalOutlierRemove->setEnabled(false);
         ui->menu_output->setEnabled(false);
+        ui->VoxelGrid->setEnabled(false);
+        ui->menu_3->setEnabled(false);
+        ui->RadiusOutlinerRemoval->setEnabled(false);
+        ui->StatisticalOutlierRemoval1->setEnabled(false);
+        ui->ProjectInliers->setEnabled(false);
     }
 
     setButtonsEnabled(checkcount == 1);//如果复选框勾选数量等于1，则启用其他大多数功能
@@ -1867,12 +1875,27 @@ void MainWindow::projectInliers(void* viewer_void)
     pointCloudVisibilityMap.insert(QString::number(id), true);
 
     //保留的点云项
+    QStandardItemModel *model = qobject_cast<QStandardItemModel*>(ui->treeView->model());
+
+    if (!model) {
+        model = new QStandardItemModel(this);
+        ui->treeView->setModel(model);
+    }
     QStandardItem* fileItem1 = new QStandardItem();
     fileItem1->setIcon(QIcon(":/new/prefix1/resource/cloud.png"));
     fileItem1->setData(false, Qt::UserRole);
     fileItem1->setFlags(Qt::ItemIsUserCheckable | Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     fileItem1->setCheckState(Qt::Checked);
     fileItem1->setText(QString::number(id)+":"+"点云"+cloudId+"的分割部分1");
+    //创建保留点云项的各节点并添加
+    QStandardItem* rootItem1 = model->invisibleRootItem();
+    QStandardItem* parentItem1 = new QStandardItem();
+    parentItem1->setIcon(QIcon(":/new/prefix1/resource/file.png")); // 设置文件图标
+    parentItem1->setData(true, Qt::UserRole); // 存储是目录的信息
+    parentItem1->setText("点云"+cloudId+"分割结果");
+    rootItem1->appendRow(parentItem1);
+    rootItem1=parentItem1;
+    rootItem1->appendRow(fileItem1);
     //去除的点云项
     id=id+1;
     count1=count1+1;
@@ -1885,10 +1908,16 @@ void MainWindow::projectInliers(void* viewer_void)
     fileItem2->setFlags(Qt::ItemIsUserCheckable | Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     fileItem2->setCheckState(Qt::Checked);
     fileItem2->setText(QString::number(id)+":"+"点云"+cloudId+"的分割部分2");
-    // 假设添加到根项，如果需要添加到其他项，可先获取该父项
-    QStandardItem* rootItem1 = model->invisibleRootItem();
-    rootItem1->appendRow(fileItem1);
-    rootItem1->appendRow(fileItem2);
+    //创建去除点云项的各节点并添加
+    QStandardItem* rootItem2 = model->invisibleRootItem();
+    QStandardItem* parentItem2 = new QStandardItem();
+    parentItem2->setIcon(QIcon(":/new/prefix1/resource/file.png")); // 设置文件图标
+    parentItem2->setData(true, Qt::UserRole); // 存储是目录的信息
+    parentItem2->setText("点云"+cloudId+"分割结果");
+    rootItem2->appendRow(parentItem2);
+    rootItem2=parentItem2;
+    rootItem2->appendRow(fileItem2);
+    ui->treeView->expandAll(); // 展开所有项
 
     //更新显示界面并输出Debug
     ui->guiwidget->renderWindow()->Render();
@@ -2345,5 +2374,200 @@ void MainWindow::on_close_action_triggered()
     ui->guiwidget->renderWindow()->Render();
     ui->guiwidget->update();
     qDebug()<<"已关闭所有文件！";
+}
+
+//统计离群点去除滤波器
+void MainWindow::on_StatisticalOutlierRemoval1_triggered()
+{
+    // 获取当前显示的点云指针及其 cloudId
+    auto result = getCurrentlyDisplayedPointCloudFromView();
+    QString cloudId = result.first;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloudptr = result.second;
+    qDebug()<<"正在对点云"<<cloudId<<"进行统计离群点去除......";
+    // 原始点云
+    std::shared_ptr<pcl::PointCloud<pcl::PointXYZ>> modifiedCloud(new pcl::PointCloud<pcl::PointXYZ>(*cloudptr));
+    pcl::StatisticalOutlierRemoval<pcl::PointXYZ> sor;
+    sor.setInputCloud(modifiedCloud);
+    sor.setMeanK(50);
+    sor.setStddevMulThresh(1.00);
+    sor.filter(*cloudptr);
+    // 更新 pointCloudMap 中的指针
+    pointCloudMap[cloudId] = cloudptr;
+    view->removeAllPointClouds();
+    view->addPointCloud(cloudptr);
+    ui->guiwidget->renderWindow()->Render();
+    ui->guiwidget->update();
+    qDebug()<<"点云统计离群点去除已完成！";
+}
+
+//体素滤波器
+void MainWindow::on_VoxelGrid_triggered()
+{
+    // 获取当前显示的点云指针及其 cloudId
+    auto result = getCurrentlyDisplayedPointCloudFromView();
+    QString cloudId = result.first;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloudptr = result.second;
+    qDebug()<<"正在对点云"<<cloudId<<"进行体素滤波......";
+    // 创建点云副本，使用智能指针管理内存
+    std::shared_ptr<pcl::PointCloud<pcl::PointXYZ>> modifiedCloud(new pcl::PointCloud<pcl::PointXYZ>(*cloudptr));
+    if (modifiedCloud->empty()) {
+        qDebug()<<"体素滤波失败！";
+        return;
+    }
+    // 计算点云中两点之间的最小距离，用于设定合适的叶尺寸
+    double min_distance = std::numeric_limits<double>::max();
+    for (size_t i = 0; i < modifiedCloud->size(); ++i) {
+        for (size_t j = i + 1; j < modifiedCloud->size(); ++j) {
+            double dist = std::sqrt(std::pow(modifiedCloud->points[i].x - modifiedCloud->points[j].x, 2) +
+                                    std::pow(modifiedCloud->points[i].y - modifiedCloud->points[j].y, 2) +
+                                    std::pow(modifiedCloud->points[i].z - modifiedCloud->points[j].z, 2));
+            if (dist < min_distance) {
+                min_distance = dist;
+            }
+        }
+    }
+    float leaf_size = min_distance * 0.8f;
+    // 创建体素网格滤波器对象
+    pcl::VoxelGrid<pcl::PointXYZ> sor;
+    sor.setInputCloud(modifiedCloud);
+    // 设置体素网格的大小（以米为单位），这将决定体素滤波后的点云分辨率
+    sor.setLeafSize(leaf_size, leaf_size, leaf_size);
+    // 应用滤波器并获取体素滤波后的点云
+    sor.filter(*cloudptr);
+
+    pointCloudMap[cloudId]=cloudptr;
+    view->removeAllPointClouds();
+    view->addPointCloud(cloudptr);
+    ui->guiwidget->renderWindow()->Render();
+    ui->guiwidget->update();
+    qDebug()<<"体素滤波处理完成！";
+}
+
+//半径离群点去除滤波器
+void MainWindow::on_RadiusOutlinerRemoval_triggered()
+{
+    // 获取当前显示的点云指针及其 cloudId
+    auto result = getCurrentlyDisplayedPointCloudFromView();
+    QString cloudId = result.first;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloudptr = result.second;
+    qDebug()<<"正在对点云"<<cloudId<<"进行半径离群点去除......";
+    // 原始点云
+    std::shared_ptr<pcl::PointCloud<pcl::PointXYZ>> modifiedCloud(new pcl::PointCloud<pcl::PointXYZ>(*cloudptr));
+    pcl::RadiusOutlierRemoval<pcl::PointXYZ> pcFilter;  //创建滤波器对象
+    pcFilter.setInputCloud(modifiedCloud);              //设置待滤波的点云
+    pcFilter.setRadiusSearch(0.8);                      // 设置搜索半径
+    pcFilter.setMinNeighborsInRadius(2);                // 设置一个内点最少的邻居数目
+    pcFilter.filter(*cloudptr);
+    // 更新 pointCloudMap 中的指针
+    pointCloudMap[cloudId] = cloudptr;
+    view->removeAllPointClouds();
+    view->addPointCloud(cloudptr);
+    ui->guiwidget->renderWindow()->Render();
+    ui->guiwidget->update();
+    qDebug()<<"点云半径离群点去除已完成！";
+}
+
+//直通滤波器X轴
+void MainWindow::on_actionX_triggered()
+{
+    // 获取当前显示的点云指针及其 cloudId
+    auto result = getCurrentlyDisplayedPointCloudFromView();
+    QString cloudId = result.first;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloudptr = result.second;
+    qDebug()<<"正在对点云"<<cloudId<<"进行X轴直通滤波......";
+    // 原始点云
+    std::shared_ptr<pcl::PointCloud<pcl::PointXYZ>> modifiedCloud(new pcl::PointCloud<pcl::PointXYZ>(*cloudptr));
+    pcl::PassThrough<pcl::PointXYZ> pass;
+    pass.setInputCloud(modifiedCloud);
+    pass.setFilterFieldName("x");
+    pass.setFilterLimits(0.0, 1.0); //闭区间[0.0, 1.0]，保留该闭区间内的值
+    pass.filter(*cloudptr);
+    // 更新 pointCloudMap 中的指针
+    pointCloudMap[cloudId] = cloudptr;
+    view->removeAllPointClouds();
+    view->addPointCloud(cloudptr);
+    ui->guiwidget->renderWindow()->Render();
+    ui->guiwidget->update();
+    qDebug()<<"X轴点云直通滤波已完成！";
+}
+
+//直通滤波器Y轴
+void MainWindow::on_actiony_triggered()
+{
+    // 获取当前显示的点云指针及其 cloudId
+    auto result = getCurrentlyDisplayedPointCloudFromView();
+    QString cloudId = result.first;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloudptr = result.second;
+    qDebug()<<"正在对点云"<<cloudId<<"进行Y轴直通滤波......";
+    // 原始点云
+    std::shared_ptr<pcl::PointCloud<pcl::PointXYZ>> modifiedCloud(new pcl::PointCloud<pcl::PointXYZ>(*cloudptr));
+    pcl::PassThrough<pcl::PointXYZ> pass;
+    pass.setInputCloud(modifiedCloud);
+    pass.setFilterFieldName("y");
+    pass.setFilterLimits(0.0, 1.0); //闭区间[0.0, 1.0]，保留该闭区间内的值
+    pass.filter(*cloudptr);
+    // 更新 pointCloudMap 中的指针
+    pointCloudMap[cloudId] = cloudptr;
+    view->removeAllPointClouds();
+    view->addPointCloud(cloudptr);
+    ui->guiwidget->renderWindow()->Render();
+    ui->guiwidget->update();
+    qDebug()<<"Y轴点云直通滤波已完成！";
+}
+
+//直通滤波器Z轴
+void MainWindow::on_actionZ_triggered()
+{
+    // 获取当前显示的点云指针及其 cloudId
+    auto result = getCurrentlyDisplayedPointCloudFromView();
+    QString cloudId = result.first;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloudptr = result.second;
+    qDebug()<<"正在对点云"<<cloudId<<"进行Z轴直通滤波......";
+    // 原始点云
+    std::shared_ptr<pcl::PointCloud<pcl::PointXYZ>> modifiedCloud(new pcl::PointCloud<pcl::PointXYZ>(*cloudptr));
+    pcl::PassThrough<pcl::PointXYZ> pass;
+    pass.setInputCloud(modifiedCloud);
+    pass.setFilterFieldName("z");
+    pass.setFilterLimits(0.0, 1.0); //闭区间[0.0, 1.0]，保留该闭区间内的值
+    pass.filter(*cloudptr);
+    // 更新 pointCloudMap 中的指针
+    pointCloudMap[cloudId] = cloudptr;
+    view->removeAllPointClouds();
+    view->addPointCloud(cloudptr);
+    ui->guiwidget->renderWindow()->Render();
+    ui->guiwidget->update();
+    qDebug()<<"Z轴点云直通滤波已完成！";
+}
+
+//投影参数化模型滤波器
+void MainWindow::on_ProjectInliers_triggered()
+{
+    // 获取当前显示的点云指针及其 cloudId
+    auto result = getCurrentlyDisplayedPointCloudFromView();
+    QString cloudId = result.first;
+    pcl::PointCloud<pcl::PointXYZ>::Ptr cloudptr = result.second;
+    qDebug()<<"正在对点云"<<cloudId<<"进行投影参数化模型滤波......";
+    // 原始点云
+    std::shared_ptr<pcl::PointCloud<pcl::PointXYZ>> modifiedCloud(new pcl::PointCloud<pcl::PointXYZ>(*cloudptr));
+    //平面 ax+by+cz+d=0 的系数a b c d
+    pcl::ModelCoefficients::Ptr coef(new pcl::ModelCoefficients());
+    coef->values.resize(4);
+    coef->values[0] = 1;
+    coef->values[1] = 1;
+    coef->values[2] = 1;
+    coef->values[3] = -1;
+    //ProjectInliers滤波器
+    pcl::ProjectInliers<pcl::PointXYZ> prot;
+    prot.setModelType(pcl::SACMODEL_PLANE); //设置投影模型为平面模型
+    prot.setInputCloud(modifiedCloud);
+    prot.setModelCoefficients(coef);
+    prot.filter(*cloudptr);
+    // 更新 pointCloudMap 中的指针
+    pointCloudMap[cloudId] = cloudptr;
+    view->removeAllPointClouds();
+    view->addPointCloud(cloudptr);
+    ui->guiwidget->renderWindow()->Render();
+    ui->guiwidget->update();
+    qDebug()<<"投影参数化模型滤波已完成！";
 }
 
