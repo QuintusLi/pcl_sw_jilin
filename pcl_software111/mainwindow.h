@@ -55,8 +55,6 @@ public:
 
     void mouseEventOccurred(vtkObject* caller, unsigned long eventId, void* callData);
     pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_polygon;//用于储存鼠标框选的框选点
-    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_cliped1;//用于存储点云在多边形内部的点
-    pcl::PointCloud<pcl::PointXYZ>::Ptr cloud_cliped2;//用于存储点云在多边形内部的点
     pcl::PointXYZ curP, lastP;
     bool flag = false;
     bool isPickingMode = false;
@@ -163,6 +161,26 @@ private slots:
 
     void on_ProjectInliers_triggered();
 
+    void on_actionLaplas_triggered();
+
+    void on_actionGauss_triggered();
+
+    void on_marching_cubes_triggered();
+
+    void on_action_B_triggered();
+
+    void on_aobao_clicked();
+
+    void on_action_help_triggered();
+
+    void on_action_quick_triggered();
+
+    void mergePointClouds();
+
+    void on_actionMLS_triggered();
+
+    void on_delete_away_2_clicked();
+
 private:
     Ui::MainWindow *ui;
     CustomTreeView *customTreeView;
@@ -184,17 +202,18 @@ private:
     std::pair<QString, pcl::PointCloud<pcl::PointXYZ>::Ptr> getCurrentlyDisplayedPointCloudFromView(); //查找当前正在显示的点云
     //判断两点云是否相同（此函数为辅助用）
     bool arePointCloudsEqual(const pcl::PointCloud<pcl::PointXYZ>::Ptr& cloud1, const pcl::PointCloud<pcl::PointXYZ>::Ptr& cloud2) const {
-        if (cloud1->size()!= cloud2->size()) {
+        if (cloud1->size()!= cloud2->size())
+        {
             return false;
         }
-        for (size_t i = 0; i < cloud1->size(); ++i) {
+        for (size_t i = 0; i < cloud1->size(); ++i)
+        {
             if (cloud1->points[i].x!= cloud2->points[i].x || cloud1->points[i].y!= cloud2->points[i].y || cloud1->points[i].z!= cloud2->points[i].z) {
                 return false;
             }
         }
         return true;
     }
-
 
 
 };

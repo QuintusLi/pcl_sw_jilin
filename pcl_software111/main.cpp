@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     a.setStyle(QStyleFactory::create("windows"));
     qInstallMessageHandler(LogMessage);
-    qDebug()<<"startup application!";
+    qDebug()<<"正在打开软件......";
     MainWindow w;
     w.show();
 

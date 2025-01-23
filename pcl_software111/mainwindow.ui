@@ -147,14 +147,6 @@
     <addaction name="StatisticalOutlierRemoval1"/>
     <addaction name="ProjectInliers"/>
    </widget>
-   <widget class="QMenu" name="menu_7">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="title">
-     <string>关键点</string>
-    </property>
-   </widget>
    <widget class="QMenu" name="menu_8">
     <property name="enabled">
      <bool>true</bool>
@@ -164,19 +156,15 @@
     </property>
     <addaction name="tanlan"/>
     <addaction name="bosong1"/>
-   </widget>
-   <widget class="QMenu" name="menu_9">
-    <property name="enabled">
-     <bool>true</bool>
-    </property>
-    <property name="title">
-     <string>快捷键</string>
-    </property>
+    <addaction name="marching_cubes"/>
+    <addaction name="action_B"/>
    </widget>
    <widget class="QMenu" name="menu_10">
     <property name="title">
      <string>帮助</string>
     </property>
+    <addaction name="action_help"/>
+    <addaction name="action_quick"/>
    </widget>
    <widget class="QMenu" name="menu_11">
     <property name="title">
@@ -196,15 +184,15 @@
     </property>
     <addaction name="Mouse_select"/>
     <addaction name="divide"/>
+    <addaction name="separator"/>
+    <addaction name="mergeButton"/>
    </widget>
    <addaction name="menu"/>
    <addaction name="menu_2"/>
    <addaction name="menu_4"/>
    <addaction name="menu_5"/>
-   <addaction name="menu_7"/>
    <addaction name="menu_12"/>
    <addaction name="menu_8"/>
-   <addaction name="menu_9"/>
    <addaction name="menu_10"/>
    <addaction name="menu_11"/>
   </widget>
@@ -222,10 +210,23 @@
    <addaction name="open_action"/>
    <addaction name="save_action"/>
    <addaction name="actionSTL"/>
+   <addaction name="tree_clear"/>
+   <addaction name="separator"/>
+   <addaction name="actionLaplas"/>
+   <addaction name="actionGauss"/>
+   <addaction name="actionMLS"/>
    <addaction name="separator"/>
    <addaction name="Triangular_meshing"/>
+   <addaction name="bosong1"/>
+   <addaction name="marching_cubes"/>
+   <addaction name="action_B"/>
    <addaction name="interpolation"/>
-   <addaction name="tree_clear"/>
+   <addaction name="separator"/>
+   <addaction name="Mouse_select"/>
+   <addaction name="divide"/>
+   <addaction name="mergeButton"/>
+   <addaction name="separator"/>
+   <addaction name="action_help"/>
   </widget>
   <widget class="QToolBar" name="toolBar_2">
    <property name="windowTitle">
@@ -295,7 +296,7 @@
     <layout class="QVBoxLayout" name="verticalLayout_3">
      <item>
       <widget class="QWidget" name="widget_6" native="true">
-       <layout class="QVBoxLayout" name="verticalLayout_8">
+       <layout class="QVBoxLayout" name="verticalLayout_10">
         <item>
          <widget class="QLabel" name="label_5">
           <property name="text">
@@ -304,54 +305,123 @@
          </widget>
         </item>
         <item>
-         <widget class="QLabel" name="L_yuzhi1">
-          <property name="text">
-           <string>判断阈值：</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QDoubleSpinBox" name="L_yuzhi">
-          <property name="maximum">
-           <double>5.000000000000000</double>
-          </property>
-          <property name="singleStep">
-           <double>0.250000000000000</double>
-          </property>
-          <property name="value">
-           <double>1.000000000000000</double>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="L_search1">
-          <property name="text">
-           <string>考虑临近点个数：</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QSpinBox" name="L_search">
-          <property name="maximum">
-           <number>10000</number>
-          </property>
-          <property name="singleStep">
-           <number>1</number>
-          </property>
-          <property name="value">
-           <number>50</number>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="delete_away">
-          <property name="enabled">
-           <bool>false</bool>
-          </property>
-          <property name="text">
-           <string>离群点去除</string>
-          </property>
-         </widget>
+         <layout class="QHBoxLayout" name="horizontalLayout_9">
+          <item>
+           <widget class="QWidget" name="widget_12" native="true">
+            <layout class="QVBoxLayout" name="verticalLayout_9">
+             <item>
+              <widget class="QLabel" name="L_yuzhi1">
+               <property name="text">
+                <string>判断阈值：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="L_yuzhi">
+               <property name="maximum">
+                <double>5.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.250000000000000</double>
+               </property>
+               <property name="value">
+                <double>1.000000000000000</double>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="L_search1">
+               <property name="text">
+                <string>考虑临近点个数：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="L_search">
+               <property name="maximum">
+                <number>10000</number>
+               </property>
+               <property name="singleStep">
+                <number>1</number>
+               </property>
+               <property name="value">
+                <number>50</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="delete_away">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="text">
+                <string>离群点去除</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QWidget" name="widget_11" native="true">
+            <layout class="QVBoxLayout" name="verticalLayout_8">
+             <item>
+              <widget class="QLabel" name="L_yuzhi1_2">
+               <property name="text">
+                <string>MLS拟合阶数：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="L_search_2">
+               <property name="minimum">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <number>5</number>
+               </property>
+               <property name="singleStep">
+                <number>1</number>
+               </property>
+               <property name="value">
+                <number>2</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="L_yuzhi1_3">
+               <property name="text">
+                <string>搜索半径：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="L_search_3">
+               <property name="maximum">
+                <number>10000</number>
+               </property>
+               <property name="singleStep">
+                <number>1</number>
+               </property>
+               <property name="value">
+                <number>10</number>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="delete_away_2">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="text">
+                <string>MLS平滑处理</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
         </item>
         <item>
          <widget class="QPushButton" name="pushButton">
@@ -528,103 +598,129 @@
       </widget>
      </item>
      <item>
-      <widget class="QWidget" name="widget" native="true">
-       <layout class="QVBoxLayout" name="verticalLayout_6">
+      <widget class="Line" name="line_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWidget" name="widget_10" native="true">
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
-         <widget class="Line" name="line_2">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_4">
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>50</height>
-           </size>
-          </property>
-          <property name="text">
-           <string>网格化操作：</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QWidget" name="widget_7" native="true">
-          <layout class="QGridLayout" name="gridLayout_2">
-           <item row="0" column="4" rowspan="2" colspan="2">
-            <widget class="QDoubleSpinBox" name="fluent_coefficient">
-             <property name="singleStep">
-              <double>0.500000000000000</double>
+         <widget class="QWidget" name="widget" native="true">
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <widget class="QLabel" name="label_4">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>50</height>
+              </size>
              </property>
-             <property name="value">
-              <double>3.500000000000000</double>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1" rowspan="2" colspan="2">
-            <widget class="QDoubleSpinBox" name="searchradius">
-             <property name="maximum">
-              <double>9999.000000000000000</double>
-             </property>
-             <property name="value">
-              <double>10.000000000000000</double>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="3" colspan="2">
-            <widget class="QLabel" name="label_9">
              <property name="text">
-              <string>考虑点的法线一致性:</string>
+              <string>网格化操作：</string>
              </property>
             </widget>
            </item>
-           <item row="2" column="5">
-            <widget class="QComboBox" name="comboBox_3">
-             <item>
-              <property name="text">
-               <string>否</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>是</string>
-              </property>
-             </item>
+           <item>
+            <widget class="QWidget" name="widget_7" native="true">
+             <layout class="QGridLayout" name="gridLayout_2">
+              <item row="0" column="1" rowspan="2" colspan="2">
+               <widget class="QDoubleSpinBox" name="searchradius">
+                <property name="maximum">
+                 <double>9999.000000000000000</double>
+                </property>
+                <property name="value">
+                 <double>10.000000000000000</double>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="4" rowspan="2" colspan="2">
+               <widget class="QDoubleSpinBox" name="fluent_coefficient">
+                <property name="singleStep">
+                 <double>0.500000000000000</double>
+                </property>
+                <property name="value">
+                 <double>3.500000000000000</double>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0" colspan="2">
+               <widget class="QLabel" name="label_8">
+                <property name="text">
+                 <string>最大邻居点数：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="3" colspan="2">
+               <widget class="QLabel" name="label_9">
+                <property name="text">
+                 <string>考虑点的法线一致性:</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="2">
+               <widget class="QSpinBox" name="setMaximumNearestNeighbors">
+                <property name="maximum">
+                 <number>10000</number>
+                </property>
+                <property name="singleStep">
+                 <number>10</number>
+                </property>
+                <property name="value">
+                 <number>1500</number>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3" rowspan="2">
+               <widget class="QLabel" name="label_7">
+                <property name="text">
+                 <string>光滑密度因子：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0" rowspan="2">
+               <widget class="QLabel" name="label_6">
+                <property name="text">
+                 <string>搜索半径：</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="5">
+               <widget class="QComboBox" name="comboBox_3">
+                <item>
+                 <property name="text">
+                  <string>否</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>是</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
             </widget>
            </item>
-           <item row="2" column="0" colspan="2">
-            <widget class="QLabel" name="label_8">
+           <item>
+            <widget class="QPushButton" name="TaLanSanJiao">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="text">
-              <string>最大邻居点数：</string>
+              <string>进行贪婪三角化</string>
              </property>
             </widget>
            </item>
-           <item row="0" column="3" rowspan="2">
-            <widget class="QLabel" name="label_7">
+           <item>
+            <widget class="QPushButton" name="bosong">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="text">
-              <string>光滑密度因子：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="0" rowspan="2">
-            <widget class="QLabel" name="label_6">
-             <property name="text">
-              <string>搜索半径：</string>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="2">
-            <widget class="QSpinBox" name="setMaximumNearestNeighbors">
-             <property name="maximum">
-              <number>10000</number>
-             </property>
-             <property name="singleStep">
-              <number>10</number>
-             </property>
-             <property name="value">
-              <number>1500</number>
+              <string>泊松重建</string>
              </property>
             </widget>
            </item>
@@ -632,23 +728,57 @@
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="TaLanSanJiao">
-          <property name="enabled">
-           <bool>false</bool>
-          </property>
-          <property name="text">
-           <string>进行贪婪三角化</string>
+         <widget class="Line" name="line_4">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
           </property>
          </widget>
         </item>
         <item>
-         <widget class="QPushButton" name="bosong">
-          <property name="enabled">
-           <bool>false</bool>
-          </property>
-          <property name="text">
-           <string>泊松重建</string>
-          </property>
+         <widget class="QWidget" name="widget_8" native="true">
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <item>
+            <widget class="QLabel" name="label_14">
+             <property name="text">
+              <string>a-shape凹包算法：</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_8">
+             <item>
+              <widget class="QLabel" name="label_15">
+               <property name="text">
+                <string>alpha值：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="searchradius_2">
+               <property name="maximum">
+                <double>1.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+               <property name="value">
+                <double>0.500000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QPushButton" name="aobao">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
+             <property name="text">
+              <string>进行凹包重建</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
          </widget>
         </item>
        </layout>
@@ -941,7 +1071,7 @@
             </property>
             <item>
              <property name="text">
-              <string>轴向（当前为无）</string>
+              <string>选择轴向（当前为非渲染状态）</string>
              </property>
             </item>
             <item>
@@ -1070,6 +1200,9 @@
    <property name="toolTip">
     <string>关闭所有打开的点云文件</string>
    </property>
+   <property name="shortcut">
+    <string>Esc</string>
+   </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
    </property>
@@ -1080,6 +1213,9 @@
    </property>
    <property name="text">
     <string>退出程序（exit）</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+Esc</string>
    </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
@@ -1128,7 +1264,7 @@
   </action>
   <action name="actionSTL">
    <property name="enabled">
-    <bool>true</bool>
+    <bool>false</bool>
    </property>
    <property name="icon">
     <iconset resource="view_icon.qrc">
@@ -1149,6 +1285,9 @@
    <property name="text">
     <string>坐标轴显示</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
+   </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
    </property>
@@ -1160,6 +1299,9 @@
    </property>
    <property name="text">
     <string>界面放大</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Up</string>
    </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
@@ -1173,6 +1315,9 @@
    <property name="text">
     <string>视角复位</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Space</string>
+   </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
    </property>
@@ -1185,6 +1330,9 @@
    <property name="text">
     <string>界面缩小</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Down</string>
+   </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
    </property>
@@ -1192,6 +1340,9 @@
   <action name="bb_theme">
    <property name="text">
     <string>白蓝风格</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+W</string>
    </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
@@ -1201,15 +1352,24 @@
    <property name="text">
     <string>原风格</string>
    </property>
+   <property name="shortcut">
+    <string>Shift+I</string>
+   </property>
   </action>
   <action name="action3">
    <property name="text">
     <string>黑色风格</string>
    </property>
+   <property name="shortcut">
+    <string>Shift+B</string>
+   </property>
   </action>
   <action name="action4">
    <property name="text">
     <string>白黑风格</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+G</string>
    </property>
   </action>
   <action name="Triangular_meshing">
@@ -1222,6 +1382,9 @@
    </property>
    <property name="text">
     <string>三角网格化</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+T</string>
    </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
@@ -1238,6 +1401,9 @@
    <property name="text">
     <string>最近邻插值</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
    </property>
@@ -1252,6 +1418,9 @@
    </property>
    <property name="text">
     <string>main_view</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+1</string>
    </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
@@ -1268,6 +1437,9 @@
    <property name="text">
     <string>back_view</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+4</string>
+   </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
    </property>
@@ -1282,6 +1454,9 @@
    </property>
    <property name="text">
     <string>left_view</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+2</string>
    </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
@@ -1298,6 +1473,9 @@
    <property name="text">
     <string>right_view</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+5</string>
+   </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
    </property>
@@ -1312,6 +1490,9 @@
    </property>
    <property name="text">
     <string>top_view</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+3</string>
    </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
@@ -1328,6 +1509,9 @@
    <property name="text">
     <string>up_view</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+6</string>
+   </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
    </property>
@@ -1336,6 +1520,9 @@
    <property name="text">
     <string>可视化操作窗口</string>
    </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+V</string>
+   </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
    </property>
@@ -1343,6 +1530,9 @@
   <action name="processing_action">
    <property name="text">
     <string>点云处理窗口</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+P</string>
    </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
@@ -1356,6 +1546,9 @@
    <property name="text">
     <string>清空树状图</string>
    </property>
+   <property name="shortcut">
+    <string>Shift+T</string>
+   </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
    </property>
@@ -1363,6 +1556,10 @@
   <action name="Mouse_select">
    <property name="enabled">
     <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="view_icon.qrc">
+     <normaloff>:/new/prefix1/resource/kuangxuan.png</normaloff>:/new/prefix1/resource/kuangxuan.png</iconset>
    </property>
    <property name="text">
     <string>鼠标框选</string>
@@ -1381,8 +1578,15 @@
    <property name="enabled">
     <bool>false</bool>
    </property>
+   <property name="icon">
+    <iconset resource="view_icon.qrc">
+     <normaloff>:/new/prefix1/resource/fenge.png</normaloff>:/new/prefix1/resource/fenge.png</iconset>
+   </property>
    <property name="text">
     <string>开始分割</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
    </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
@@ -1392,8 +1596,15 @@
    <property name="enabled">
     <bool>false</bool>
    </property>
+   <property name="icon">
+    <iconset resource="view_icon.qrc">
+     <normaloff>:/new/prefix1/resource/meshing.png</normaloff>:/new/prefix1/resource/meshing.png</iconset>
+   </property>
    <property name="text">
     <string>贪婪三角化</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+G</string>
    </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
@@ -1403,8 +1614,15 @@
    <property name="enabled">
     <bool>false</bool>
    </property>
+   <property name="icon">
+    <iconset resource="view_icon.qrc">
+     <normaloff>:/new/prefix1/resource/bosong.png</normaloff>:/new/prefix1/resource/bosong.png</iconset>
+   </property>
    <property name="text">
     <string>泊松重建</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
    </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
@@ -1416,6 +1634,9 @@
    </property>
    <property name="text">
     <string>StatisticalOutlierRemove</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+O</string>
    </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
@@ -1431,6 +1652,9 @@
    <property name="toolTip">
     <string>VoxelGrid</string>
    </property>
+   <property name="shortcut">
+    <string>Shift+V</string>
+   </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
    </property>
@@ -1444,6 +1668,9 @@
    </property>
    <property name="toolTip">
     <string>RadiusOutlinerRemoval</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+R</string>
    </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
@@ -1459,6 +1686,9 @@
    <property name="toolTip">
     <string>StatisticalOutlierRemoval</string>
    </property>
+   <property name="shortcut">
+    <string>Shift+S</string>
+   </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
    </property>
@@ -1466,6 +1696,9 @@
   <action name="actionX">
    <property name="text">
     <string>X轴</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+X</string>
    </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
@@ -1475,6 +1708,9 @@
    <property name="text">
     <string>Y轴</string>
    </property>
+   <property name="shortcut">
+    <string>Shift+Y</string>
+   </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
    </property>
@@ -1482,6 +1718,9 @@
   <action name="actionZ">
    <property name="text">
     <string>Z轴</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+Z</string>
    </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>
@@ -1496,6 +1735,170 @@
    </property>
    <property name="toolTip">
     <string>ProjectInliers</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+P</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionLaplas">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="view_icon.qrc">
+     <normaloff>:/new/prefix1/resource/Laplas.png</normaloff>:/new/prefix1/resource/Laplas.png</iconset>
+   </property>
+   <property name="text">
+    <string>拉普拉斯平滑</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+L</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionGauss">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="view_icon.qrc">
+     <normaloff>:/new/prefix1/resource/Gauss.png</normaloff>:/new/prefix1/resource/Gauss.png</iconset>
+   </property>
+   <property name="text">
+    <string>高斯平滑</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+G</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionhelp">
+   <property name="icon">
+    <iconset resource="view_icon.qrc">
+     <normaloff>:/new/prefix1/resource/help.png</normaloff>:/new/prefix1/resource/help.png</iconset>
+   </property>
+   <property name="text">
+    <string>帮助</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+Return</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="marching_cubes">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="view_icon.qrc">
+     <normaloff>:/new/prefix1/resource/marching_cubes.png</normaloff>:/new/prefix1/resource/marching_cubes.png</iconset>
+   </property>
+   <property name="text">
+    <string>移动立方体重建</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+I</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="action_B">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="view_icon.qrc">
+     <normaloff>:/new/prefix1/resource/a-shape.png</normaloff>:/new/prefix1/resource/a-shape.png</iconset>
+   </property>
+   <property name="text">
+    <string>a-shape凹包重建</string>
+   </property>
+   <property name="toolTip">
+    <string>a-shape凹包重建</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+B</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="action_help">
+   <property name="icon">
+    <iconset resource="view_icon.qrc">
+     <normaloff>:/new/prefix1/resource/help.png</normaloff>:/new/prefix1/resource/help.png</iconset>
+   </property>
+   <property name="text">
+    <string>使用指南</string>
+   </property>
+   <property name="toolTip">
+    <string>使用指南</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+H</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="action_quick">
+   <property name="text">
+    <string>快捷键表</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+K</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="mergeButton">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="view_icon.qrc">
+     <normaloff>:/new/prefix1/resource/pinjie.png</normaloff>:/new/prefix1/resource/pinjie.png</iconset>
+   </property>
+   <property name="text">
+    <string>点云拼接</string>
+   </property>
+   <property name="toolTip">
+    <string>点云拼接</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+P</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::NoRole</enum>
+   </property>
+  </action>
+  <action name="actionMLS">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="view_icon.qrc">
+     <normaloff>:/new/prefix1/resource/MLS.png</normaloff>:/new/prefix1/resource/MLS.png</iconset>
+   </property>
+   <property name="text">
+    <string>MLS平滑</string>
+   </property>
+   <property name="toolTip">
+    <string>MLS平滑</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+M</string>
    </property>
    <property name="menuRole">
     <enum>QAction::NoRole</enum>

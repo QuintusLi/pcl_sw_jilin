@@ -24,5 +24,15 @@
         <file>resource/cloud.png</file>
         <file>resource/tree_clear.png</file>
         <file>resource/file.png</file>
+        <file>resource/bosong.png</file>
+        <file>resource/fenge.png</file>
+        <file>resource/Gauss.png</file>
+        <file>resource/help.png</file>
+        <file>resource/kuangxuan.png</file>
+        <file>resource/Laplas.png</file>
+        <file>resource/marching_cubes.png</file>
+        <file>resource/a-shape.png</file>
+        <file>resource/pinjie.png</file>
+        <file>resource/MLS.png</file>
     </qresource>
 </RCC>

@@ -80,6 +80,15 @@ public:
     QAction *actiony;
     QAction *actionZ;
     QAction *ProjectInliers;
+    QAction *actionLaplas;
+    QAction *actionGauss;
+    QAction *actionhelp;
+    QAction *marching_cubes;
+    QAction *action_B;
+    QAction *action_help;
+    QAction *action_quick;
+    QAction *mergeButton;
+    QAction *actionMLS;
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout;
     QWidget *widget_5;
@@ -93,9 +102,7 @@ public:
     QMenu *menu_4;
     QMenu *menu_5;
     QMenu *menu_3;
-    QMenu *menu_7;
     QMenu *menu_8;
-    QMenu *menu_9;
     QMenu *menu_10;
     QMenu *menu_11;
     QMenu *menu_12;
@@ -106,13 +113,23 @@ public:
     QWidget *dockWidgetContents_3;
     QVBoxLayout *verticalLayout_3;
     QWidget *widget_6;
-    QVBoxLayout *verticalLayout_8;
+    QVBoxLayout *verticalLayout_10;
     QLabel *label_5;
+    QHBoxLayout *horizontalLayout_9;
+    QWidget *widget_12;
+    QVBoxLayout *verticalLayout_9;
     QLabel *L_yuzhi1;
     QDoubleSpinBox *L_yuzhi;
     QLabel *L_search1;
     QSpinBox *L_search;
     QPushButton *delete_away;
+    QWidget *widget_11;
+    QVBoxLayout *verticalLayout_8;
+    QLabel *L_yuzhi1_2;
+    QSpinBox *L_search_2;
+    QLabel *L_yuzhi1_3;
+    QSpinBox *L_search_3;
+    QPushButton *delete_away_2;
     QPushButton *pushButton;
     QWidget *widget_9;
     QHBoxLayout *horizontalLayout_2;
@@ -135,22 +152,32 @@ public:
     QVBoxLayout *verticalLayout_7;
     QPushButton *chazhi;
     QPushButton *chazhi1;
-    QWidget *widget;
-    QVBoxLayout *verticalLayout_6;
     QFrame *line_2;
+    QWidget *widget_10;
+    QHBoxLayout *horizontalLayout_3;
+    QWidget *widget;
+    QVBoxLayout *verticalLayout_4;
     QLabel *label_4;
     QWidget *widget_7;
     QGridLayout *gridLayout_2;
-    QDoubleSpinBox *fluent_coefficient;
     QDoubleSpinBox *searchradius;
-    QLabel *label_9;
-    QComboBox *comboBox_3;
+    QDoubleSpinBox *fluent_coefficient;
     QLabel *label_8;
+    QLabel *label_9;
+    QSpinBox *setMaximumNearestNeighbors;
     QLabel *label_7;
     QLabel *label_6;
-    QSpinBox *setMaximumNearestNeighbors;
+    QComboBox *comboBox_3;
     QPushButton *TaLanSanJiao;
     QPushButton *bosong;
+    QFrame *line_4;
+    QWidget *widget_8;
+    QVBoxLayout *verticalLayout_6;
+    QLabel *label_14;
+    QHBoxLayout *horizontalLayout_8;
+    QLabel *label_15;
+    QDoubleSpinBox *searchradius_2;
+    QPushButton *aobao;
     QDockWidget *dockWidget;
     QWidget *dockWidgetContents_2;
     QHBoxLayout *horizontalLayout;
@@ -224,7 +251,7 @@ public:
         actionOBJ->setMenuRole(QAction::NoRole);
         actionSTL = new QAction(MainWindow);
         actionSTL->setObjectName("actionSTL");
-        actionSTL->setEnabled(true);
+        actionSTL->setEnabled(false);
         QIcon icon3;
         icon3.addFile(QString::fromUtf8(":/new/prefix1/resource/Save_As.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionSTL->setIcon(icon3);
@@ -333,18 +360,28 @@ public:
         Mouse_select = new QAction(MainWindow);
         Mouse_select->setObjectName("Mouse_select");
         Mouse_select->setEnabled(false);
+        QIcon icon17;
+        icon17.addFile(QString::fromUtf8(":/new/prefix1/resource/kuangxuan.png"), QSize(), QIcon::Normal, QIcon::Off);
+        Mouse_select->setIcon(icon17);
         Mouse_select->setMenuRole(QAction::NoRole);
         divide = new QAction(MainWindow);
         divide->setObjectName("divide");
         divide->setEnabled(false);
+        QIcon icon18;
+        icon18.addFile(QString::fromUtf8(":/new/prefix1/resource/fenge.png"), QSize(), QIcon::Normal, QIcon::Off);
+        divide->setIcon(icon18);
         divide->setMenuRole(QAction::NoRole);
         tanlan = new QAction(MainWindow);
         tanlan->setObjectName("tanlan");
         tanlan->setEnabled(false);
+        tanlan->setIcon(icon8);
         tanlan->setMenuRole(QAction::NoRole);
         bosong1 = new QAction(MainWindow);
         bosong1->setObjectName("bosong1");
         bosong1->setEnabled(false);
+        QIcon icon19;
+        icon19.addFile(QString::fromUtf8(":/new/prefix1/resource/bosong.png"), QSize(), QIcon::Normal, QIcon::Off);
+        bosong1->setIcon(icon19);
         bosong1->setMenuRole(QAction::NoRole);
         actionStatisticalOutlierRemove = new QAction(MainWindow);
         actionStatisticalOutlierRemove->setObjectName("actionStatisticalOutlierRemove");
@@ -375,6 +412,61 @@ public:
         ProjectInliers->setObjectName("ProjectInliers");
         ProjectInliers->setEnabled(false);
         ProjectInliers->setMenuRole(QAction::NoRole);
+        actionLaplas = new QAction(MainWindow);
+        actionLaplas->setObjectName("actionLaplas");
+        actionLaplas->setEnabled(false);
+        QIcon icon20;
+        icon20.addFile(QString::fromUtf8(":/new/prefix1/resource/Laplas.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionLaplas->setIcon(icon20);
+        actionLaplas->setMenuRole(QAction::NoRole);
+        actionGauss = new QAction(MainWindow);
+        actionGauss->setObjectName("actionGauss");
+        actionGauss->setEnabled(false);
+        QIcon icon21;
+        icon21.addFile(QString::fromUtf8(":/new/prefix1/resource/Gauss.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionGauss->setIcon(icon21);
+        actionGauss->setMenuRole(QAction::NoRole);
+        actionhelp = new QAction(MainWindow);
+        actionhelp->setObjectName("actionhelp");
+        QIcon icon22;
+        icon22.addFile(QString::fromUtf8(":/new/prefix1/resource/help.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionhelp->setIcon(icon22);
+        actionhelp->setMenuRole(QAction::NoRole);
+        marching_cubes = new QAction(MainWindow);
+        marching_cubes->setObjectName("marching_cubes");
+        marching_cubes->setEnabled(false);
+        QIcon icon23;
+        icon23.addFile(QString::fromUtf8(":/new/prefix1/resource/marching_cubes.png"), QSize(), QIcon::Normal, QIcon::Off);
+        marching_cubes->setIcon(icon23);
+        marching_cubes->setMenuRole(QAction::NoRole);
+        action_B = new QAction(MainWindow);
+        action_B->setObjectName("action_B");
+        action_B->setEnabled(false);
+        QIcon icon24;
+        icon24.addFile(QString::fromUtf8(":/new/prefix1/resource/a-shape.png"), QSize(), QIcon::Normal, QIcon::Off);
+        action_B->setIcon(icon24);
+        action_B->setMenuRole(QAction::NoRole);
+        action_help = new QAction(MainWindow);
+        action_help->setObjectName("action_help");
+        action_help->setIcon(icon22);
+        action_help->setMenuRole(QAction::NoRole);
+        action_quick = new QAction(MainWindow);
+        action_quick->setObjectName("action_quick");
+        action_quick->setMenuRole(QAction::NoRole);
+        mergeButton = new QAction(MainWindow);
+        mergeButton->setObjectName("mergeButton");
+        mergeButton->setEnabled(false);
+        QIcon icon25;
+        icon25.addFile(QString::fromUtf8(":/new/prefix1/resource/pinjie.png"), QSize(), QIcon::Normal, QIcon::Off);
+        mergeButton->setIcon(icon25);
+        mergeButton->setMenuRole(QAction::NoRole);
+        actionMLS = new QAction(MainWindow);
+        actionMLS->setObjectName("actionMLS");
+        actionMLS->setEnabled(false);
+        QIcon icon26;
+        icon26.addFile(QString::fromUtf8(":/new/prefix1/resource/MLS.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionMLS->setIcon(icon26);
+        actionMLS->setMenuRole(QAction::NoRole);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         verticalLayout = new QVBoxLayout(centralwidget);
@@ -428,15 +520,9 @@ public:
         menu_3 = new QMenu(menu_5);
         menu_3->setObjectName("menu_3");
         menu_3->setEnabled(false);
-        menu_7 = new QMenu(menubar);
-        menu_7->setObjectName("menu_7");
-        menu_7->setEnabled(true);
         menu_8 = new QMenu(menubar);
         menu_8->setObjectName("menu_8");
         menu_8->setEnabled(true);
-        menu_9 = new QMenu(menubar);
-        menu_9->setObjectName("menu_9");
-        menu_9->setEnabled(true);
         menu_10 = new QMenu(menubar);
         menu_10->setObjectName("menu_10");
         menu_11 = new QMenu(menubar);
@@ -472,50 +558,102 @@ public:
         verticalLayout_3->setObjectName("verticalLayout_3");
         widget_6 = new QWidget(dockWidgetContents_3);
         widget_6->setObjectName("widget_6");
-        verticalLayout_8 = new QVBoxLayout(widget_6);
-        verticalLayout_8->setObjectName("verticalLayout_8");
+        verticalLayout_10 = new QVBoxLayout(widget_6);
+        verticalLayout_10->setObjectName("verticalLayout_10");
         label_5 = new QLabel(widget_6);
         label_5->setObjectName("label_5");
 
-        verticalLayout_8->addWidget(label_5);
+        verticalLayout_10->addWidget(label_5);
 
-        L_yuzhi1 = new QLabel(widget_6);
+        horizontalLayout_9 = new QHBoxLayout();
+        horizontalLayout_9->setObjectName("horizontalLayout_9");
+        widget_12 = new QWidget(widget_6);
+        widget_12->setObjectName("widget_12");
+        verticalLayout_9 = new QVBoxLayout(widget_12);
+        verticalLayout_9->setObjectName("verticalLayout_9");
+        L_yuzhi1 = new QLabel(widget_12);
         L_yuzhi1->setObjectName("L_yuzhi1");
 
-        verticalLayout_8->addWidget(L_yuzhi1);
+        verticalLayout_9->addWidget(L_yuzhi1);
 
-        L_yuzhi = new QDoubleSpinBox(widget_6);
+        L_yuzhi = new QDoubleSpinBox(widget_12);
         L_yuzhi->setObjectName("L_yuzhi");
         L_yuzhi->setMaximum(5.000000000000000);
         L_yuzhi->setSingleStep(0.250000000000000);
         L_yuzhi->setValue(1.000000000000000);
 
-        verticalLayout_8->addWidget(L_yuzhi);
+        verticalLayout_9->addWidget(L_yuzhi);
 
-        L_search1 = new QLabel(widget_6);
+        L_search1 = new QLabel(widget_12);
         L_search1->setObjectName("L_search1");
 
-        verticalLayout_8->addWidget(L_search1);
+        verticalLayout_9->addWidget(L_search1);
 
-        L_search = new QSpinBox(widget_6);
+        L_search = new QSpinBox(widget_12);
         L_search->setObjectName("L_search");
         L_search->setMaximum(10000);
         L_search->setSingleStep(1);
         L_search->setValue(50);
 
-        verticalLayout_8->addWidget(L_search);
+        verticalLayout_9->addWidget(L_search);
 
-        delete_away = new QPushButton(widget_6);
+        delete_away = new QPushButton(widget_12);
         delete_away->setObjectName("delete_away");
         delete_away->setEnabled(false);
 
-        verticalLayout_8->addWidget(delete_away);
+        verticalLayout_9->addWidget(delete_away);
+
+
+        horizontalLayout_9->addWidget(widget_12);
+
+        widget_11 = new QWidget(widget_6);
+        widget_11->setObjectName("widget_11");
+        verticalLayout_8 = new QVBoxLayout(widget_11);
+        verticalLayout_8->setObjectName("verticalLayout_8");
+        L_yuzhi1_2 = new QLabel(widget_11);
+        L_yuzhi1_2->setObjectName("L_yuzhi1_2");
+
+        verticalLayout_8->addWidget(L_yuzhi1_2);
+
+        L_search_2 = new QSpinBox(widget_11);
+        L_search_2->setObjectName("L_search_2");
+        L_search_2->setMinimum(1);
+        L_search_2->setMaximum(5);
+        L_search_2->setSingleStep(1);
+        L_search_2->setValue(2);
+
+        verticalLayout_8->addWidget(L_search_2);
+
+        L_yuzhi1_3 = new QLabel(widget_11);
+        L_yuzhi1_3->setObjectName("L_yuzhi1_3");
+
+        verticalLayout_8->addWidget(L_yuzhi1_3);
+
+        L_search_3 = new QSpinBox(widget_11);
+        L_search_3->setObjectName("L_search_3");
+        L_search_3->setMaximum(10000);
+        L_search_3->setSingleStep(1);
+        L_search_3->setValue(10);
+
+        verticalLayout_8->addWidget(L_search_3);
+
+        delete_away_2 = new QPushButton(widget_11);
+        delete_away_2->setObjectName("delete_away_2");
+        delete_away_2->setEnabled(false);
+
+        verticalLayout_8->addWidget(delete_away_2);
+
+
+        horizontalLayout_9->addWidget(widget_11);
+
+
+        verticalLayout_10->addLayout(horizontalLayout_9);
 
         pushButton = new QPushButton(widget_6);
         pushButton->setObjectName("pushButton");
         pushButton->setEnabled(false);
 
-        verticalLayout_8->addWidget(pushButton);
+        verticalLayout_10->addWidget(pushButton);
 
         widget_9 = new QWidget(widget_6);
         widget_9->setObjectName("widget_9");
@@ -597,7 +735,7 @@ public:
         horizontalLayout_2->addWidget(Gauss_Button);
 
 
-        verticalLayout_8->addWidget(widget_9);
+        verticalLayout_10->addWidget(widget_9);
 
 
         verticalLayout_3->addWidget(widget_6);
@@ -638,34 +776,31 @@ public:
 
         verticalLayout_3->addWidget(widget_2);
 
-        widget = new QWidget(dockWidgetContents_3);
-        widget->setObjectName("widget");
-        verticalLayout_6 = new QVBoxLayout(widget);
-        verticalLayout_6->setObjectName("verticalLayout_6");
-        line_2 = new QFrame(widget);
+        line_2 = new QFrame(dockWidgetContents_3);
         line_2->setObjectName("line_2");
         line_2->setFrameShape(QFrame::Shape::HLine);
         line_2->setFrameShadow(QFrame::Shadow::Sunken);
 
-        verticalLayout_6->addWidget(line_2);
+        verticalLayout_3->addWidget(line_2);
 
+        widget_10 = new QWidget(dockWidgetContents_3);
+        widget_10->setObjectName("widget_10");
+        horizontalLayout_3 = new QHBoxLayout(widget_10);
+        horizontalLayout_3->setObjectName("horizontalLayout_3");
+        widget = new QWidget(widget_10);
+        widget->setObjectName("widget");
+        verticalLayout_4 = new QVBoxLayout(widget);
+        verticalLayout_4->setObjectName("verticalLayout_4");
         label_4 = new QLabel(widget);
         label_4->setObjectName("label_4");
         label_4->setMaximumSize(QSize(16777215, 50));
 
-        verticalLayout_6->addWidget(label_4);
+        verticalLayout_4->addWidget(label_4);
 
         widget_7 = new QWidget(widget);
         widget_7->setObjectName("widget_7");
         gridLayout_2 = new QGridLayout(widget_7);
         gridLayout_2->setObjectName("gridLayout_2");
-        fluent_coefficient = new QDoubleSpinBox(widget_7);
-        fluent_coefficient->setObjectName("fluent_coefficient");
-        fluent_coefficient->setSingleStep(0.500000000000000);
-        fluent_coefficient->setValue(3.500000000000000);
-
-        gridLayout_2->addWidget(fluent_coefficient, 0, 4, 2, 2);
-
         searchradius = new QDoubleSpinBox(widget_7);
         searchradius->setObjectName("searchradius");
         searchradius->setMaximum(9999.000000000000000);
@@ -673,22 +808,30 @@ public:
 
         gridLayout_2->addWidget(searchradius, 0, 1, 2, 2);
 
-        label_9 = new QLabel(widget_7);
-        label_9->setObjectName("label_9");
+        fluent_coefficient = new QDoubleSpinBox(widget_7);
+        fluent_coefficient->setObjectName("fluent_coefficient");
+        fluent_coefficient->setSingleStep(0.500000000000000);
+        fluent_coefficient->setValue(3.500000000000000);
 
-        gridLayout_2->addWidget(label_9, 2, 3, 1, 2);
-
-        comboBox_3 = new QComboBox(widget_7);
-        comboBox_3->addItem(QString());
-        comboBox_3->addItem(QString());
-        comboBox_3->setObjectName("comboBox_3");
-
-        gridLayout_2->addWidget(comboBox_3, 2, 5, 1, 1);
+        gridLayout_2->addWidget(fluent_coefficient, 0, 4, 2, 2);
 
         label_8 = new QLabel(widget_7);
         label_8->setObjectName("label_8");
 
         gridLayout_2->addWidget(label_8, 2, 0, 1, 2);
+
+        label_9 = new QLabel(widget_7);
+        label_9->setObjectName("label_9");
+
+        gridLayout_2->addWidget(label_9, 2, 3, 1, 2);
+
+        setMaximumNearestNeighbors = new QSpinBox(widget_7);
+        setMaximumNearestNeighbors->setObjectName("setMaximumNearestNeighbors");
+        setMaximumNearestNeighbors->setMaximum(10000);
+        setMaximumNearestNeighbors->setSingleStep(10);
+        setMaximumNearestNeighbors->setValue(1500);
+
+        gridLayout_2->addWidget(setMaximumNearestNeighbors, 2, 2, 1, 1);
 
         label_7 = new QLabel(widget_7);
         label_7->setObjectName("label_7");
@@ -700,31 +843,76 @@ public:
 
         gridLayout_2->addWidget(label_6, 0, 0, 2, 1);
 
-        setMaximumNearestNeighbors = new QSpinBox(widget_7);
-        setMaximumNearestNeighbors->setObjectName("setMaximumNearestNeighbors");
-        setMaximumNearestNeighbors->setMaximum(10000);
-        setMaximumNearestNeighbors->setSingleStep(10);
-        setMaximumNearestNeighbors->setValue(1500);
+        comboBox_3 = new QComboBox(widget_7);
+        comboBox_3->addItem(QString());
+        comboBox_3->addItem(QString());
+        comboBox_3->setObjectName("comboBox_3");
 
-        gridLayout_2->addWidget(setMaximumNearestNeighbors, 2, 2, 1, 1);
+        gridLayout_2->addWidget(comboBox_3, 2, 5, 1, 1);
 
 
-        verticalLayout_6->addWidget(widget_7);
+        verticalLayout_4->addWidget(widget_7);
 
         TaLanSanJiao = new QPushButton(widget);
         TaLanSanJiao->setObjectName("TaLanSanJiao");
         TaLanSanJiao->setEnabled(false);
 
-        verticalLayout_6->addWidget(TaLanSanJiao);
+        verticalLayout_4->addWidget(TaLanSanJiao);
 
         bosong = new QPushButton(widget);
         bosong->setObjectName("bosong");
         bosong->setEnabled(false);
 
-        verticalLayout_6->addWidget(bosong);
+        verticalLayout_4->addWidget(bosong);
 
 
-        verticalLayout_3->addWidget(widget);
+        horizontalLayout_3->addWidget(widget);
+
+        line_4 = new QFrame(widget_10);
+        line_4->setObjectName("line_4");
+        line_4->setFrameShape(QFrame::Shape::VLine);
+        line_4->setFrameShadow(QFrame::Shadow::Sunken);
+
+        horizontalLayout_3->addWidget(line_4);
+
+        widget_8 = new QWidget(widget_10);
+        widget_8->setObjectName("widget_8");
+        verticalLayout_6 = new QVBoxLayout(widget_8);
+        verticalLayout_6->setObjectName("verticalLayout_6");
+        label_14 = new QLabel(widget_8);
+        label_14->setObjectName("label_14");
+
+        verticalLayout_6->addWidget(label_14);
+
+        horizontalLayout_8 = new QHBoxLayout();
+        horizontalLayout_8->setObjectName("horizontalLayout_8");
+        label_15 = new QLabel(widget_8);
+        label_15->setObjectName("label_15");
+
+        horizontalLayout_8->addWidget(label_15);
+
+        searchradius_2 = new QDoubleSpinBox(widget_8);
+        searchradius_2->setObjectName("searchradius_2");
+        searchradius_2->setMaximum(1.000000000000000);
+        searchradius_2->setSingleStep(0.100000000000000);
+        searchradius_2->setValue(0.500000000000000);
+
+        horizontalLayout_8->addWidget(searchradius_2);
+
+
+        verticalLayout_6->addLayout(horizontalLayout_8);
+
+        aobao = new QPushButton(widget_8);
+        aobao->setObjectName("aobao");
+        aobao->setEnabled(false);
+
+        verticalLayout_6->addWidget(aobao);
+
+
+        horizontalLayout_3->addWidget(widget_8);
+
+
+        verticalLayout_3->addWidget(widget_10);
 
         dockWidget_3->setWidget(dockWidgetContents_3);
         MainWindow->addDockWidget(Qt::DockWidgetArea::LeftDockWidgetArea, dockWidget_3);
@@ -894,10 +1082,8 @@ public:
         menubar->addAction(menu_2->menuAction());
         menubar->addAction(menu_4->menuAction());
         menubar->addAction(menu_5->menuAction());
-        menubar->addAction(menu_7->menuAction());
         menubar->addAction(menu_12->menuAction());
         menubar->addAction(menu_8->menuAction());
-        menubar->addAction(menu_9->menuAction());
         menubar->addAction(menu_10->menuAction());
         menubar->addAction(menu_11->menuAction());
         menu->addAction(open_action);
@@ -924,19 +1110,38 @@ public:
         menu_3->addAction(actionZ);
         menu_8->addAction(tanlan);
         menu_8->addAction(bosong1);
+        menu_8->addAction(marching_cubes);
+        menu_8->addAction(action_B);
+        menu_10->addAction(action_help);
+        menu_10->addAction(action_quick);
         menu_11->addAction(bb_theme);
         menu_11->addAction(action1);
         menu_11->addAction(action3);
         menu_11->addAction(action4);
         menu_12->addAction(Mouse_select);
         menu_12->addAction(divide);
+        menu_12->addSeparator();
+        menu_12->addAction(mergeButton);
         toolBar->addAction(open_action);
         toolBar->addAction(save_action);
         toolBar->addAction(actionSTL);
+        toolBar->addAction(tree_clear);
+        toolBar->addSeparator();
+        toolBar->addAction(actionLaplas);
+        toolBar->addAction(actionGauss);
+        toolBar->addAction(actionMLS);
         toolBar->addSeparator();
         toolBar->addAction(Triangular_meshing);
+        toolBar->addAction(bosong1);
+        toolBar->addAction(marching_cubes);
+        toolBar->addAction(action_B);
         toolBar->addAction(interpolation);
-        toolBar->addAction(tree_clear);
+        toolBar->addSeparator();
+        toolBar->addAction(Mouse_select);
+        toolBar->addAction(divide);
+        toolBar->addAction(mergeButton);
+        toolBar->addSeparator();
+        toolBar->addAction(action_help);
         toolBar_2->addAction(if_axis_appear);
         toolBar_2->addAction(reset_view);
         toolBar_2->addAction(interface_larger);
@@ -974,31 +1179,94 @@ public:
 #if QT_CONFIG(tooltip)
         close_action->setToolTip(QCoreApplication::translate("MainWindow", "\345\205\263\351\227\255\346\211\200\346\234\211\346\211\223\345\274\200\347\232\204\347\202\271\344\272\221\346\226\207\344\273\266", nullptr));
 #endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(shortcut)
+        close_action->setShortcut(QCoreApplication::translate("MainWindow", "Esc", nullptr));
+#endif // QT_CONFIG(shortcut)
         exit_action->setText(QCoreApplication::translate("MainWindow", "\351\200\200\345\207\272\347\250\213\345\272\217\357\274\210exit\357\274\211", nullptr));
+#if QT_CONFIG(shortcut)
+        exit_action->setShortcut(QCoreApplication::translate("MainWindow", "Shift+Esc", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionPCD->setText(QCoreApplication::translate("MainWindow", "PCD", nullptr));
         actionPLY->setText(QCoreApplication::translate("MainWindow", "PLY", nullptr));
         actionTXT->setText(QCoreApplication::translate("MainWindow", "TXT", nullptr));
         actionOBJ->setText(QCoreApplication::translate("MainWindow", "OBJ", nullptr));
         actionSTL->setText(QCoreApplication::translate("MainWindow", "STL", nullptr));
         if_axis_appear->setText(QCoreApplication::translate("MainWindow", "\345\235\220\346\240\207\350\275\264\346\230\276\347\244\272", nullptr));
+#if QT_CONFIG(shortcut)
+        if_axis_appear->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+A", nullptr));
+#endif // QT_CONFIG(shortcut)
         interface_larger->setText(QCoreApplication::translate("MainWindow", "\347\225\214\351\235\242\346\224\276\345\244\247", nullptr));
+#if QT_CONFIG(shortcut)
+        interface_larger->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+Up", nullptr));
+#endif // QT_CONFIG(shortcut)
         reset_view->setText(QCoreApplication::translate("MainWindow", "\350\247\206\350\247\222\345\244\215\344\275\215", nullptr));
+#if QT_CONFIG(shortcut)
+        reset_view->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+Space", nullptr));
+#endif // QT_CONFIG(shortcut)
         interface_smaller->setText(QCoreApplication::translate("MainWindow", "\347\225\214\351\235\242\347\274\251\345\260\217", nullptr));
+#if QT_CONFIG(shortcut)
+        interface_smaller->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+Down", nullptr));
+#endif // QT_CONFIG(shortcut)
         bb_theme->setText(QCoreApplication::translate("MainWindow", "\347\231\275\350\223\235\351\243\216\346\240\274", nullptr));
+#if QT_CONFIG(shortcut)
+        bb_theme->setShortcut(QCoreApplication::translate("MainWindow", "Shift+W", nullptr));
+#endif // QT_CONFIG(shortcut)
         action1->setText(QCoreApplication::translate("MainWindow", "\345\216\237\351\243\216\346\240\274", nullptr));
+#if QT_CONFIG(shortcut)
+        action1->setShortcut(QCoreApplication::translate("MainWindow", "Shift+I", nullptr));
+#endif // QT_CONFIG(shortcut)
         action3->setText(QCoreApplication::translate("MainWindow", "\351\273\221\350\211\262\351\243\216\346\240\274", nullptr));
+#if QT_CONFIG(shortcut)
+        action3->setShortcut(QCoreApplication::translate("MainWindow", "Shift+B", nullptr));
+#endif // QT_CONFIG(shortcut)
         action4->setText(QCoreApplication::translate("MainWindow", "\347\231\275\351\273\221\351\243\216\346\240\274", nullptr));
+#if QT_CONFIG(shortcut)
+        action4->setShortcut(QCoreApplication::translate("MainWindow", "Shift+G", nullptr));
+#endif // QT_CONFIG(shortcut)
         Triangular_meshing->setText(QCoreApplication::translate("MainWindow", "\344\270\211\350\247\222\347\275\221\346\240\274\345\214\226", nullptr));
+#if QT_CONFIG(shortcut)
+        Triangular_meshing->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+T", nullptr));
+#endif // QT_CONFIG(shortcut)
         interpolation->setText(QCoreApplication::translate("MainWindow", "\346\234\200\350\277\221\351\202\273\346\217\222\345\200\274", nullptr));
+#if QT_CONFIG(shortcut)
+        interpolation->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+N", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionmain_view->setText(QCoreApplication::translate("MainWindow", "main_view", nullptr));
+#if QT_CONFIG(shortcut)
+        actionmain_view->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+1", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionback_view->setText(QCoreApplication::translate("MainWindow", "back_view", nullptr));
+#if QT_CONFIG(shortcut)
+        actionback_view->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+4", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionleft_view->setText(QCoreApplication::translate("MainWindow", "left_view", nullptr));
+#if QT_CONFIG(shortcut)
+        actionleft_view->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+2", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionright_view->setText(QCoreApplication::translate("MainWindow", "right_view", nullptr));
+#if QT_CONFIG(shortcut)
+        actionright_view->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+5", nullptr));
+#endif // QT_CONFIG(shortcut)
         actiontop_view->setText(QCoreApplication::translate("MainWindow", "top_view", nullptr));
+#if QT_CONFIG(shortcut)
+        actiontop_view->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+3", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionup_view->setText(QCoreApplication::translate("MainWindow", "up_view", nullptr));
+#if QT_CONFIG(shortcut)
+        actionup_view->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+6", nullptr));
+#endif // QT_CONFIG(shortcut)
         visualization_action->setText(QCoreApplication::translate("MainWindow", "\345\217\257\350\247\206\345\214\226\346\223\215\344\275\234\347\252\227\345\217\243", nullptr));
+#if QT_CONFIG(shortcut)
+        visualization_action->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+Shift+V", nullptr));
+#endif // QT_CONFIG(shortcut)
         processing_action->setText(QCoreApplication::translate("MainWindow", "\347\202\271\344\272\221\345\244\204\347\220\206\347\252\227\345\217\243", nullptr));
+#if QT_CONFIG(shortcut)
+        processing_action->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+Shift+P", nullptr));
+#endif // QT_CONFIG(shortcut)
         tree_clear->setText(QCoreApplication::translate("MainWindow", "\346\270\205\347\251\272\346\240\221\347\212\266\345\233\276", nullptr));
+#if QT_CONFIG(shortcut)
+        tree_clear->setShortcut(QCoreApplication::translate("MainWindow", "Shift+T", nullptr));
+#endif // QT_CONFIG(shortcut)
         Mouse_select->setText(QCoreApplication::translate("MainWindow", "\351\274\240\346\240\207\346\241\206\351\200\211", nullptr));
 #if QT_CONFIG(tooltip)
         Mouse_select->setToolTip(QCoreApplication::translate("MainWindow", "\351\274\240\346\240\207\346\241\206\351\200\211\345\207\272\350\246\201\344\277\235\347\225\231\347\232\204\347\202\271\344\272\221\351\203\250\345\210\206", nullptr));
@@ -1007,27 +1275,102 @@ public:
         Mouse_select->setShortcut(QCoreApplication::translate("MainWindow", "F", nullptr));
 #endif // QT_CONFIG(shortcut)
         divide->setText(QCoreApplication::translate("MainWindow", "\345\274\200\345\247\213\345\210\206\345\211\262", nullptr));
+#if QT_CONFIG(shortcut)
+        divide->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+D", nullptr));
+#endif // QT_CONFIG(shortcut)
         tanlan->setText(QCoreApplication::translate("MainWindow", "\350\264\252\345\251\252\344\270\211\350\247\222\345\214\226", nullptr));
+#if QT_CONFIG(shortcut)
+        tanlan->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+G", nullptr));
+#endif // QT_CONFIG(shortcut)
         bosong1->setText(QCoreApplication::translate("MainWindow", "\346\263\212\346\235\276\351\207\215\345\273\272", nullptr));
+#if QT_CONFIG(shortcut)
+        bosong1->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+P", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionStatisticalOutlierRemove->setText(QCoreApplication::translate("MainWindow", "StatisticalOutlierRemove", nullptr));
+#if QT_CONFIG(shortcut)
+        actionStatisticalOutlierRemove->setShortcut(QCoreApplication::translate("MainWindow", "Shift+O", nullptr));
+#endif // QT_CONFIG(shortcut)
         VoxelGrid->setText(QCoreApplication::translate("MainWindow", "\344\275\223\347\264\240\346\273\244\346\263\242\345\231\250", nullptr));
 #if QT_CONFIG(tooltip)
         VoxelGrid->setToolTip(QCoreApplication::translate("MainWindow", "VoxelGrid", nullptr));
 #endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(shortcut)
+        VoxelGrid->setShortcut(QCoreApplication::translate("MainWindow", "Shift+V", nullptr));
+#endif // QT_CONFIG(shortcut)
         RadiusOutlinerRemoval->setText(QCoreApplication::translate("MainWindow", "\345\215\212\345\276\204\347\246\273\347\276\244\347\202\271\345\216\273\351\231\244\346\273\244\346\263\242\345\231\250", nullptr));
 #if QT_CONFIG(tooltip)
         RadiusOutlinerRemoval->setToolTip(QCoreApplication::translate("MainWindow", "RadiusOutlinerRemoval", nullptr));
 #endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(shortcut)
+        RadiusOutlinerRemoval->setShortcut(QCoreApplication::translate("MainWindow", "Shift+R", nullptr));
+#endif // QT_CONFIG(shortcut)
         StatisticalOutlierRemoval1->setText(QCoreApplication::translate("MainWindow", "\347\273\237\350\256\241\347\246\273\347\276\244\347\202\271\345\216\273\351\231\244\346\273\244\346\263\242\345\231\250", nullptr));
 #if QT_CONFIG(tooltip)
         StatisticalOutlierRemoval1->setToolTip(QCoreApplication::translate("MainWindow", "StatisticalOutlierRemoval", nullptr));
 #endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(shortcut)
+        StatisticalOutlierRemoval1->setShortcut(QCoreApplication::translate("MainWindow", "Shift+S", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionX->setText(QCoreApplication::translate("MainWindow", "X\350\275\264", nullptr));
+#if QT_CONFIG(shortcut)
+        actionX->setShortcut(QCoreApplication::translate("MainWindow", "Shift+X", nullptr));
+#endif // QT_CONFIG(shortcut)
         actiony->setText(QCoreApplication::translate("MainWindow", "Y\350\275\264", nullptr));
+#if QT_CONFIG(shortcut)
+        actiony->setShortcut(QCoreApplication::translate("MainWindow", "Shift+Y", nullptr));
+#endif // QT_CONFIG(shortcut)
         actionZ->setText(QCoreApplication::translate("MainWindow", "Z\350\275\264", nullptr));
+#if QT_CONFIG(shortcut)
+        actionZ->setShortcut(QCoreApplication::translate("MainWindow", "Shift+Z", nullptr));
+#endif // QT_CONFIG(shortcut)
         ProjectInliers->setText(QCoreApplication::translate("MainWindow", "\346\212\225\345\275\261\345\217\202\346\225\260\345\214\226\346\250\241\345\236\213\346\273\244\346\263\242\345\231\250", nullptr));
 #if QT_CONFIG(tooltip)
         ProjectInliers->setToolTip(QCoreApplication::translate("MainWindow", "ProjectInliers", nullptr));
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(shortcut)
+        ProjectInliers->setShortcut(QCoreApplication::translate("MainWindow", "Shift+P", nullptr));
+#endif // QT_CONFIG(shortcut)
+        actionLaplas->setText(QCoreApplication::translate("MainWindow", "\346\213\211\346\231\256\346\213\211\346\226\257\345\271\263\346\273\221", nullptr));
+#if QT_CONFIG(shortcut)
+        actionLaplas->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+L", nullptr));
+#endif // QT_CONFIG(shortcut)
+        actionGauss->setText(QCoreApplication::translate("MainWindow", "\351\253\230\346\226\257\345\271\263\346\273\221", nullptr));
+#if QT_CONFIG(shortcut)
+        actionGauss->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+G", nullptr));
+#endif // QT_CONFIG(shortcut)
+        actionhelp->setText(QCoreApplication::translate("MainWindow", "\345\270\256\345\212\251", nullptr));
+#if QT_CONFIG(shortcut)
+        actionhelp->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+Shift+Return", nullptr));
+#endif // QT_CONFIG(shortcut)
+        marching_cubes->setText(QCoreApplication::translate("MainWindow", "\347\247\273\345\212\250\347\253\213\346\226\271\344\275\223\351\207\215\345\273\272", nullptr));
+#if QT_CONFIG(shortcut)
+        marching_cubes->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+I", nullptr));
+#endif // QT_CONFIG(shortcut)
+        action_B->setText(QCoreApplication::translate("MainWindow", "a-shape\345\207\271\345\214\205\351\207\215\345\273\272", nullptr));
+#if QT_CONFIG(tooltip)
+        action_B->setToolTip(QCoreApplication::translate("MainWindow", "a-shape\345\207\271\345\214\205\351\207\215\345\273\272", nullptr));
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(shortcut)
+        action_B->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+B", nullptr));
+#endif // QT_CONFIG(shortcut)
+        action_help->setText(QCoreApplication::translate("MainWindow", "\344\275\277\347\224\250\346\214\207\345\215\227", nullptr));
+#if QT_CONFIG(tooltip)
+        action_help->setToolTip(QCoreApplication::translate("MainWindow", "\344\275\277\347\224\250\346\214\207\345\215\227", nullptr));
+#endif // QT_CONFIG(tooltip)
+#if QT_CONFIG(shortcut)
+        action_help->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+H", nullptr));
+#endif // QT_CONFIG(shortcut)
+        action_quick->setText(QCoreApplication::translate("MainWindow", "\345\277\253\346\215\267\351\224\256\350\241\250", nullptr));
+#if QT_CONFIG(shortcut)
+        action_quick->setShortcut(QCoreApplication::translate("MainWindow", "Ctrl+K", nullptr));
+#endif // QT_CONFIG(shortcut)
+        mergeButton->setText(QCoreApplication::translate("MainWindow", "\347\202\271\344\272\221\346\213\274\346\216\245", nullptr));
+#if QT_CONFIG(tooltip)
+        mergeButton->setToolTip(QCoreApplication::translate("MainWindow", "\347\202\271\344\272\221\346\213\274\346\216\245", nullptr));
+#endif // QT_CONFIG(tooltip)
+        actionMLS->setText(QCoreApplication::translate("MainWindow", "MLS\345\271\263\346\273\221", nullptr));
+#if QT_CONFIG(tooltip)
+        actionMLS->setToolTip(QCoreApplication::translate("MainWindow", "MLS\345\271\263\346\273\221", nullptr));
 #endif // QT_CONFIG(tooltip)
         menu->setTitle(QCoreApplication::translate("MainWindow", "\346\226\207\344\273\266", nullptr));
         menu_output->setTitle(QCoreApplication::translate("MainWindow", "\345\217\246\345\255\230\344\270\272(output)", nullptr));
@@ -1035,9 +1378,7 @@ public:
         menu_4->setTitle(QCoreApplication::translate("MainWindow", "\347\246\273\347\276\244\347\202\271\347\247\273\351\231\244", nullptr));
         menu_5->setTitle(QCoreApplication::translate("MainWindow", "\346\273\244\346\263\242", nullptr));
         menu_3->setTitle(QCoreApplication::translate("MainWindow", "\347\233\264\351\200\232\346\273\244\346\263\242\345\231\250", nullptr));
-        menu_7->setTitle(QCoreApplication::translate("MainWindow", "\345\205\263\351\224\256\347\202\271", nullptr));
         menu_8->setTitle(QCoreApplication::translate("MainWindow", "\350\241\250\351\235\242\351\207\215\345\273\272", nullptr));
-        menu_9->setTitle(QCoreApplication::translate("MainWindow", "\345\277\253\346\215\267\351\224\256", nullptr));
         menu_10->setTitle(QCoreApplication::translate("MainWindow", "\345\270\256\345\212\251", nullptr));
         menu_11->setTitle(QCoreApplication::translate("MainWindow", "\344\270\273\351\242\230", nullptr));
         menu_12->setTitle(QCoreApplication::translate("MainWindow", "\345\210\206\345\211\262", nullptr));
@@ -1048,6 +1389,9 @@ public:
         L_yuzhi1->setText(QCoreApplication::translate("MainWindow", "\345\210\244\346\226\255\351\230\210\345\200\274\357\274\232", nullptr));
         L_search1->setText(QCoreApplication::translate("MainWindow", "\350\200\203\350\231\221\344\270\264\350\277\221\347\202\271\344\270\252\346\225\260\357\274\232", nullptr));
         delete_away->setText(QCoreApplication::translate("MainWindow", "\347\246\273\347\276\244\347\202\271\345\216\273\351\231\244", nullptr));
+        L_yuzhi1_2->setText(QCoreApplication::translate("MainWindow", "MLS\346\213\237\345\220\210\351\230\266\346\225\260\357\274\232", nullptr));
+        L_yuzhi1_3->setText(QCoreApplication::translate("MainWindow", "\346\220\234\347\264\242\345\215\212\345\276\204\357\274\232", nullptr));
+        delete_away_2->setText(QCoreApplication::translate("MainWindow", "MLS\345\271\263\346\273\221\345\244\204\347\220\206", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "\344\270\213\351\207\207\346\240\267", nullptr));
         label_12->setText(QCoreApplication::translate("MainWindow", "\345\271\263\346\273\221\350\277\255\344\273\243\346\254\241\346\225\260\357\274\232", nullptr));
         label_13->setText(QCoreApplication::translate("MainWindow", "\346\235\276\345\274\233\345\233\240\345\255\220\357\274\232", nullptr));
@@ -1059,15 +1403,18 @@ public:
         chazhi->setText(QCoreApplication::translate("MainWindow", "\346\234\200\350\277\221\351\202\273\346\217\222\345\200\274", nullptr));
         chazhi1->setText(QCoreApplication::translate("MainWindow", "\350\267\235\347\246\273\345\217\215\346\257\224\346\217\222\345\200\274", nullptr));
         label_4->setText(QCoreApplication::translate("MainWindow", "\347\275\221\346\240\274\345\214\226\346\223\215\344\275\234\357\274\232", nullptr));
+        label_8->setText(QCoreApplication::translate("MainWindow", "\346\234\200\345\244\247\351\202\273\345\261\205\347\202\271\346\225\260\357\274\232", nullptr));
         label_9->setText(QCoreApplication::translate("MainWindow", "\350\200\203\350\231\221\347\202\271\347\232\204\346\263\225\347\272\277\344\270\200\350\207\264\346\200\247:", nullptr));
+        label_7->setText(QCoreApplication::translate("MainWindow", "\345\205\211\346\273\221\345\257\206\345\272\246\345\233\240\345\255\220\357\274\232", nullptr));
+        label_6->setText(QCoreApplication::translate("MainWindow", "\346\220\234\347\264\242\345\215\212\345\276\204\357\274\232", nullptr));
         comboBox_3->setItemText(0, QCoreApplication::translate("MainWindow", "\345\220\246", nullptr));
         comboBox_3->setItemText(1, QCoreApplication::translate("MainWindow", "\346\230\257", nullptr));
 
-        label_8->setText(QCoreApplication::translate("MainWindow", "\346\234\200\345\244\247\351\202\273\345\261\205\347\202\271\346\225\260\357\274\232", nullptr));
-        label_7->setText(QCoreApplication::translate("MainWindow", "\345\205\211\346\273\221\345\257\206\345\272\246\345\233\240\345\255\220\357\274\232", nullptr));
-        label_6->setText(QCoreApplication::translate("MainWindow", "\346\220\234\347\264\242\345\215\212\345\276\204\357\274\232", nullptr));
         TaLanSanJiao->setText(QCoreApplication::translate("MainWindow", "\350\277\233\350\241\214\350\264\252\345\251\252\344\270\211\350\247\222\345\214\226", nullptr));
         bosong->setText(QCoreApplication::translate("MainWindow", "\346\263\212\346\235\276\351\207\215\345\273\272", nullptr));
+        label_14->setText(QCoreApplication::translate("MainWindow", "a-shape\345\207\271\345\214\205\347\256\227\346\263\225\357\274\232", nullptr));
+        label_15->setText(QCoreApplication::translate("MainWindow", "alpha\345\200\274\357\274\232", nullptr));
+        aobao->setText(QCoreApplication::translate("MainWindow", "\350\277\233\350\241\214\345\207\271\345\214\205\351\207\215\345\273\272", nullptr));
         dockWidget->setWindowTitle(QCoreApplication::translate("MainWindow", "\347\202\271\344\272\221\345\244\204\347\220\206\345\256\236\346\227\266\346\227\245\345\277\227\357\274\232", nullptr));
         dockWidget_2->setWindowTitle(QCoreApplication::translate("MainWindow", "\347\202\271\344\272\221\345\217\257\350\247\206\345\214\226\346\223\215\344\275\234\347\225\214\351\235\242", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "\350\247\206\345\233\276\350\275\254\346\215\242\357\274\232", nullptr));
@@ -1078,7 +1425,7 @@ public:
         top_view->setText(QString());
         upward_view->setText(QString());
         label_2->setText(QCoreApplication::translate("MainWindow", "\351\253\230\347\250\213\346\270\262\346\237\223\357\274\232", nullptr));
-        comboBox->setItemText(0, QCoreApplication::translate("MainWindow", "\350\275\264\345\220\221\357\274\210\345\275\223\345\211\215\344\270\272\346\227\240\357\274\211", nullptr));
+        comboBox->setItemText(0, QCoreApplication::translate("MainWindow", "\351\200\211\346\213\251\350\275\264\345\220\221\357\274\210\345\275\223\345\211\215\344\270\272\351\235\236\346\270\262\346\237\223\347\212\266\346\200\201\357\274\211", nullptr));
         comboBox->setItemText(1, QCoreApplication::translate("MainWindow", "X\350\275\264", nullptr));
         comboBox->setItemText(2, QCoreApplication::translate("MainWindow", "Y\350\275\264", nullptr));
         comboBox->setItemText(3, QCoreApplication::translate("MainWindow", "Z\350\275\264", nullptr));

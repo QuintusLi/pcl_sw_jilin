@@ -182,10 +182,16 @@ compiler_rcc_clean:
 release\qrc_view_icon.cpp: ..\..\view_icon.qrc \
 		D:\Qt\6.7.0\msvc2019_64\bin\rcc.exe \
 		..\..\resource\up_view.png \
+		..\..\resource\MLS.png \
 		..\..\resource\main_view.png \
+		..\..\resource\fenge.png \
 		..\..\resource\meshing.png \
 		..\..\resource\interpolation.png \
+		..\..\resource\kuangxuan.png \
+		..\..\resource\bosong.png \
 		..\..\resource\point_cloud_icon.png \
+		..\..\resource\help.png \
+		..\..\resource\Laplas.png \
 		..\..\resource\smaller.png \
 		..\..\resource\save.png \
 		..\..\resource\open.png \
@@ -194,11 +200,15 @@ release\qrc_view_icon.cpp: ..\..\view_icon.qrc \
 		..\..\resource\axis.png \
 		..\..\resource\back_view.png \
 		..\..\resource\cloud.png \
+		..\..\resource\a-shape.png \
+		..\..\resource\marching_cubes.png \
 		..\..\resource\eye.png \
 		..\..\resource\file.png \
 		..\..\resource\tree_clear.png \
 		..\..\resource\bigger.png \
 		..\..\resource\Save_As.png \
+		..\..\resource\Gauss.png \
+		..\..\resource\pinjie.png \
 		..\..\resource\logo.ico \
 		..\..\resource\top_view.png \
 		..\..\resource\theme\white.qss \
@@ -2719,13 +2729,86 @@ release\moc_mainwindow.cpp: ..\..\mainwindow.h \
 		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\fusion\view\filter_view\detail\size_impl.hpp" \
 		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\common\impl\centroid.hpp" \
 		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\features\impl\normal_3d.hpp" \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\QCheckBox \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qcheckbox.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractbutton.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\QStandardItemModel \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qstandarditemmodel.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qabstractitemmodel.h \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\filters\project_inliers.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\filters\filter.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\filters\impl\filter.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\mersenne_twister.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\integer\integer_mask.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\config.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\ptr_helper.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\seed.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\seed_impl.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\integer\static_log2.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\traits.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\const_mod.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\large_arithmetic.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\integer_log2.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\disable_warnings.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\enable_warnings.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\signed_unsigned_tools.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\generator_bits.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\generator_seed_seq.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\polynomial.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\uniform_int.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\uniform_int_distribution.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\operators.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\uniform_int_float.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\variate_generator.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\model_types.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\filters\impl\project_inliers.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_circle.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_circle.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\NonLinearOptimization" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\NumericalDiff" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NumericalDiff\NumericalDiff.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\qrsolv.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\r1updt.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\r1mpyq.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\rwupdt.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\fdjac1.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\lmpar.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\dogleg.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\covar.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\chkder.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\HybridNonLinearSolver.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\LevenbergMarquardt.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_cylinder.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_cylinder.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\common\common.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\common\impl\common.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_cone.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_cone.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_line.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_line.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_normal_plane.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_plane.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_plane.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_normal_plane.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_normal_sphere.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_sphere.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_sphere.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_normal_sphere.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_parallel_plane.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_parallel_plane.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_normal_parallel_plane.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_normal_parallel_plane.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_parallel_line.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_parallel_line.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_perpendicular_plane.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_perpendicular_plane.hpp" \
 		..\..\CustomTreeView.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\QTreeView \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtreeview.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractitemview.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qframe.h \
-		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qabstractitemmodel.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qitemselectionmodel.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractitemdelegate.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qstyleoption.h \
@@ -5710,13 +5793,86 @@ release\main.obj: ..\..\main.cpp ..\..\mainwindow.h \
 		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\fusion\view\filter_view\detail\size_impl.hpp" \
 		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\common\impl\centroid.hpp" \
 		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\features\impl\normal_3d.hpp" \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\QCheckBox \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qcheckbox.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractbutton.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\QStandardItemModel \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qstandarditemmodel.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qabstractitemmodel.h \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\filters\project_inliers.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\filters\filter.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\filters\impl\filter.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\mersenne_twister.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\integer\integer_mask.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\config.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\ptr_helper.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\seed.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\seed_impl.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\integer\static_log2.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\traits.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\const_mod.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\large_arithmetic.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\integer_log2.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\disable_warnings.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\enable_warnings.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\signed_unsigned_tools.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\generator_bits.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\generator_seed_seq.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\polynomial.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\uniform_int.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\uniform_int_distribution.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\operators.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\uniform_int_float.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\variate_generator.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\model_types.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\filters\impl\project_inliers.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_circle.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_circle.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\NonLinearOptimization" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\NumericalDiff" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NumericalDiff\NumericalDiff.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\qrsolv.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\r1updt.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\r1mpyq.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\rwupdt.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\fdjac1.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\lmpar.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\dogleg.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\covar.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\chkder.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\HybridNonLinearSolver.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\LevenbergMarquardt.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_cylinder.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_cylinder.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\common\common.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\common\impl\common.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_cone.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_cone.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_line.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_line.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_normal_plane.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_plane.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_plane.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_normal_plane.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_normal_sphere.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_sphere.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_sphere.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_normal_sphere.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_parallel_plane.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_parallel_plane.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_normal_parallel_plane.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_normal_parallel_plane.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_parallel_line.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_parallel_line.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_perpendicular_plane.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_perpendicular_plane.hpp" \
 		..\..\CustomTreeView.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\QTreeView \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtreeview.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractitemview.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qframe.h \
-		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qabstractitemmodel.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qitemselectionmodel.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractitemdelegate.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qstyleoption.h \
@@ -8037,13 +8193,86 @@ release\mainwindow.obj: ..\..\mainwindow.cpp ..\..\mainwindow.h \
 		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\fusion\view\filter_view\detail\size_impl.hpp" \
 		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\common\impl\centroid.hpp" \
 		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\features\impl\normal_3d.hpp" \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\QCheckBox \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qcheckbox.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractbutton.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\QStandardItemModel \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qstandarditemmodel.h \
+		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qabstractitemmodel.h \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\filters\project_inliers.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\filters\filter.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\filters\impl\filter.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\mersenne_twister.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\integer\integer_mask.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\config.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\ptr_helper.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\seed.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\seed_impl.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\integer\static_log2.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\traits.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\const_mod.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\large_arithmetic.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\integer_log2.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\disable_warnings.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\enable_warnings.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\signed_unsigned_tools.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\generator_bits.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\generator_seed_seq.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\polynomial.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\uniform_int.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\uniform_int_distribution.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\operators.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\detail\uniform_int_float.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\random\variate_generator.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\model_types.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\filters\impl\project_inliers.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_circle.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_circle.hpp" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\NonLinearOptimization" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\NumericalDiff" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NumericalDiff\NumericalDiff.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\qrsolv.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\r1updt.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\r1mpyq.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\rwupdt.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\fdjac1.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\lmpar.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\dogleg.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\covar.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\chkder.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\HybridNonLinearSolver.h" \
+		"C:\Program Files\PCL 1.13.1\3rdParty\Eigen\eigen3\unsupported\Eigen\src\NonLinearOptimization\LevenbergMarquardt.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_cylinder.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_cylinder.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\common\common.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\common\impl\common.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_cone.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_cone.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_line.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_line.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_normal_plane.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_plane.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_plane.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_normal_plane.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_normal_sphere.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_sphere.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_sphere.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_normal_sphere.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_parallel_plane.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_parallel_plane.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_normal_parallel_plane.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_normal_parallel_plane.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_parallel_line.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_parallel_line.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\sac_model_perpendicular_plane.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\sample_consensus\impl\sac_model_perpendicular_plane.hpp" \
 		..\..\CustomTreeView.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\QTreeView \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qtreeview.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractitemview.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractscrollarea.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qframe.h \
-		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qabstractitemmodel.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qitemselectionmodel.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qabstractitemdelegate.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtWidgets\qstyleoption.h \
@@ -8079,13 +8308,10 @@ release\mainwindow.obj: ..\..\mainwindow.cpp ..\..\mainwindow.h \
 		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkColorTransferFunction.h" \
 		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkScalarBarActor.h" \
 		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkDoubleArray.h" \
-		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\common\common.h" \
-		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\common\impl\common.hpp" \
 		D:\Qt\6.7.0\msvc2019_64\include\QtGui\QFileSystemModel \
 		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qfilesystemmodel.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtCore\qdiriterator.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtGui\QStandardItem \
-		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qstandarditemmodel.h \
 		D:\Qt\6.7.0\msvc2019_64\include\QtCore\QDir \
 		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\convex_hull.h" \
 		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\impl\convex_hull.hpp" \
@@ -8134,8 +8360,6 @@ release\mainwindow.obj: ..\..\mainwindow.cpp ..\..\mainwindow.h \
 		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\impl\processing.hpp" \
 		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\impl\mls.hpp" \
 		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\filters\voxel_grid.h" \
-		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\filters\filter.h" \
-		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\filters\impl\filter.hpp" \
 		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\filters\impl\voxel_grid.hpp" \
 		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\sort\spreadsort\integer_sort.hpp" \
 		"C:\Program Files\PCL 1.13.1\3rdParty\Boost\include\boost-1_82\boost\sort\spreadsort\detail\constants.hpp" \
@@ -8216,7 +8440,23 @@ release\mainwindow.obj: ..\..\mainwindow.cpp ..\..\mainwindow.h \
 		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkIOCoreModule.h" \
 		"C:\Program Files\PCL 1.13.1\3rdParty\VTK\include\vtk-9.2\vtkSmoothPolyDataFilter.h" \
 		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\filters\convolution_3d.h" \
-		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\filters\impl\convolution_3d.hpp"
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\filters\impl\convolution_3d.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\filters\statistical_outlier_removal.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\filters\filter_indices.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\filters\impl\filter_indices.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\filters\impl\statistical_outlier_removal.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\filters\radius_outlier_removal.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\filters\impl\radius_outlier_removal.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\filters\passthrough.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\filters\impl\passthrough.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\marching_cubes_hoppe.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\marching_cubes.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\impl\marching_cubes.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\impl\marching_cubes_hoppe.hpp" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\concave_hull.h" \
+		"C:\Program Files\PCL 1.13.1\include\pcl-1.13\pcl\surface\impl\concave_hull.hpp" \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\QDesktopServices \
+		D:\Qt\6.7.0\msvc2019_64\include\QtGui\qdesktopservices.h
 
 release\qrc_view_icon.obj: release\qrc_view_icon.cpp 
 
